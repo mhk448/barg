@@ -1,0 +1,4 @@
+ErrorDocument 404 /user/avatar/unknown.png
+ErrorDocument 500 /user/avatar/unknown.png
+RewriteEngine On
+RewriteBase /

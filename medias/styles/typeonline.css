@@ -1,0 +1,183 @@
+@font-face {
+    font-family: Elmend;
+    src: url('../Fonts/BYekan.eot?#') format('eot'),
+        url('../Fonts/BYekan.woff') format('woff'),
+        url('../Fonts/BYekan.ttf') format('truetype');
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Elmend,tahoma;
+}
+.slide{
+    transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    /*margin: 0px 60px;*/
+}
+.teta0{
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);  
+    -webkit-transform: rotate(0deg); 
+    -o-transform: rotate(0deg); 
+    -moz-transform: rotate(0deg);
+}
+.teta90{
+    transform: rotate(90deg);
+    -ms-transform: rotate(90deg);  
+    -webkit-transform: rotate(90deg); 
+    -o-transform: rotate(90deg); 
+    -moz-transform: rotate(90deg);
+}
+.teta180{
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);  
+    -webkit-transform: rotate(180deg); 
+    -o-transform: rotate(180deg); 
+    -moz-transform: rotate(180deg);
+}
+.teta270{
+    transform: rotate(270deg);
+    -ms-transform: rotate(270deg);  
+    -webkit-transform: rotate(270deg); 
+    -o-transform: rotate(270deg); 
+    -moz-transform: rotate(270deg);
+}
+
+#line{
+    margin-right: 7%;
+    margin-left: 7%;
+    /*position: absolute;*/
+    top: 100px;
+    width: 86%;
+    height: 10px;
+    background-color: #ff8a00;
+    position: fixed;
+    visibility: hidden;
+}
+.btn img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url('../images/icons/trans.png');
+    border-radius: 3px;
+}
+.user{
+    text-align: right;
+}
+.user img{
+    width: 20px;
+    height: 20px;
+    float: right;
+    
+}
+.user span{
+    font-family: Tahoma,Arial;
+}
+
+#menu{
+    background-image: url('../images/icons/typeonline_menu.png');
+    background-repeat: no-repeat;
+    background-size: 160px 202px;
+    background-position: center top;
+    padding: 10px;
+    width: 140px;
+}
+#menu div{
+    margin-top: 5px;
+}
+.right_menu{
+    z-index: 3;
+    position: fixed;
+    display: inline;
+    top: 10px;
+    float: right;
+    left: 12px;
+    color: white;
+    font-family: Elmend;
+    font-size: 12px;
+}
+#logo{
+    cursor: pointer;
+    border-radius: 3px;
+    margin-bottom: -12px;
+    display: block;
+    z-index: 100;
+    position: relative;
+    /*width: 180px;*/
+}
+.trans{
+    background-image: url('../images/icons/trans.png');
+    box-shadow: 1px 1px 2px 2px rgb(51, 51, 51) inset;
+    -moz-box-shadow: 1px 1px 2px 2px rgb(51, 51, 51) inset;
+    -webkit-box-shadow:  1px 1px 2px 2px rgb(51, 51, 51) inset;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    padding: 2px;
+}
+.textview{
+    font-family: Elmend,tahoma;
+    position: fixed;
+    top: 70%;
+    width: 100%;
+    height: 30%;
+    text-align: justify;
+    background-color: #ff6600;
+    font-size: 15px;
+    /*padding: 10px;
+    /*border-radius: 5px;*/
+}
+.textview2{
+    background-color: whitesmoke;
+    overflow-y: auto;
+    direction: rtl;
+    height: 100%;
+    margin-top: 5px;
+    /*border-radius: 5px;*/
+    cursor: text;
+}
+
+#chat{
+    z-index: 3;
+    position: fixed;
+    display: inline;
+    top: 120px;
+    float: right;
+    left: 190px;
+    color: black;
+    width: 170px;
+    padding: 0 5px;
+    background-image: url('../images/icons/trans.png');
+}
+#chat #msg{
+    width: 130px;
+    margin: 5px 0;
+}
+#chat #content{
+    background-color: white;
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-height: 50px;
+    max-height: 130px;
+    /*direction: ltr;*/
+    text-align: right;
+    padding: 2px;
+}
+#chat input{
+    font-family: Elmend;
+}
+#chat .user span{
+    color: green;
+}
+#chat .admin span{
+    color: red;
+}
+#chat .typist span{
+    color: blue;
+}
+#chat p{
+    padding: 0;
+    margin: 0;
+}

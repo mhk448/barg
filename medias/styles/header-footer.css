@@ -1,0 +1,330 @@
+/* 
+    Document   : header-footer
+    Created on : Sep 20, 2013, 1:03:39 PM
+    Author     : MHK448
+    Description:
+        Purpose of the stylesheet follows.
+*/
+#header-wrapper {
+    /*margin-bottom: 20px;*/
+}
+
+
+/*////// header ///////*/
+.regheader{
+    /*position: fixed;*/
+    background-image: url('../images/theme/wood.jpg');
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 0px;
+}
+.reglink{
+    float: left;
+    /*font-weight: bold;*/
+    color: white; 
+    margin-bottom: -20px;
+    position: relative;
+    z-index: 3;
+}
+.reglink .info{
+    border-radius: 2px;
+    min-width: 140px;
+    padding: 8px 8px 0;
+}
+.reglink .info a{
+    font-weight: bold;
+    /*color: white;*/ 
+    padding: 0 1px;
+}
+.reglink .btn{
+    width: 18px;
+    height: 18px;
+    background-image: url('../images/icons/topreg-info.gif');
+    background-size: 72px 54px;
+    display: inline-block;
+}
+.reglink .user-img{
+    background-color: white;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.reglink .close{
+    float: right;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    margin: 2px 4px 0 -20px ;
+}
+
+/*/////////////////*/
+.top-icons {
+    float: right;
+    margin-top: 80px;
+    margin-right: 30px;
+}
+.top-icons .margined {
+    margin-right: 10px;
+}
+.logo {
+    margin-right: 120px;
+    margin-top: 41px;
+    float: right;
+}
+.top-links {
+    float: left;
+    margin-top:57px;
+    margin-left: 10px;
+}
+.top-links a {
+    color: #000;
+}
+.top-links a:hover {
+    color: #333;
+}
+.top-links b {
+    font-family: tahoma;
+}
+
+.top-links {
+    float: right;
+    margin-top:57px;
+    margin-right: 117px;
+}
+.header_logo{
+    margin-top: -10px;
+}
+
+.header_logo a{
+    color: white;
+}
+
+.navi{
+    /*width: 100px;*/
+    display: block;
+    float: right;
+}
+.navi a,a.navi{
+    color: white;
+    padding: 16px 20px;
+    font-size: 12pt;
+    border-left: 1px solid black;
+    display: block;
+    height: 25px;
+}
+.navi:hover{
+
+}
+.navi:hover a{
+    color: white;
+    background-color: #373a3c;
+}
+.navi .sub{
+    /*width: 150px;*/
+    display: none;
+    background-color: red;
+    position: absolute;
+    /*margin-top: 18px;*/
+    /*padding: 20px;*/
+    overflow: hidden;
+    color: white;
+    background-color: #63675d;
+    /*display: none;*/
+    /*height: 0px;*/
+}
+.navi .sub li:hover{
+    color: white;
+    /*background-color: red;*/
+    /*background-color: #373a3c;*/
+}
+.navi:hover .sub{
+    /*height: auto;*/
+}
+
+#main-menu {
+    position:relative;
+    float:right;
+    direction:rtl;
+    font-size:10pt;
+    padding: 18px 0;
+    color:white;
+}
+#main-menu a {
+    display:block;
+    float:right;
+    color: white;
+    margin-top:0px;
+    padding:16px 13px;
+    font-size:10pt;
+    border-left: 1px solid black;
+    display: block;
+    /*height: 25px;*/
+    width: 45px;
+}
+#main-menu a:hover {
+    background-color:#373a3c; 
+    background-image:none;
+    color:white;      
+}
+#main-menu ul {
+    list-style-type:none;
+    padding-top:0px;   
+}
+#main-menu li:hover {
+    background-color:#373a3c; 
+    color:white;    
+}
+#main-menu li {
+    float:right;
+    position:relative;
+    text-align:center;
+}
+#main-menu li ul a{
+    text-align:right;
+    border:0px;
+    /*border-bottom:1px solid black;*/
+    background-color: #5D5D5D;
+    background-image: url("../images/theme/menu.gif");
+    width: 120px;
+    /*height:23px;*/
+    font-size: 12px;
+    padding: 12px 15px 12px 3px;
+}
+#main-menu ul.sub-menu {
+    display:none;
+    position:absolute;
+    top:52px;
+    padding:0px;
+    z-index:80;
+    border-bottom: 1px solid black;
+/*    list-style-type: circle;
+    list-style-position: inside;*/
+}
+#main-menu ul.sub-menu li {
+    text-align:center;
+    /*border-bottom: 1px solid black;*/
+
+}
+#main-menu li:hover ul.sub-menu {
+    display: block;
+    /*border: 1px solid black;*/
+    /*width: 120px;*/
+}
+/*-------- events ----------*/
+#topmenu-event .content div{
+    margin: 1px;
+    padding: 3px 5px 3px 0;
+    border-top-style: solid;
+    border-top-width: 2px;
+    background-color: #CCC;
+    cursor: pointer;
+    background-image:url('../images/icons/open.png');
+    background-position: 90% center; 
+    background-repeat: no-repeat;
+
+}
+
+/*//////////////// footer /////////////*/
+/*	Footer Section	*/
+#footer-wrapper {
+    /*background: url("../images/theme/footer.jpg") bottom center no-repeat;*/
+    width: 100%;
+    height: 250px;
+    /*margin-top: 20px;*/
+    padding-top: 40px;
+    background-color: #333;
+    border-top-style: solid;
+    border-top-width: 8px;
+    color: white;
+    background: linear-gradient(#2D2D2D 300px, #1F1F1F 300px) 
+        repeat scroll 0 0 transparent;
+}
+#footer{
+    text-align: right;
+    font-size: 12px;
+}
+#footer .right-links{
+    /*float: right;*/
+    display: inline-block;
+    width: 17%;
+    padding-right: 20px;
+
+    /*margin-top: 5px;*/
+    /*text-align: right;*/
+    /*margin-right: 42px;*/
+}
+#footer .right-links img{
+    margin-right: 2px;
+}
+#footer .right-links a {
+    color: gray;
+    display: block;
+    /*padding: 5px;*/
+    line-height: 28px;
+    /*font-size: larger;*/
+}
+#footer .right-links a:hover {
+    color: white;
+}
+#footer li {
+    color: #ccc;
+    list-style: square;
+    /*border-top: 1px solid #444;*/
+    border-bottom: 1px solid #444;
+
+    /*display: block;*/
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*transform: scale(0.75, 1.5);*/
+}
+#footer li:hover {
+    color: white;
+}
+#footer h2 {
+    color: white;
+    text-align: right;
+}
+.copy-right {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    text-align: left;
+    /*width: 290px;*/
+    color: white;
+    font-size: 12px;
+}
+#footer .copy-right a{
+    color: #006282;
+}
+#footer .copy-right a:hover{
+    color: #007EA8;
+}
+#footer-right{
+    float:right;
+    width:25%;
+    margin-right:30px;
+    padding:5px;
+    line-height:1.7;
+}
+/*////////////////////////////////////*/
+.social{
+    float:left;
+    background-color:#2d2d2d;
+    background-image:url('../images/icons/socials.png');
+    background-repeat: no-repeat;
+    background-size: 24px 72px;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    margin: 2px;
+}
+.social1:hover{
+    background-color:#224898;
+}
+.social2:hover{
+    background-color:#1dc8e9;
+}
+.social3:hover{
+    background-color:#da4e37;
+}

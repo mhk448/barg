@@ -1,0 +1,4 @@
+ErrorDocument 404 /user/refer/unknown.gif
+ErrorDocument 500 /user/refer/unknown.gif
+RewriteEngine On
+RewriteBase /
