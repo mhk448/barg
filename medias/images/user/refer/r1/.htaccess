@@ -2,5 +2,5 @@ ErrorDocument 404 /medias/images/user/refer/r1/default.gif
 ErrorDocument 500 /medias/images/user/refer/r1/default.gif
 RewriteEngine On
 RewriteBase /
-#ErrorDocument 404 http://bargardon.ir/user/ref--dk-er/unknown.gif
-#ErrorDocument 500 http://bargardon.ir/user/refer/un-dpl-known.gif
+#ErrorDocument 404 http://bargardoon.com/user/ref--dk-er/unknown.gif
+#ErrorDocument 500 http://bargardoon.com/user/refer/un-dpl-known.gif

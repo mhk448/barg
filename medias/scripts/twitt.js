@@ -64,7 +64,7 @@ mhktwitt ={
         }
 
         e='<div id="div_content_twitt_id_'+twitt.id+'" style="display:none;border-width:1px;border-top-style:dashed;padding: 10px;background-color:'+(twitt.reply_id==0?'#EEE':'#DDD')+'" class="twitt-content br-theme" >'
-        +'<img class="user-avator" style="float: right;margin: 0 5px 5px 5px;" src="http://bargardon.ir/user/avatar/UA_' +twitt.user_id+ '.png" width="40" height="40" >'
+        +'<img class="user-avator" style="float: right;margin: 0 5px 5px 5px;" src="http://bargardoon.com/user/avatar/UA_' +twitt.user_id+ '.png" width="40" height="40" >'
         +'<div style="text-align:right;">'
         +'<a href="user_' +twitt.user_id+ '" style="color: green;float: right;" class="popup" target="_blank" >'
         +  twitt.user_nickname
@@ -91,7 +91,7 @@ mhktwitt ={
         
         +'<div style="display: none;margin-right: 55px;padding:10px;background-color:#DDD;" id="div_answer_twitt_id_'+twitt.id+'">'
         +'<img class="user-avator" style="float: right;margin: 0 5px 5px 5px;"'
-        +'src="http://bargardon.ir/user/avatar/UA_'+curUser.id+'.png" '
+        +'src="http://bargardoon.com/user/avatar/UA_'+curUser.id+'.png" '
         +'width="40" height="40" />'
         +'<input type="hidden" id="reply_id_input_'+twitt.id+'" value="'+twitt.id+'"/>'
         +'<div style="float: right;">'
