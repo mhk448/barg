@@ -14,7 +14,7 @@ if (isset($_CONFIGS['Params'][1]) && $_CONFIGS['Params'][1] == "open" && !$my_pr
             $v['u' . $row['user_id']] = 1;
             $u0 = new User($row['user_id']);
             $user_online.=$u0->displayAvator();
-//        $user_online.=' <a style="" title="' . $user->getNickname($row['user_id']) . '"><img class="user-avator" style="border: 4px solid #FFF;"  src="http://bargardon.ir/user/avatar/UA_' . $row['user_id'] . '.png" width="40" height="40" />' . '</a> ';
+//        $user_online.=' <a style="" title="' . $user->getNickname($row['user_id']) . '"><img class="user-avator" style="border: 4px solid #FFF;"  src="http://bargardoon.com/user/avatar/UA_' . $row['user_id'] . '.png" width="40" height="40" />' . '</a> ';
         }
     }
 }
