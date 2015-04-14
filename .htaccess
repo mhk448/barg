@@ -1,8 +1,13 @@
 Options +FollowSymLinks
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www\.bargardon\.ir$
-RewriteRule (.*) http://bargardon.ir/$1 [R=301,L]
+RewriteRule (.*) http://bargardoon.com/$1 [R=301,L]
 
+RewriteCond %{HTTP_HOST} ^bargardon\.ir$
+RewriteRule (.*) http://bargardoon.com/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www\.bargardoon\.com$
+RewriteRule (.*) http://bargardoon.com/$1 [R=301,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
