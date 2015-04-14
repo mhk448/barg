@@ -95,7 +95,7 @@ $GLOBALS['_PAGES'] = array(
 );
 
 if (isSubType()) {
-    $_PAGES['rules'] = array('http://blog.bargardon.ir/type/type-rols/%D8%B4%D8%B1%D8%A7%DB%8C%D8%B7-%D9%88-%D9%82%D9%88%D8%A7%D9%86%DB%8C%D9%86-%D8%A7%D8%B3%D8%AA%D9%81%D8%A7%D8%AF%D9%87-%D8%A7%D8%B2-%D8%AE%D8%AF%D9%85%D8%A7%D8%AA-%D9%85%D8%B1%DA%A9%D8%B2-%D8%AA%D8%A7/', 'شرایط و قوانین', 'شرایط و قوانین', '', '', 'All');
+    $_PAGES['rules'] = array('http://blog.bargardoon.com/type/type-rols/%D8%B4%D8%B1%D8%A7%DB%8C%D8%B7-%D9%88-%D9%82%D9%88%D8%A7%D9%86%DB%8C%D9%86-%D8%A7%D8%B3%D8%AA%D9%81%D8%A7%D8%AF%D9%87-%D8%A7%D8%B2-%D8%AE%D8%AF%D9%85%D8%A7%D8%AA-%D9%85%D8%B1%DA%A9%D8%B2-%D8%AA%D8%A7/', 'شرایط و قوانین', 'شرایط و قوانین', '', '', 'All');
     $_PAGES['Home'] = array($subSite . '/home.php', 'مرکز تخصصی تایپ', 'مرکز تخصصی تایپ', '', '', 'All');
     $_PAGES['typeonline'] = array($subSite . '/typeonline.php', 'تایپ آنلاین', 'تایپ آنلاین', '', '', 'Admin,Bookkeeper,System,User,Agency,Both,Worker');
 } else if (isSubTranslate()) {

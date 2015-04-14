@@ -12,7 +12,7 @@ $t = $pager->getParamById('twitts',FALSE);
 
             <?
             $e = '<div id="div_content_twitt_id_' . $t['id'] . '" style="border-width:1px;border-top-style:dashed;padding: 10px;background-color:' . ($t['reply_id'] == 0 ? '#EEE' : '#DDD') . '" class="twitt-content br-theme" >'
-                    . '<img class="user-avator" style="float: right;margin: 0 5px 5px 5px;" src="http://bargardon.ir/user/avatar/UA_' . $t['user_id'] . '.png" width="40" height="40" >'
+                    . '<img class="user-avator" style="float: right;margin: 0 5px 5px 5px;" src="http://bargardoon.com/user/avatar/UA_' . $t['user_id'] . '.png" width="40" height="40" >'
                     . '<div style="text-align:right;">'
                     . '<a href="user_' . $t['user_id'] . '" style="color: green;float: right;" class="popup" target="_blank" >'
                     . $user->getNickname($t['user_id'])

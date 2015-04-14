@@ -5,49 +5,49 @@
 
 $GLOBALS['_CONFIGS'] = array(
     'TestMode' => FALSE,
-    'domains' => 'bargardon.ir',
-    'FileServerPath' => 'http://fileserver.bargardon.ir/type/',
-    'BackupServerPath' => 'http://fileserver.bargardon.ir/type/',
+    'domains' => 'bargardoon.com',
+    'FileServerPath' => 'http://fileserver.bargardoon.com/type/',
+    'BackupServerPath' => 'http://fileserver.bargardoon.com/type/',
     'Site' => array(
         'Name' => 'برگردون',
-        'Path' => 'http://bargardon.ir/',
+        'Path' => 'http://bargardoon.com/',
         'NickName' => 'برگردون',
-        'NickPath' => 'www.bargardon.ir',
+        'NickPath' => 'www.bargardoon.com',
         'type' => array(
             'Name' => 'برگردون',
-            'Path' => 'http://bargardon.ir/',
+            'Path' => 'http://bargardoon.com/',
             'NickName' => 'برگردون',
-            'NickPath' => 'www.bargardon.ir', // 'Type.Elmend.ir',
-            'Email' => 'info@bargardon.ir',
-            'Blog' => 'http://blog.bargardon.ir/type', //sub path without "/"
-            'Forum' => 'http://forum.bargardon.ir/', //sub path
-            'SMS_Postfix' => "\nwww.bargardon.ir", //"\nwww.Elmend.ir",
+            'NickPath' => 'www.bargardoon.com', // 'Type.Elmend.ir',
+            'Email' => 'info@bargardoon.com',
+            'Blog' => 'http://blog.bargardoon.com/type', //sub path without "/"
+            'Forum' => 'http://forum.bargardoon.com/', //sub path
+            'SMS_Postfix' => "\nwww.bargardoon.com", //"\nwww.Elmend.ir",
             'fg_color' => "#bace39",
             'bg_color' => "#bace39",
             'code' => "T",
         ),
         'translate' => array(
             'Name' => 'برگردون',
-            'Path' => 'http://bargardon.ir/',
+            'Path' => 'http://bargardoon.com/',
             'NickName' => 'برگردون',
             'NickPath' => 'www.Tarjomeiran.com',
-            'Email' => 'info@bargardon.ir',
-            'Blog' => 'http://blog.bargardon.ir/type', //sub path without "/"
-            'Forum' => 'http://forum.bargardon.ir/', //sub path
-            'SMS_Postfix' => "\nwww.bargardon.ir",
+            'Email' => 'info@bargardoon.com',
+            'Blog' => 'http://blog.bargardoon.com/type', //sub path without "/"
+            'Forum' => 'http://forum.bargardoon.com/', //sub path
+            'SMS_Postfix' => "\nwww.bargardoon.com",
             'fg_color' => "#b9e2ff",
             'bg_color' => "#b9e2ff",
             'code' => "R",
         ),
         'graphic' => array(
             'Name' => 'برگردون',
-            'Path' => 'http://graphic.bargardon.ir/',
+            'Path' => 'http://graphic.bargardoon.com/',
             'NickName' => 'برگردون',
-            'NickPath' => 'graphic.bargardon.ir',
-            'Email' => 'info@graphic.bargardon.ir',
+            'NickPath' => 'graphic.bargardoon.com',
+            'Email' => 'info@graphic.bargardoon.com',
             'Blog' => 'http://blog.bargardon.net/type', //sub path without "/"
-            'Forum' => 'http://forum.bargardon.ir/', //sub path
-            'SMS_Postfix' => "\ngraphic.bargardon.ir",
+            'Forum' => 'http://forum.bargardoon.com/', //sub path
+            'SMS_Postfix' => "\ngraphic.bargardoon.com",
             'fg_color' => "#b9e2ff",
             'bg_color' => "#b9e2ff",
             'code' => "G",
@@ -55,8 +55,8 @@ $GLOBALS['_CONFIGS'] = array(
     ),
     // Path Informations
     'Pathes' => array(
-        'Blog' => 'http://blog.bargardon.ir/',
-        'Root' => 'http://bargardon.ir/',
+        'Blog' => 'http://blog.bargardoon.com/',
+        'Root' => 'http://bargardoon.com/',
     ),
     // Security
     'Security' => array(

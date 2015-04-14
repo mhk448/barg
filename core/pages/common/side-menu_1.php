@@ -449,7 +449,7 @@
     <? if (!isSubType()) { ?>
 <!--        <div style="text-align: center">
             <br/>
-            <a href="http://bargardon.ir" target="_blank">
+            <a href="http://bargardoon.com" target="_blank">
                 <img style="width: 60%" src="/medias/images/theme/typeiran_logo.png" alt="  تایپ فوری"/>
             </a>
         </div>-->

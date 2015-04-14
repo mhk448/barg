@@ -149,7 +149,7 @@
 </audio>
 <? if (!$user->isAdmin()) { ?>
     <!-- Iran Web Festival -->
-    <!--    <script>var _mxvtmw_position = 'right', _mxvtmw_domain = 'bargardon.ir'</script>
+    <!--    <script>var _mxvtmw_position = 'right', _mxvtmw_domain = 'bargardoon.com'</script>
     <script src="http://iwfcdn.iranwebfestival.com/js/mx.vtmw.min.js?37275" async="async"></script>-->
     <!-- Iran Web Festival -->
 <? } ?>
