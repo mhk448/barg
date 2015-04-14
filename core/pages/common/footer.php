@@ -4,6 +4,7 @@
 
 <div class="clear"></div>
 </div>
+</section>
 
 <div id="footer-wrapper" class="br-theme">
     <div id="footer">

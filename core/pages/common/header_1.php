@@ -5,7 +5,6 @@
     <head>
         <title><?php echo $_CONFIGS['Page']['Title'] ?></title>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <meta name="description" content="<?php echo $_CONFIGS['Page']['Description'] ?>" />
         <meta name="keywords" content="<?php echo $_CONFIGS['Page']['Keywords'] ?>" />
         <link rel="shortcut icon" href="<?= $_CONFIGS['Site']['Sub']['Path'].$subSite ?>_favicon.ico" />
@@ -30,11 +29,10 @@
         <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/mhkform.js?v=6"></script>
         <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/event.js?v=5"></script>
         <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/custom.js?v=8"></script>
-        <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/bootstrap/js/bootstrap.min.js"></script> 
-        <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/app.js"></script> 
+   
     
       <!-- Bootstrap 3.3.2 -->
-    <link href="<?= _HELP_PATH_ ?>medias/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />    
+    <link href="<?= _HELP_PATH_ ?>medias/bootstrap.min.css" rel="stylesheet" type="text/css" />    
     <!-- FontAwesome 4.3.0 -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <!-- Ionicons 2.0.0 -->
@@ -43,13 +41,13 @@
     <link href="<?= _HELP_PATH_ ?>medias/styles/AdminLTE.css" rel="stylesheet" type="text/css" />
     <!-- AdminLTE Skins. Choose a skin from the css/skins 
          folder instead of downloading all of them to reduce the load. -->
-    <link href="<?= _HELP_PATH_ ?>medias/styles/skin-green.css" rel="stylesheet" type="text/css" />
-   
+    <link href="<?= _HELP_PATH_ ?>medias/styles/skins-green.css" rel="stylesheet" type="text/css" />
+ 
     
     
     
     </head>
-    <body class="skin-green" >
+    <body >
         <script type="text/javascript">
             curUser={};
         </script>
@@ -60,7 +58,7 @@
                 curUser.feature = '<?= $user->feature ?>';
             </script>
         <? } ?>
-        <center class="wrapper">
+        <center>
             <div id="help_cover" style="display: none" onmouseover="$('#help_cover').hide();">
                 <div id="help_arrow"> </div>
                 <div style="
@@ -113,6 +111,109 @@
             
             
             
+            
+            
+            
+            
+            <div id="header-wrapper">
+                <div id="header">
+                    <? include 'header-top-menu.php'; ?>
+                    <div style=" background-color: white;
+                         /*background-image: url('cmedias/images/theme/typeiran_logo_bg.png');*/
+                         /*background-image: url('medias/images/theme/bg-home.png');*/
+                         background: url('medias/images/theme/body-bg.png') repeat scroll 0 0 #FFFFFF;
+                         /*display: none;*/
+                         border-bottom-style: solid ;
+                         border-bottom-width: 10px ;
+                         padding: 20px;
+                         "
+                         onclick=""
+                         class="br-theme"
+                         >
+                        <div style="float: right;
+                             width: 23%;
+                             text-align: right;
+                             padding: 3px 9px;
+                             display: none;
+                             color: #FFF;">
+
+                            <? if (FALSE && $user->isUser()) { ?>
+
+                                <!--<div style="display: none">-->
+                                <img src="<?= $_CONFIGS['Site']['Path'] ?>user/avatar/UA_<?= $user->id ?>.png" width="50" style="float: right;margin: 5px" />
+                                <?= $user->getNickname() ?>
+                                <br/>
+
+                                <!--</div>-->
+                                <div class="bg-theme" style2="
+                                     text-align: right;
+                                     border-radius: 3px;
+                                     color: white;
+                                     font-weight: bold;
+                                     box-shadow: 1px 1px 2px 0 #333;
+                                     margin-bottom: 30px;
+                                     padding: 8px 5px" >
+                                    <div style2="
+                                         border-top:  1px dashed gray;
+                                         border-bottom:  1px dashed gray;
+                                         padding: 5px 0;
+                                         ">
+
+                                        <span style2="padding-left: 5px;color: black;width: 125px;float: right;text-align: left;">درجه:</span>
+                                        <!--            <div class="classification">
+                                                        <div class="cover"></div>
+                                                        <div class="progress" style="width: <? //echo ($user->rank * 10) . '%;'                             ?>">
+                                                        </div>
+                                                    </div>-->
+                                        <?= ($user->rate) . ' از 7' ?>
+
+                                        <br/><span style2="padding-left: 5px;color: black;width: 125px;float: right;text-align: left;">گروه کاربری: </span>
+                                        <?= $_ENUM2FA['usergroup'][$user->usergroup] ?>
+
+                                        <? if ($user->isWorker()) { ?>
+                                            <br/><span style2="padding-left: 5px;color: black;width: 125px;float: right;text-align: left;">میانگین امتیاز:</span>
+                                            <?= (($user->rankers == 0) ? $user->rank : number_format($user->rank / $user->rankers, 2)) ?> 
+                                        <? } ?>
+
+                                        <? if ($user->isWorker()) { ?>
+                                            <br/><span style2="padding-left: 5px;color: black;width: 125px;float: right;text-align: left;">پروژه های انجام شده:</span>
+                                        <? } else { ?>
+                                            <br/><span style2="padding-left: 5px;color: black;width: 125px;float: right;text-align: left;">پروژه های ارسالی:</span>
+                                        <? } ?>
+                                        <?= $user->finished_projects ?>
+
+                                        <br/><span style2="padding-left: 5px;color: black;width: 125px;float: right;text-align: left;">مبلغ پروژه ها:</span>
+                                        <?= $user->getSumPriceProject(); ?> ریال
+
+                                        <br/><span style2="padding-left: 5px;color: black;width: 125px;float: right;text-align: left;">میزان اعتبار:</span>
+                                        <span class="price" ><?= $user->getCredit() ?></span>
+                                        ریال
+
+
+                                    </div>
+                                </div>
+                            <? } ?>
+                        </div>
+                        <img style=""
+                             alt=""
+                             src="medias/images/theme/<?=$subSite;?>_panel_header.png"
+                             height="100"
+                             />
+                        <div class="clear"></div>
+                    </div>
+
+                    <div style="height: 25px;
+                         background-image: url('medias/images/theme/sub_menu_bg.jpg');
+                         background-repeat: repeat-x;
+                         text-align: left;
+                         padding: 5px;
+                         display: none;
+                         ">
+
+
+                    </div>
+                </div>
+            </div>
             
             
             
@@ -371,29 +472,26 @@
             
             
             
-      
+            
+            
+            
+            
+            <div class="clear"></div>
+            <div>
 
-         
+                <!--[if gte IE 9]>
+                    <style type="text/css">
+                      .gradient {
+                         filter: none;
+                      }
+                    </style>
+                 <![endif]-->
+
+                <div class="" >
+                    <div class="right_panel2" style="">
                         <?
                         include_once 'side-menu.php';
                         ?>
-            <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-          <h1>
-            Dashboard
-            <small>Control panel</small>
-          </h1>
-          <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Dashboard</li>
-          </ol>
-        </section>
-
-        <!-- Main content -->
-        <section class="content">
-        
-            <div>
-                <div class="" >
+                    </div>
                     <div id="ajax_content" class="left_panel2">
 
