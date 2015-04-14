@@ -109,9 +109,9 @@ class Report {
 
     public function addIfExistReferer() {
         global $cdatabase, $discount;
-        //mc? bargardon.ir
+        //mc? bargardoon.com
         if (isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER']) {
-            if (strpos($_SERVER['HTTP_REFERER'], 'bargardon.ir') === FALSE) {
+            if (strpos($_SERVER['HTTP_REFERER'], 'bargardoon.com') === FALSE) {
                 if ($_SERVER['HTTP_REFERER'] != 'https://www.google.com/')
                     if (strpos($_SERVER['HTTP_REFERER'], 'baidu.com') === FALSE)
                         if (strpos($_SERVER['HTTP_REFERER'], 'www.google.com') === FALSE)

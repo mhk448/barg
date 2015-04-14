@@ -504,7 +504,7 @@ class Event {
 //            'title' => $title,
 //            'body' => $body));
 //        $email = $user->getEmail?depricated($uid);
-//        $mailer->sendMail($email, $title, '<a href="http://bargardon.ir/"><b>مرکز</b></a><br><br>' . $body . '<hr>تاریخ: ' . $persiandate->date('d F Y ساعت H:i:s', $dateline));
+//        $mailer->sendMail($email, $title, '<a href="http://bargardoon.com/"><b>مرکز</b></a><br><br>' . $body . '<hr>تاریخ: ' . $persiandate->date('d F Y ساعت H:i:s', $dateline));
 //    }
 
     public function setRead($id) {

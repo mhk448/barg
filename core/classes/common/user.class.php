@@ -1253,7 +1253,7 @@ class User {
         $color = $this->isWorker() ? '' : 'br-theme';
         $a = ' <span class="' . ($lazy ? "" : "help") . ' user" style="" title="' . $this->getNickname() . '">'
                 . '<a href="user_' . $this->id . '" class="popup"> '
-                . '<img class="user-avator ' . $color . '"  src="http://bargardon.ir/user/avatar/UA_' . $this->id . '.png" width="40" height="40" />'
+                . '<img class="user-avator ' . $color . '"  src="http://bargardoon.com/user/avatar/UA_' . $this->id . '.png" width="40" height="40" />'
                 . '</a> '
                 . '</span> ';
         if (!$lazy)

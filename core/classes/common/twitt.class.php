@@ -99,7 +99,7 @@ class Twitt {
         <? if ($user->isSignin()) { ?>
             <div class="br-theme" style="border-bottom-style:solid;padding: 10px">
                 <img class="user-avator" style="float: right;margin: 0 5px 5px 5px;"
-                     src<?= '="http://bargardon.ir/user/avatar/UA_' . $user->id . '.png"'; ?> 
+                     src<?= '="http://bargardoon.com/user/avatar/UA_' . $user->id . '.png"'; ?> 
                      width="40" height="40" />
                 <input type="hidden" id="reply_id_input" value="0"/>
                 <div style="float: right;width: 400px;">
