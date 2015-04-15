@@ -407,10 +407,10 @@ a:focus {
 @media (min-width: 768px) {
   .sidebar-collapse .main-sidebar,
   .sidebar-collapse .right-side {
-    -webkit-transform: translate(190px, 0);
-    -ms-transform: translate(190px, 0);
-    -o-transform: translate(190px, 0);
-    transform: translate(190px, 0);
+    -webkit-transform: translate(230px, 0);
+    -ms-transform: translate(230px, 0);
+    -o-transform: translate(230px, 0);
+    transform: translate(230px, 0);
   }
 }
 @media (max-width: 767px) {
