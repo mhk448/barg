@@ -24,7 +24,7 @@
                 <img src<?= '="' . $_CONFIGS['Site']['Path'] . 'user/avatar/UA_' . $user->id . '.png"' ?> class="img-circle" alt="User Image" />
             </div>
             <div class="pull-right info">
-                <p><?=$user->getNickname()?></p>
+                <p><?= $user->getNickname() ?></p>
 
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
@@ -41,7 +41,7 @@
         <!-- /.search form -->
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
-           
+
 
 
 
@@ -168,9 +168,10 @@
                     </li>
 
                     <li class="treeview" >
-                        <a class=""><i class="fa fa-circle-o"></i>
+                        <a class=""><i class="fa fa-briefcase"></i>
                             پروژه های 
                             <?= $_ENUM2FA['fa']['work']; ?>           
+                            <i class="fa fa-angle-right pull-left"></i>
                         </a>
                         <ul  class="treeview-menu">
                             <? if ($user->isWorker()) { ?>
@@ -197,7 +198,9 @@
                     <? if ($user->isAgency()) { ?>
                         <li class="treeview">
                             <a class=""><i class="fa fa-briefcase"></i>
-                                لیست پروژه ها</a>
+                                لیست پروژه ها
+                                <i class="fa fa-angle-right pull-left"></i>
+                            </a>
                             <ul  class="treeview-menu">
                                 <li><a class="side-ajax" href="projects_run_<?php echo $user->id ?>" >پروژه های در حال اجرا</a></li>
                                 <li><a class="side-ajax" href="projects_finish_<?php echo $user->id ?>" >پروژه های تمام شده</a></li>
@@ -208,7 +211,7 @@
                     <li class="treeview">
                         <a class=""><i class="fa fa-money"></i>
                             مدیریت مالی
-
+                            <i class="fa fa-angle-right pull-left"></i>
                         </a>
                         <ul  class="treeview-menu">
                             <? if ($user->isWorker()) { ?>
@@ -224,7 +227,9 @@
 
                     <li class="treeview">
                         <a class=""><i class="fa fa-envelope-o"></i>
-                            پیامها</a>
+                            پیامها
+                            <i class="fa fa-angle-right pull-left"></i>          
+                        </a>
                         <ul  class="treeview-menu">
                             <li><a class="side-ajax" href="send-message" >ارسال پیام</a></li>
                             <li><a class="side-ajax" href="messages_inbox" >صندوق دریافت</a></li>
@@ -236,8 +241,9 @@
                         <li class="treeview">
                             <a class=""><i class="fa fa-plus"></i>
                                 امکانات
+                                <i class="fa fa-angle-right pull-left"></i>
                                 <? if ($user->isWorker()) { ?>
-                                    <img src="medias/images/theme/new.png" alt="" align="absmiddle" style="">
+                                    <small class="label pull-left bg-green">جدید</small>
                                 <? } ?>
                             </a>
                             <ul  class="treeview-menu">
@@ -255,6 +261,7 @@
                         <a class=""><i class="fa fa-cog"></i>
 
                             تنظیمات
+                            <i class="fa fa-angle-right pull-left"></i>
                         </a>
                         <ul  class="treeview-menu">
                             <li><a class="side-ajax" href="edit-profile" >ویرایش اطلاعات</a></li>
@@ -277,7 +284,9 @@
                     <li class="treeview">
                         <a class=""><i class="fa fa-support"></i>
 
-                            پشتیبانی</a>
+                            پشتیبانی
+                            <i class="fa fa-angle-right pull-left"></i>
+                        </a>
                         <ul  class="treeview-menu">
                             <li><a class="side-ajax" href="send-message_1_S1" >درخواست پشتیبانی</a></li>
                             <li><a class="side-ajax" href="support" >گزارش درخواستهای قبلی</a></li>
@@ -289,6 +298,7 @@
                         <li class="treeview">
                             <a class=""><i class="fa fa-circle-o"></i>
                                 دسترسی ها
+                                <i class="fa fa-angle-right pull-left"></i>
                             </a>
                             <ul  class="treeview-menu">
                                 <li><a class="side-ajax" href="manage-support?new=1" >درخواست های پشتیبانی</a></li>
@@ -309,10 +319,10 @@
                     <a href<?= '="' . $_CONFIGS['Site']['Sub']['Blog'] . "/type-sub/type-about" . '"'; ?> target="_blank" >
                         <i class="fa fa-leanpub"></i>
                         درباره ما
-                    
-                    <small class="label pull-left bg-yellow">12</small>
+
+                        <small class="label pull-left bg-yellow">12</small>
                     </a>
-                    
+
                     <ul  class="treeview-menu">
                         <li style="display: none"></li>
                     </ul>

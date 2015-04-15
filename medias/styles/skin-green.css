@@ -70,14 +70,15 @@
   background: #1a2226;
 }
 .skin-green .sidebar-menu > li > a {
-  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
   margin-right: 1px;
 }
 .skin-green .sidebar-menu > li > a:hover,
 .skin-green .sidebar-menu > li.active > a {
   color: #ffffff;
   background: #1e282c;
-  border-left-color: #00a65a;
+  /*border-left-color: #00a65a;*/
+  border-right-color: #00a65a;
 }
 .skin-green .sidebar-menu > li > .treeview-menu {
   margin: 0 1px;
