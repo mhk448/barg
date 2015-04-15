@@ -148,7 +148,7 @@
                     </li>
                     <? if ($user->isSuperAdmin()) { ?>
                         <li class="treeview">
-                            <a class=""><i class="fa fa-circle-o"></i>
+                            <a class=""><i class="fa fa-cog"></i>
                                 تنظیمات</a>
                             <ul  class="treeview-menu">
                                 <li><a class="side-ajax" href="system-settings" >تنظیمات سیستم</a></li>
@@ -159,7 +159,7 @@
                 <? } else { ?>
 
                     <li class="treeview" >
-                        <a class="side-ajax2" href="panel" ><i class="fa fa-circle-o"></i>
+                        <a class="side-ajax2" href="panel" ><i class="fa fa-home"></i>
                             صفحه نخست  پنل کاربری</a>
                         <ul  class="treeview-menu">
                             <li style="display: none"></li>
@@ -196,7 +196,7 @@
 
                     <? if ($user->isAgency()) { ?>
                         <li class="treeview">
-                            <a class=""><i class="fa fa-circle-o"></i>
+                            <a class=""><i class="fa fa-briefcase"></i>
                                 لیست پروژه ها</a>
                             <ul  class="treeview-menu">
                                 <li><a class="side-ajax" href="projects_run_<?php echo $user->id ?>" >پروژه های در حال اجرا</a></li>
@@ -206,7 +206,7 @@
                         </li>
                     <? } ?>
                     <li class="treeview">
-                        <a class=""><i class="fa fa-circle-o"></i>
+                        <a class=""><i class="fa fa-money"></i>
                             مدیریت مالی
 
                         </a>
@@ -223,7 +223,7 @@
                     </li> 
 
                     <li class="treeview">
-                        <a class=""><i class="fa fa-circle-o"></i>
+                        <a class=""><i class="fa fa-envelope-o"></i>
                             پیامها</a>
                         <ul  class="treeview-menu">
                             <li><a class="side-ajax" href="send-message" >ارسال پیام</a></li>
@@ -234,7 +234,7 @@
                     </li>
                     <? if ($user->isOlderThan(7)) { ?>
                         <li class="treeview">
-                            <a class=""><i class="fa fa-circle-o"></i>
+                            <a class=""><i class="fa fa-plus"></i>
                                 امکانات
                                 <? if ($user->isWorker()) { ?>
                                     <img src="medias/images/theme/new.png" alt="" align="absmiddle" style="">
@@ -252,7 +252,7 @@
                         </li>
                     <? } ?>
                     <li class="treeview">
-                        <a class=""><i class="fa fa-circle-o"></i>
+                        <a class=""><i class="fa fa-cog"></i>
 
                             تنظیمات
                         </a>
@@ -275,7 +275,7 @@
                     </li>
 
                     <li class="treeview">
-                        <a class=""><i class="fa fa-circle-o"></i>
+                        <a class=""><i class="fa fa-support"></i>
 
                             پشتیبانی</a>
                         <ul  class="treeview-menu">
@@ -297,8 +297,8 @@
                         </li>
                     <? } ?>
                 <? } ?>
-                <li  class="treeview"><i class="fa fa-envelope"></i>
-                    <a class="confirm" href="users_logout" ><i class="fa fa-envelope"></i>
+                <li  class="treeview">
+                    <a class="confirm" href="users_logout" ><i class="fa fa-sign-out"></i>
                         خروج</a>
                     <ul  class="treeview-menu">
                         <li style="display: none"></li>
@@ -307,7 +307,7 @@
             <? } else { ?>
                 <li  class="treeview">
                     <a href<?= '="' . $_CONFIGS['Site']['Sub']['Blog'] . "/type-sub/type-about" . '"'; ?> target="_blank" >
-                        <i class="fa fa-envelope"></i>
+                        <i class="fa fa-leanpub"></i>
                         درباره ما
                     
                     <small class="label pull-left bg-yellow">12</small>
