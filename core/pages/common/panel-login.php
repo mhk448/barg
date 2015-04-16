@@ -148,13 +148,14 @@
     <body>
         <div class="container">
 
-            <form class="form-signin">
+            <form class="form-signin" method="post" action="/panel">
+                <input type="hidden" name="formName" value="LoginForm" />
                 <a class="signin-logo" href="#"><img src="images/logo.png" height="40"></a>
                 <label for="inputEmail" class="sr-only">رایانامه</label>
-                <input type="email" id="inputEmail" class="form-control" placeholder="رایانامه" required autofocus>
+                <input type="text" name="un" id="inputEmail" class="form-control" placeholder="رایانامه" required autofocus>
                 <label for="inputPassword" class="sr-only">گذرواژه</label>
-                <input type="password" id="inputPassword" class="form-control" placeholder="گذرواژه" required>
-                <button class="btn btn-lg btn-green btn-block" type="submit">ورود</button>
+                <input type="password" name="pw" id="inputPassword" class="form-control" placeholder="گذرواژه" required>
+                <button class="btn btn-lg btn-green btn-block" name="submit" type="submit">ورود</button>
             </form>
 
             <a class="text-right" href="#">گذر واژیتان را فراموش کردید؟  </a>

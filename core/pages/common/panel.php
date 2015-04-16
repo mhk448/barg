@@ -50,8 +50,12 @@ if ($user->state == 'Inactive')
 if (!$user->isSignin() || !$user->hasGroup()) {
     include 'core/pages/common/panel-login.php';
 } elseif ($user->isWorker()) {
+    include 'core/pages/' . 'common/header.php';
     include 'core/pages/' . $subSite . '/panel-worker.php';
+    include 'core/pages/' . 'common/footer.php';
 } else {
+    include 'core/pages/' . 'common/header.php';
     include 'core/pages/' . $subSite . '/panel-user.php';
+    include 'core/pages/' . 'common/footer.php';
 }
 ?>
