@@ -5,46 +5,46 @@
     <head>
         <title><?php echo $_CONFIGS['Page']['Title'] ?></title>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-            <meta name="description" content="<?php echo $_CONFIGS['Page']['Description'] ?>" />
-            <meta name="keywords" content="<?php echo $_CONFIGS['Page']['Keywords'] ?>" />
-            <link rel="shortcut icon" href="<?= $_CONFIGS['Site']['Sub']['Path'] . $subSite ?>_favicon.ico" />
-            <link rel="stylesheet" href="<?= _HELP_PATH_ ?>medias/styles/reset.css?v=5" type="text/css" />
-            <link rel="stylesheet" href="<?= _HELP_PATH_ ?>medias/styles/sideMenu.css?v=5" type="text/css" />
-            <link rel="stylesheet" href="<?= _HELP_PATH_ ?>medias/styles/style.css?v=9" type="text/css" />
-            <link rel="stylesheet" href="<?= _HELP_PATH_ ?>medias/styles/header-footer.css?v=5" type="text/css" />
-            <link rel="stylesheet" href="<?= _HELP_PATH_ ?>medias/styles/panel.css?v=5" type="text/css" />
-            <link rel="stylesheet" href="<?= _HELP_PATH_ ?>medias/styles/<?= $subSite ?>/spcss.css" type="text/css" />
-            <!--[if lte IE 8]> <link href="medias/styles/ie.css" rel="stylesheet" type="text/css"> <![endif]-->
-            <!--<script type="text/javascript" src="medias/scripts/jquery-typeonline.js"></script>-->
-            <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/jquery-2.0.0.min.js"></script>
-            <!--<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script>-->
-            <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/jquery-migrate-1.2.1.min.js"></script>
-            <!--<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
-            <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/jquery.upload-1.0.2.min.js"></script>
-            <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/jquery-ui.min.js" ></script>
-            <!--<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>-->
-            <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/jquery.countdown.min.js"></script>
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'></meta>
+        <meta name="description" content="<?php echo $_CONFIGS['Page']['Description'] ?>" ></meta>
+        <meta name="keywords" content="<?php echo $_CONFIGS['Page']['Keywords'] ?>" />
+        <link rel="shortcut icon" href="<?= $_CONFIGS['Site']['Sub']['Path'] . $subSite ?>_favicon.ico" />
+        <link rel="stylesheet" href="<?= _HELP_PATH_ ?>medias/styles/reset.css?v=5" type="text/css" />
+        <link rel="stylesheet" href="<?= _HELP_PATH_ ?>medias/styles/sideMenu.css?v=5" type="text/css" />
+        <link rel="stylesheet" href="<?= _HELP_PATH_ ?>medias/styles/style.css?v=9" type="text/css" />
+        <link rel="stylesheet" href="<?= _HELP_PATH_ ?>medias/styles/header-footer.css?v=5" type="text/css" />
+        <link rel="stylesheet" href="<?= _HELP_PATH_ ?>medias/styles/panel.css?v=5" type="text/css" />
+        <link rel="stylesheet" href="<?= _HELP_PATH_ ?>medias/styles/<?= $subSite ?>/spcss.css" type="text/css" />
+        <!--[if lte IE 8]> <link href="medias/styles/ie.css" rel="stylesheet" type="text/css"> <![endif]-->
+        <!--<script type="text/javascript" src="medias/scripts/jquery-typeonline.js"></script>-->
+        <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/jquery-2.0.0.min.js"></script>
+        <!--<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script>-->
+        <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/jquery-migrate-1.2.1.min.js"></script>
+        <!--<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+        <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/jquery.upload-1.0.2.min.js"></script>
+        <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/jquery-ui.min.js" ></script>
+        <!--<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>-->
+        <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/jquery.countdown.min.js"></script>
 
 
-            <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/mhkform.js?v=6"></script>
-            <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/event.js?v=5"></script>
-            <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/custom.js?v=8"></script>
-            <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/bootstrap/js/bootstrap.min.js"></script> 
-            <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/app.js"></script> 
-            <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/jquery.slimscroll.min.js"></script> 
+        <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/mhkform.js?v=6"></script>
+        <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/event.js?v=5"></script>
+        <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/custom.js?v=8"></script>
+        <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/bootstrap/js/bootstrap.min.js"></script> 
+        <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/app.js"></script> 
+        <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/jquery.slimscroll.min.js"></script> 
 
-            <!-- Bootstrap 3.3.2 -->
-            <link href="<?= _HELP_PATH_ ?>medias/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />    
-            <!-- FontAwesome 4.3.0 -->
-            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-            <!-- Ionicons 2.0.0 -->
-            <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />    
-            <!-- Theme style -->
-            <link href="<?= _HELP_PATH_ ?>medias/styles/AdminLTE.css" rel="stylesheet" type="text/css" />
-            <!-- AdminLTE Skins. Choose a skin from the css/skins 
-                 folder instead of downloading all of them to reduce the load. -->
-            <link href="<?= _HELP_PATH_ ?>medias/styles/skin-green.css" rel="stylesheet" type="text/css" />
+        <!-- Bootstrap 3.3.2 -->
+        <link href="<?= _HELP_PATH_ ?>medias/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />    
+        <!-- FontAwesome 4.3.0 -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <!-- Ionicons 2.0.0 -->
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />    
+        <!-- Theme style -->
+        <link href="<?= _HELP_PATH_ ?>medias/styles/AdminLTE.css" rel="stylesheet" type="text/css" />
+        <!-- AdminLTE Skins. Choose a skin from the css/skins 
+             folder instead of downloading all of them to reduce the load. -->
+        <link href="<?= _HELP_PATH_ ?>medias/styles/skin-green.css" rel="stylesheet" type="text/css" />
 
 
 
@@ -52,7 +52,7 @@
     </head>
     <body class="skin-green fixed" >
         <script type="text/javascript">
-            curUser={};
+            curUser = {};
         </script>
         <? if ($user->isSignin()) { ?>
             <script type="text/javascript">
@@ -134,16 +134,16 @@
                     </a>
                     <div class="navbar-custom-menu">
                         <ul class="nav navbar-nav">
-                             <!-- User Account: style can be found in dropdown.less -->
+                            <!-- User Account: style can be found in dropdown.less -->
                             <li class="dropdown user user-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <img src<?= '="' . $_CONFIGS['Site']['Path'] . 'user/avatar/UA_' . $user->id . '.png"' ?> class="user-image" alt="User Image"/>
+                                    <img src="<?= $_CONFIGS['Site']['Path'] . 'user/avatar/UA_' . $user->id . '.png' ?>" class="user-image" alt="User Image"/>
                                     <span class="hidden-xs"><?= $user->fullname ?></span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <!-- User image -->
                                     <li class="user-header">
-                                        <img src<?= '="' . $_CONFIGS['Site']['Path'] . 'user/avatar/UA_' . $user->id . '.png"' ?> class="img-circle" alt="User Image" />
+                                        <img src="<?=  $_CONFIGS['Site']['Path'] . 'user/avatar/UA_' . $user->id . '.png' ?>" class="img-circle" alt="User Image" />
                                         <p>
                                             Alexander Pierce - Web Developer
                                             <small>Member since Nov. 2012</small>
@@ -360,7 +360,7 @@
                                     </li>
                                 </ul>
                             </li>
-                           
+
                         </ul>
                     </div>
                 </nav>
@@ -381,7 +381,7 @@
             ?>
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
-                <section class="content-header">
+<!--                <section class="content-header">
                     <h1>
                         Dashboard
                         <small>Control panel</small>
@@ -390,7 +390,7 @@
                         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
                         <li class="active">Dashboard</li>
                     </ol>
-                </section>
+                </section>-->
 
                 <!-- Main content -->
                 <section class="content">
