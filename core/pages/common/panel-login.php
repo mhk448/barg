@@ -52,6 +52,7 @@
                 box-sizing: border-box;
                 padding: 10px;
                 font-size: 16px;
+                text-align: center;
             }
             .form-signin .form-control:focus {
                 z-index: 2;
@@ -175,7 +176,8 @@
                 <button class="btn btn-lg btn-green btn-block" name="submit" type="submit">ورود</button>
             </form>
 
-            <a class="text-right" href="#">گذر واژیتان را فراموش کردید؟  </a>
+            <!--<a class="text-right" href="#">گذر واژیتان را فراموش کردید؟  </a>-->
+            <a class="text-right" href="/register">ساخت حساب کاربری جدید</a>
             <!--
                         <div class="divider-horizontal login-divider-horizontal">
                             <span class="divider-label">یا</span>

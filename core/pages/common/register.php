@@ -36,7 +36,7 @@ if ($auth->validate('RegisterForm', array(
                 background-color: #ffffff;
                 border: 1px solid #dddddd;
                 width: 396px;
-                margin: 96px auto 28px;
+                margin: 36px auto 28px;
                 padding: 57px 35px 44px;
                 text-align: center;
                 -webkit-border-radius: 3px;
