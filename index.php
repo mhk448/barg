@@ -55,6 +55,8 @@ if ($_REQUEST['request'] == "mob" || $_REQUEST['request'] == "/mob") {
     } else {
         include 'core/pages/' . $_CONFIGS['Page']['File'];
     }
+} else if (getCurPageName(FALSE) == "register") {
+    include 'core/pages/' . $_CONFIGS['Page']['File'];
 } else if (getCurPageName(FALSE) == "panel") {
     include 'core/pages/' . $_CONFIGS['Page']['File'];
 } else if (getCurPageName(FALSE) == "typeonline") {
