@@ -142,7 +142,24 @@
                 filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
                 border-color: #eda79b #cf3d25 #a4301d;
             }
+            .btn-green {
+                background-color: #27AC7F;
+                box-shadow: inset 0 -1px 2px rgba(0,0,0,.3), 0 4px 10px rgba(0,0,0,0.2);
+                border-color: #6AD1B1;
+                color: #FFF;
+                border-style: solid none none;
+                background-image: linear-gradient(top, #33B58B, #1ba478);
+                background-image: -o-linear-gradient(top, #33B58B, #1ba478);
+                background-image: -moz-linear-gradient(top, #33B58B, #1ba478);
+                background-image: -webkit-linear-gradient(top, #33B58B, #1ba478);
+                background-image: -ms-linear-gradient(top, #33B58B, #1ba478);
 
+                -webkit-transition: all .5s ease;
+                -moz-transition: all .5s ease;
+                -ms-transition: all .5s ease;
+                -o-transition: all .5s ease;
+                transition: all .5s ease;
+            }
         </style>
     </head>
     <body>
@@ -159,27 +176,27 @@
             </form>
 
             <a class="text-right" href="#">گذر واژیتان را فراموش کردید؟  </a>
-<!--
-            <div class="divider-horizontal login-divider-horizontal">
-                <span class="divider-label">یا</span>
-            </div>
-
-            <div class="login-with">
-                <h3>ورود با استفاده از</h3>
-                <div class="row">
-                    <div class="col-md-6 col-xs-12">
-                        <a href="#">
-                            <button class="btn btn-block btn-facebook">فیسبوک</button>
-                        </a>
-                    </div>
-
-                    <div class="col-md-6 col-xs-12">
-                        <a href="#">
-                            <button class="btn btn-block btn-google">گوگل</button>
-                        </a>
-                    </div>
-                </div>
-            </div>-->
+            <!--
+                        <div class="divider-horizontal login-divider-horizontal">
+                            <span class="divider-label">یا</span>
+                        </div>
+            
+                        <div class="login-with">
+                            <h3>ورود با استفاده از</h3>
+                            <div class="row">
+                                <div class="col-md-6 col-xs-12">
+                                    <a href="#">
+                                        <button class="btn btn-block btn-facebook">فیسبوک</button>
+                                    </a>
+                                </div>
+            
+                                <div class="col-md-6 col-xs-12">
+                                    <a href="#">
+                                        <button class="btn btn-block btn-google">گوگل</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>-->
 
         </div> <!-- /container -->
 
