@@ -1,3 +1,3 @@
 <?php
-header('Location: bargardoon.blog.ir' );
+header('Location: http://bargardoon.blog.ir' );
 
