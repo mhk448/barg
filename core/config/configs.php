@@ -60,7 +60,7 @@ $GLOBALS['_CONFIGS'] = array(
     ),
     // Security
     'Security' => array(
-        'CommandKey' => 'ÑëÌ°áþì´G¹îojnÿJÑ0×d',
+        'CommandKey' => 'MHK448þì´G¹îojnÿJÑ0×d',
     ),
     //HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
     // Database Informations
