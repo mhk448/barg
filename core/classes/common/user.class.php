@@ -93,13 +93,14 @@ class User {
             if (strlen($_POST['pw']) > 5 && $_POST['pw'] == $_POST['vpw']) {
                 $cdatabase->insert("users", array(
                     'username' => $username,
-                    'fullname' => $_POST['na'],
+//                    'fullname' => $_POST['na'],
                     'userpass' => md5($_POST['pw']),
                     'email' => $email,
                     'state' => 'FirstDay',
                     'referer_id' => $discount->getReferer(),
-                    'detail' => commandEncode($_POST['pw'], $username),
-                    'mobile' => $_POST['m'])
+                    'detail' => commandEncode($_POST['pw'], $username)
+//                    'mobile' => $_POST['m']
+                    )
                 );
                 $id = $cdatabase->getInsertedId();
                 $database->insert("users_sub", array(
