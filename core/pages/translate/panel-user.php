@@ -34,13 +34,13 @@
             <div style="width: 48%;float: left">
                 <?
                 $default = ' <p style="font-size:14pt">به '.$_CONFIGS['Site']['Sub']['NickName'].' خوش آمدید!</p>
-                <p style="font-size:12pt;line-height: 2;">نسخه جدید ترجمه‌ایران با امکانات فراوان راه اندازی شد. برای دیدن لیست امکانات جدید 
+                <p style="font-size:12pt;line-height: 2;">وب سایت برگردون  با امکانات فراوان راه اندازی شد. برای دیدن لیست امکانات جدید 
                     <a href="' . $_CONFIGS['Pathes']['Blog'] . '" target="_blank">
                         اینجا</a>
                     کلیک نمایید.در حال حاضر امکانات سایت رایگان میباشد</p><br/>
                 ';
                 ?>
-                <? $userlevel->displayLevelQuestion($user, $default); ?>
+                <?=$default;// $userlevel->displayLevelQuestion($user, $default); ?>
                 <hr/>
                 <div style="width: 100%;">
                     <div style="padding: 10px"></div>
@@ -79,7 +79,7 @@
                 <hr/>
             </div>
         </div>
-        <div style="width: 100%;float: left">
+<!--        <div style="width: 100%;float: left">
             <div style="width: 48%;float: right; margin-top:20px;">
                 <div>
                     <ul>
@@ -113,7 +113,7 @@
                 </div>
             </div>
             <div class="panel_link" style="width: 48%;float: left; margin-top:20px;">
-                <!--<div style="width:50%;float:left;">-->
+                <div style="width:50%;float:left;">
                 <a class="active_btn" style="width:125px;background-color: #ff7f27"
                    href<?= '="' . $_CONFIGS['Site']['Sub']['Blog'] . "/type-help/agency" . '"'; ?> target="_blank">
                     دریافت نمایندگی
@@ -128,8 +128,8 @@
                    href<?= '="' . $_CONFIGS['Site']['Sub']['Blog'] . "/type-help/type-discount" . '"'; ?> target="_blank">
                     دریافت کارت تخفیف
                 </a>
-                <!--</div>-->
-                <!--<div style="width:50%;float:right;">-->
+                </div>
+                <div style="width:50%;float:right;">
                 <a class="active_btn" style="width:125px;background-color: #a349a4"
                    href<?= '="user-list_agency"'; ?> target="_blank">
                     لیست نمایندگی ها
@@ -142,11 +142,11 @@
                    href<?= '="' . $_CONFIGS['Site']['Sub']['Blog'] . "/type-help/type-work" . '"'; ?> target="_blank">
                     کسب درآمد
                 </a>
-                <!--</div>-->
+                </div>
 
                 <p>&nbsp;</p>
             </div>
-        </div>
+        </div>-->
 
         <div style="width: 100%;float: left">
             <div style="width: 48%;background: #f0f0f0;float: right">

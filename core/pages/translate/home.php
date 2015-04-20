@@ -191,30 +191,17 @@
 
             <section class="customer">
                 <section class="customer-content center-block">
-                    <header class="customer-title">
-                        <h1 class="text-center">برگردون به خیلی ها کمک کرده:</h1>
-                    </header>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h2>hello</h2>
-                            <ul>
-                                <li>Item 1</li>
-                                <li>Item 1</li>
-                                <li>Item 1</li>
-                                <li>Item 1</li>
-                            </ul>
-                            <button class="btn btn-default pull-left">btn</button>
-                        </div>
-                        <div class="col-md-6">
-                            <h2>hello</h2>
-                            <ul>
-                                <li>lorem</li>
-                                <li>Item 1</li>
-                                <li>Item 1</li>
-                                <li>Item 1</li>
-                            </ul>
-                            <button class="btn btn-default pull-left">btn</button>
-                        </div>
+                    <div class="col-md-6">
+                         پول کافی ندارید؟
+                    </div>
+                    <div class="col-md-6">
+                        کیفیت کار برایتان حیاتی است
+                    </div>
+                    <div class="col-md-6">
+                        زمان کمی برایتان مانده
+                    </div>
+                    <div class="col-md-6">
+                        هنوز نگرانید
                     </div>
                 </section>
             </section>
@@ -241,7 +228,7 @@
                             </section>
                     </section> -->
 
-            <section class="ourteam">
+<!--            <section class="ourteam">
                 <div class="row ourteam-content center-block">
                     <header class="ourteam-title">
                         <h1 class="text-center">به جامعه مترجمین ما بپیوندید!</h1>
@@ -285,7 +272,7 @@
                         <div class="col-md-4"></div>
                     </div>
                 </div>
-            </section>
+            </section>-->
 
             <footer class="footer">
                 <section class="footer-content center-block">

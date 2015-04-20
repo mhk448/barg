@@ -3,7 +3,7 @@
         <?php $message->display() ?>
 
         <!-- End Success Box -->	
-        <div style="width: 100%;float: left;text-align:justify;">
+        <div style="width: 100%;float: left;text-align:justify; display: none;">
             <div style="width: 48%;float: right">
 
                 <p style="font-size:14pt">تایپیست گرامی</p>
@@ -96,7 +96,7 @@
                 <hr/>
             </div>
         </div>
-        <div style="width: 100%;float: left">
+        <div style="width: 100%;float: left; display: none;">
             <div style="width: 48%;float: right; margin-top:20px;">
                 <div>
                     <ul>
