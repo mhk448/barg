@@ -9,8 +9,8 @@ if ($auth->validate('RegisterForm', array(
         ))) {
     if ($user->signup()) {
         $user->signin();
-        include 'success-register.php';
-//        header("Location: success-register");
+//        include 'success-register.php';
+        header("Location: success-register");
         exit();
     }
 }
