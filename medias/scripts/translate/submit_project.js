@@ -4,13 +4,13 @@ function checkForm1(data){
     var msg=[];
     
     if(!data.title){
-        msg.push('یک عنوان مناسب برای ترجمه خود انتخاب نمایید');        
+//        msg.push('یک عنوان مناسب برای ترجمه خود انتخاب نمایید');        
     }
     if(data.flan==data.tlan){
         msg.push('زبان مبدا و مقصد را مشخص نمایید');
     }
     if(!data.pagecount){
-        msg.push('تعداد صفحات ترجمه خود را مشخص کنید');
+//        msg.push('تعداد صفحات ترجمه خود را مشخص کنید');
     }
     if((!data.files || data.files=='[]') && !data.links){
         msg.push('فایل های اسکن شده ی ترجمه خود را انتخاب کنید');
@@ -22,10 +22,10 @@ function checkForm1(data){
         msg.push('تاریخ تحویل ترجمه خود را مشخص کنید');
     }
     if(!data.price){
-        msg.push(' مبلغ ضمانت  پروژه را مشخص کنید');
+//        msg.push(' مبلغ ضمانت  پروژه را مشخص کنید');
     }
     if(data.price<2000){
-        msg.push(' مبلغ ضمانت  پروژه را بیشتر کنید');
+//        msg.push(' مبلغ ضمانت  پروژه را بیشتر کنید');
     }
     if(data.type=='Private'){
         if(!data.private_worker){
@@ -83,12 +83,14 @@ function changeMethod(){
 
 function extractData(){
     var data={};
-    data.title=$("#title").val().toString();
+//    data.title=$("#title").val().toString();
+    data.title="پروژه ی "+" "+ curUser.nickname;
     data.flan=$("#flan").val().toString();
     data.tlan=$("#tlan").val().toString();
     data.lang=data.flan+'2'+data.tlan;
     data.subject=$("#subject").val().toString();
-    data.pagecount=$("#pagecount").val().toString();
+//    data.pagecount=$("#pagecount").val().toString();
+    data.pagecount=1;
     data.uploads=$("#files_hidden").val().toString();
     data.desc=$("#desc").val().toString();
     data.demo=$("#demo").val().toString();
