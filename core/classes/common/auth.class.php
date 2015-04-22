@@ -95,14 +95,14 @@ class Auth { //Authentication
                 $this->_setCookies($name . "[$key]", urlencode($value), $expire, $path, $domain);
             }
         } else {
-            setcookie($name, urlencode($values), $expire, $path, $domain);
-//        global $_CONFIGS;
-//            $domains = explode("|", $_CONFIGS['domains']);
-//            if ($_CONFIGS['TestMode'])
-//                setcookie($name, urlencode($values), $expire, $path);
-//            foreach ($domains as $d) {
-//                setcookie($name, urlencode($values), $expire, $path, $d);
-//            }
+//            setcookie($name, urlencode($values), $expire, $path, $domain);
+        global $_CONFIGS;
+            $domains = explode("|", $_CONFIGS['domains']);
+            if ($_CONFIGS['TestMode'])
+                setcookie($name, urlencode($values), $expire, $path);
+            foreach ($domains as $d) {
+                setcookie($name, urlencode($values), $expire, $path, $d);
+            }
         }
     }
 
