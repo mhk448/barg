@@ -5,7 +5,7 @@
 
 $GLOBALS['_CONFIGS'] = array(
     'TestMode' => FALSE,
-    'domains' => 'bargardoon.com',
+    'domains' => '.bargardoon.com',
     'FileServerPath' => 'http://fileserver.bargardoon.com/type/',
     'BackupServerPath' => 'http://fileserver.bargardoon.com/type/',
     'Site' => array(
