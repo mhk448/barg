@@ -27,11 +27,11 @@
         <link href='http://www.fontonline.ir/css/BNazanin.css' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="/medias/home/css/style.css" />
         <script>
-            odometerOptions = {auto: false}; // Disables auto-initialization
+//            odometerOptions = {auto: true}; // Disables auto-initialization
 
             // For each odometer, initialize with the theme passed in:
-            var odometer = new Odometer({el: $('.odometer')[0], value: 123, theme: 'car'});
-            odometer.render();
+//            var odometer = new Odometer({el: $('.odometer')[0], value: 123, theme: 'car'});
+//            odometer.render();
         </script>
     </head>
     <body>
@@ -183,26 +183,71 @@
             <section class="data">
                 <div class="data-content center-block text-center">
                     <span class="odometer-container">
-                        <span class="odometer">00000</span>
-                        <span>کلمات ترجمه شده</span>
+<!--                        <span class="odometer">00000</span>
+                        <span>کلمات ترجمه شده</span>-->
                     </span>
+                    <div class="clear" style="clear: both"></div>
                 </div>
             </section>
 
             <section class="customer">
+                <style>
+                    .customer h3{
+                        color: red;
+                    }
+                    .customer img{
+                        width: 100px;
+                        height: 100px;
+                    }
+                    .customer{
+                        line-height: 20pt;
+                    }
+                </style>
                 <section class="customer-content center-block">
                     <div class="col-md-6">
-                         پول کافی ندارید؟
+                        <img src="/medias/home/images/customer1.png"/>
+                        <h3>
+                            پول کافی ندارید؟
+                        </h3>                         
+
+                        نگران نباشید! اساس شکل گیری برگردوون حل این
+                        مشکل است! 
+
+                        فایل خود را به صورت رایگان
+                        آپلود کرده و منتظر صدها پیشنهاد باشید مطمئن باشید قیمت مناسب پیدا می‌کنید! 
+                    </div>
+
+                    <div class="col-md-6">
+                        <img src="/medias/home/images/customer4.png"/>
+                        <h3>
+                            زمان کمی برایتان مانده ؟؟
+                        </h3>
+                        باز هم نگران نباشید!
+                        فایل خود را به صورت رایگان آپلود کرده و زمان تحویل را مشخص کنید و منتظر پیشنهادات باشید زمانها را با هم مقایسه کرده و پیشنهاد مناسب را انتخاب کنید!  
+<br/><br/>
                     </div>
                     <div class="col-md-6">
-                        کیفیت کار برایتان حیاتی است
+                        <img src="/medias/home/images/customer3.png"/>
+                        <h3>
+                            هنوز نگرانید؟ 
+                        </h3>
+                        باز هم نگران نباشید! 
+                        برگردوون ضامن امنیت مالی و کیفی کار شماست تا زمانی که کار مترجم را تایید نکنید پول شما محفوظ میماند! در صورت وجود هر گونه مشکلی میتواند با ارسال تیکت پروژه را به کمیسیون داروی ارجاع دهید.
+                        پس با خیال راحت فایل خود را به صورت رایگان آپلود کنید و منتظر پیشنهادات شگفت انگیز باشید!  
+<br/><br/>
                     </div>
                     <div class="col-md-6">
-                        زمان کمی برایتان مانده
+                        <img src="/medias/home/images/customer2.png"/>
+                        <h3>
+                            کیفیت کار برایتان حیاتی است؟
+                        </h3>
+                        برگردوون پاتوق بهترین هاست!  
+                        فایل خود را به صورت رایگان آپلود کرده و منتظر پیشنهادات باشید  در هنگام بررسی پیشنهاد ها مترجمان توصیه شده را در نظر بگیرید و با خیال راحت انتخاب کنید 
+                        در طول کار میتوانید به راحتی تمامی نکات رو از طریق پیامک یا چت داخلی به مترجم منتقل کنید 
+
                     </div>
-                    <div class="col-md-6">
-                        هنوز نگرانید
-                    </div>
+
+                    <div class="clear" style="clear: both"></div>
                 </section>
             </section>
             <!--
@@ -320,11 +365,11 @@
                     }
                 }
             })
-            $(document).ready(function () {
-                setTimeout(function () {
-                    $('.odometer').html(523657);
-                }, 1000);
-            });
+//            $(document).ready(function () {
+//                setTimeout(function () {
+//                    $('.odometer').html(523657);
+//                }, 1000);
+//            });
 
             $(document).on('change', '.btn-file :file', function () {
                 var input = $(this),
