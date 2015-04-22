@@ -138,33 +138,121 @@
                             <li class="dropdown user user-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <img src="<?= $_CONFIGS['Site']['Path'] . 'user/avatar/UA_' . $user->id . '.png' ?>" class="user-image" alt="User Image"/>
-                                    <span class="hidden-xs"><?= $user->fullname ?></span>
+                                    <span class="hidden-xs"><?= $user->getNickname(); ?></span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <!-- User image -->
                                     <li class="user-header">
-                                        <img src="<?=  $_CONFIGS['Site']['Path'] . 'user/avatar/UA_' . $user->id . '.png' ?>" class="img-circle" alt="User Image" />
+                                        <img src="<?= $_CONFIGS['Site']['Path'] . 'user/avatar/UA_' . $user->id . '.png' ?>" class="img-circle" alt="User Image" />
                                         <p>
-                                            Alexander Pierce - Web Developer
-                                            <small>Member since Nov. 2012</small>
+                                            <?= $user->fullname ?>
+                                            <small><?= $_ENUM2FA['usergroup'][$user->usergroup] ?></small>
+
+
+                                            <div class="">
+                                                <span style="color: black;" >میزان اعتبار:</span>
+                                                <span class="price" ><?= $user->getCredit() ?></span>
+                                                ریال
+                                            </div>
+
+
+
+                                            <? if ($user->locked_credits) { ?>
+                                                <div class="">
+                                                    <span style="color: black;" >اعتبار گروگذاری شده:</span>
+                                                    <span class="price" ><?= $user->locked_credits ?></span>
+                                                    ریال
+                                                </div>
+                                            <? } ?>
+                                            <div class="">
+                                                <? if ($user->isWorker()) { ?>
+
+
+                                                    <div class="">
+                                                        <span style="color: black;" >مقام های کسب شده:</span>
+                                                        <span style="margin-bottom: -5px;"><?= ($user->displayCups($user->rate) ? $user->displayCups($user->rate) : 'هیچ مقامی کسب نشده') ?></span>
+                                                    </div>
+
+
+                                                    <div class="">
+                                                        <span style="color: black;" >رتبه ی شما در بین مجریان:</span>
+                                                        <span style="margin-bottom: -5px;"><?= $user->rate ?></span>
+                                                    </div>
+
+                                                    <div class="help">
+                                                        <span style="color: black;">پروژه های انجام شده:</span>
+                                                        <? echo $user->finished_projects ?>
+                                                    </div>
+                                                    <div class="help_comment">
+                                                        پروژه هایی که با رضایت کارفرما به پایان رسیده است
+                                                    </div>
+                                                    <div class="help">
+                                                        <span style="color: black;">پروژه های نا موفق:</span>
+                                                        <? echo $user->rejected_projects ?>
+                                                    </div>
+                                                    <div class="help_comment">
+                                                        پروژه هایی که باعث نارضایتی کارفرما شده است
+                                                    </div>
+                                                <? } else { ?>
+                                                    <span style="color: black;">پروژه های ارسالی:</span>
+                                                    <? echo $user->finished_projects ?>
+                                                <? } ?>
+                                            </div>
+
+
+                                            <div id="sidebar-moreinfo" style="display: none">
+                                                <div class="" style="display: none">
+                                                    <span style="color: black;">درجه:</span>
+                                                    <!--            <div class="classification">
+                                                                    <div class="cover"></div>
+                                                                    <div class="progress" style="width: <? //echo ($user->rank * 10) . '%;'                                                                    ?>">
+                                                                    </div>
+                                                                </div>-->
+                                                    <?= ($user->rate) . ' از 7' ?>
+                                                </div>
+
+                                                <div class="" style="display: none">
+                                                    <span style="color: black;">مبلغ پروژه ها:</span>
+                                                    <? echo $user->getSumPriceProject(); ?>
+                                                    ریال
+                                                </div>
+
+
+                                                <? if ($user->isWorker()) { ?>
+                                                    <div class="">
+                                                        <span style="color: black;">میانگین امتیاز:</span>
+                                                        <?= (($user->rankers == 0) ? $user->rank : number_format($user->rank / $user->rankers, 2)) ?> 
+                                                    </div>
+                                                <? } ?>
+
+                                                <? if ($user->isWorker()) { ?>
+                                                    <div class="">
+                                                        <span style="padding-left: 5px;color: black;">تخصص :</span>
+                                                        <? echo $user->getAbility(TRUE); ?>
+                                                    </div>
+                                                <? } ?>
+                                            </div>
+                                            
+                                            <div style="clear: both"/>
+                                            
                                         </p>
                                     </li>
                                     <!-- Menu Body -->
-                                    <li class="user-body">
-                                        <div class="col-xs-4 text-center">
-                                            <a href="#">Followers</a>
-                                        </div>
-                                        <div class="col-xs-4 text-center">
-                                            <a href="#">Sales</a>
-                                        </div>
-                                        <div class="col-xs-4 text-center">
-                                            <a href="#">Friends</a>
-                                        </div>
-                                    </li>
+                                    <!--                                    <li class="user-body">
+                                                                            <div class="col-xs-4 text-center">
+                                                                                <a href="#">Followers</a>
+                                                                            </div>
+                                                                            <div class="col-xs-4 text-center">
+                                                                                <a href="#">Sales</a>
+                                                                            </div>
+                                                                            <div class="col-xs-4 text-center">
+                                                                                <a href="#">Friends</a>
+                                                                            </div>
+                                                                        </li>-->
                                     <!-- Menu Footer-->
                                     <li class="user-footer">
                                         <div class="pull-right">
-                                            <a href="user_" class="btn btn-default btn-flat">Profile</a>
+                                            <a href="user_<?= $user->id ?>" class="btn btn-default btn-flat"> مشخصات</a>
                                         </div>
                                         <div class="pull-left">
                                             <a href="users_logout" class="btn btn-default btn-flat">خروج</a>
@@ -176,7 +264,7 @@
                             <li class="dropdown messages-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="fa fa-envelope-o"></i>
-                                    <span class="label label-success">4</span>
+                                    <span class="label label-danger"></span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="header">You have 4 messages</li>
@@ -249,117 +337,127 @@
                                 </ul>
                             </li>
                             <!-- Notifications: style can be found in dropdown.less -->
-                            <li class="dropdown notifications-menu">
+                            <li class="dropdown notifications-menu mhkevent-win">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="fa fa-bell-o"></i>
-                                    <span class="label label-warning">10</span>
+                                    <span class="label label-warning"></span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li class="header">You have 10 notifications</li>
-                                    <li>
-                                        <!-- inner menu: contains the actual data -->
-                                        <ul class="menu">
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the page and may cause design problems
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa fa-users text-red"></i> 5 new members joined
-                                                </a>
-                                            </li>
-
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa fa-shopping-cart text-green"></i> 25 sales made
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa fa-user text-red"></i> You changed your username
-                                                </a>
-                                            </li>
-                                        </ul>
+                                    <li class="header">
+                                        رخدادهای جدید
+                                        (<span id="mhkevent-counter" style="">0</span>)
                                     </li>
-                                    <li class="footer"><a href="#">View all</a></li>
-                                </ul>
-                            </li>
-                            <!-- Tasks: style can be found in dropdown.less -->
-                            <li class="dropdown tasks-menu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="fa fa-flag-o"></i>
-                                    <span class="label label-danger">9</span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="header">You have 9 tasks</li>
+                                    <!--                                    <div id="topmenu-event"  class="mini-info-box mhkevent-win">
+                                                                        </div>-->
                                     <li>
                                         <!-- inner menu: contains the actual data -->
-                                        <ul class="menu">
-                                            <li><!-- Task item -->
-                                                <a href="#">
-                                                    <h3>
-                                                        Design some buttons
-                                                        <small class="pull-left">20%</small>
-                                                    </h3>
-                                                    <div class="progress xs">
-                                                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                            <span class="sr-only">20% Complete</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li><!-- end task item -->
-                                            <li><!-- Task item -->
-                                                <a href="#">
-                                                    <h3>
-                                                        Create a nice theme
-                                                        <small class="pull-left">40%</small>
-                                                    </h3>
-                                                    <div class="progress xs">
-                                                        <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                            <span class="sr-only">40% Complete</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li><!-- end task item -->
-                                            <li><!-- Task item -->
-                                                <a href="#">
-                                                    <h3>
-                                                        Some task I need to do
-                                                        <small class="pull-left">60%</small>
-                                                    </h3>
-                                                    <div class="progress xs">
-                                                        <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                            <span class="sr-only">60% Complete</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li><!-- end task item -->
-                                            <li><!-- Task item -->
-                                                <a href="#">
-                                                    <h3>
-                                                        Make beautiful transitions
-                                                        <small class="pull-left">80%</small>
-                                                    </h3>
-                                                    <div class="progress xs">
-                                                        <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                            <span class="sr-only">80% Complete</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li><!-- end task item -->
+                                        <ul class="menu content">
+                                            <div style="display: none"></div>
+                                            <!--                                            <li>
+                                                                                            <a href="#">
+                                                                                                <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <a href="#">
+                                                                                                <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the page and may cause design problems
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <a href="#">
+                                                                                                <i class="fa fa-users text-red"></i> 5 new members joined
+                                                                                            </a>
+                                                                                        </li>
+                                            
+                                                                                        <li>
+                                                                                            <a href="#">
+                                                                                                <i class="fa fa-shopping-cart text-green"></i> 25 sales made
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <a href="#">
+                                                                                                <i class="fa fa-user text-red"></i> You changed your username
+                                                                                            </a>
+                                                                                        </li>-->
                                         </ul>
                                     </li>
                                     <li class="footer">
-                                        <a href="#">View all tasks</a>
+                                        <a href="events" class="ajax">
+                                            +نمایش همه...
+                                        </a>
                                     </li>
                                 </ul>
                             </li>
+                            <!-- Tasks: style can be found in dropdown.less -->
+                            <!--                            <li class="dropdown tasks-menu">
+                                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                                                <i class="fa fa-flag-o"></i>
+                                                                <span class="label label-danger">9</span>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="header">You have 9 tasks</li>
+                                                                <li>
+                                                                     inner menu: contains the actual data 
+                                                                    <ul class="menu">
+                                                                        <li> Task item 
+                                                                            <a href="#">
+                                                                                <h3>
+                                                                                    Design some buttons
+                                                                                    <small class="pull-left">20%</small>
+                                                                                </h3>
+                                                                                <div class="progress xs">
+                                                                                    <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                                                        <span class="sr-only">20% Complete</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </a>
+                                                                        </li> end task item 
+                                                                        <li> Task item 
+                                                                            <a href="#">
+                                                                                <h3>
+                                                                                    Create a nice theme
+                                                                                    <small class="pull-left">40%</small>
+                                                                                </h3>
+                                                                                <div class="progress xs">
+                                                                                    <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                                                        <span class="sr-only">40% Complete</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </a>
+                                                                        </li> end task item 
+                                                                        <li> Task item 
+                                                                            <a href="#">
+                                                                                <h3>
+                                                                                    Some task I need to do
+                                                                                    <small class="pull-left">60%</small>
+                                                                                </h3>
+                                                                                <div class="progress xs">
+                                                                                    <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                                                        <span class="sr-only">60% Complete</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </a>
+                                                                        </li> end task item 
+                                                                        <li> Task item 
+                                                                            <a href="#">
+                                                                                <h3>
+                                                                                    Make beautiful transitions
+                                                                                    <small class="pull-left">80%</small>
+                                                                                </h3>
+                                                                                <div class="progress xs">
+                                                                                    <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                                                        <span class="sr-only">80% Complete</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </a>
+                                                                        </li> end task item 
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="footer">
+                                                                    <a href="#">View all tasks</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>-->
 
                         </ul>
                     </div>
