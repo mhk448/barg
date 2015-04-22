@@ -224,7 +224,7 @@
                         </h3>
                         باز هم نگران نباشید!
                         فایل خود را به صورت رایگان آپلود کرده و زمان تحویل را مشخص کنید و منتظر پیشنهادات باشید زمانها را با هم مقایسه کرده و پیشنهاد مناسب را انتخاب کنید!  
-<br/><br/>
+                        <br/><br/>
                     </div>
                     <div class="col-md-6">
                         <img src="/medias/home/images/customer3.png"/>
@@ -234,7 +234,7 @@
                         باز هم نگران نباشید! 
                         برگردوون ضامن امنیت مالی و کیفی کار شماست تا زمانی که کار مترجم را تایید نکنید پول شما محفوظ میماند! در صورت وجود هر گونه مشکلی میتواند با ارسال تیکت پروژه را به کمیسیون داروی ارجاع دهید.
                         پس با خیال راحت فایل خود را به صورت رایگان آپلود کنید و منتظر پیشنهادات شگفت انگیز باشید!  
-<br/><br/>
+                        <br/><br/>
                     </div>
                     <div class="col-md-6">
                         <img src="/medias/home/images/customer2.png"/>
@@ -387,6 +387,30 @@
 
 
         </script>
+
+        <!--Start of Zopim Live Chat Script-->
+        <script type="text/javascript">
+            window.$zopim || (function (d, s) {
+                var z = $zopim = function (c) {
+                    z._.push(c)
+                }, $ = z.s =
+                        d.createElement(s), e = d.getElementsByTagName(s)[0];
+                z.set = function (o) {
+                    z.set.
+                            _.push(o)
+                };
+                z._ = [];
+                z.set._ = [];
+                $.async = !0;
+                $.setAttribute('charset', 'utf-8');
+                $.src = '//v2.zopim.com/?2xXrZepVMUi649nQbDeWvoDO6zyai053';
+                z.t = +new Date;
+                $.
+                        type = 'text/javascript';
+                e.parentNode.insertBefore($, e)
+            })(document, 'script');
+        </script>
+        <!--End of Zopim Live Chat Script-->
         <!-- Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">

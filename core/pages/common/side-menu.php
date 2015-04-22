@@ -161,10 +161,10 @@
                     <li class="treeview" >
                         <a class="side-ajax2" href="panel" ><i class="fa fa-home"></i>
                             صفحه نخست  پنل کاربری</a>
-                        <ul  class="treeview-menu">
-                            <li style="display: none"></li>
+<!--                        <ul  class="treeview-menu">
+                            <li style="display: none"></li>-->
                             <!--<li><a class="side-ajax" href="panel" >آخرین رخدادها</a></li>-->
-                        </ul>
+                        <!--</ul>-->
                     </li>
 
                     <li class="treeview" >
@@ -249,9 +249,9 @@
                             <ul  class="treeview-menu">
                                 <? if ($user->isWorker()) { ?>
                                     <li><a class="side-ajax" href="edit-group" >گروه کاری </a></li>
-                                    <li><a class="side-ajax" href="kart-request" > کارت بانک کارایران 
+<!--                                    <li><a class="side-ajax" href="kart-request" > کارت بانک کارایران 
                                             <img src="medias/images/theme/new.png" alt="" align="absmiddle" style=""/>
-                                        </a></li>
+                                        </a></li>-->
                                 <? } ?>
                                 <li><a class="side-ajax" href="refer" >کسب در آمد</a></li>
                             </ul>
