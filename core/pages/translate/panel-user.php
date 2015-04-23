@@ -2,6 +2,7 @@
     <div id="content">
         <?php $message->display() ?>
 
+        <? include 'submit-project-body.php';?>
         <!-- End Success Box -->	
         <div style="width: 100%;float: left;text-align:justify">
             <div style="width: 48%;float: right">
