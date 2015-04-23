@@ -526,7 +526,7 @@ a:focus {
   margin: 0;
 }
 .sidebar-menu .treeview-menu > li > a {
-  padding: 5px 5px 5px 15px;
+  padding: 5px 15px 5px 15px;
   display: block;
   font-size: 14px;
 }
@@ -4062,4 +4062,11 @@ Gradient Background colors
   .table-responsive > .table tr td {
     white-space: normal!important;
   }
+}
+
+.main-sidebar ul.treeview-menu{
+    padding: 2px;
+}
+.main-sidebar ul.treeview-menu li{
+    padding: 2px;
 }

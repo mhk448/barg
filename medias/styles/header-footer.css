@@ -8,7 +8,9 @@
 #header-wrapper {
     /*margin-bottom: 20px;*/
 }
-
+.dropdown-menu .header{
+   text-align: center; 
+}
 
 /*////// header ///////*/
 .regheader{

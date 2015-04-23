@@ -144,7 +144,9 @@ b {font-weight: bold;}
     padding: 3px;
 }
 
-#content h1{ font-size: 20px; }
+#content h1{ font-size: 20px !important; }
+#content h2{ font-size: 17px !important; }
+#content h3{ font-size: 15px !important; }
 
 .pager a{
     border: 1px solid gray;
