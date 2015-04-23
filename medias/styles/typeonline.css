@@ -1,8 +1,8 @@
 @font-face {
     font-family: Elmend;
-    src: url('../Fonts/BYekan.eot?#') format('eot'),
-        url('../Fonts/BYekan.woff') format('woff'),
-        url('../Fonts/BYekan.ttf') format('truetype');
+    src: url('../fonts/BYekan.eot?#') format('eot'),
+        url('../fonts/BYekan.woff') format('woff'),
+        url('../fonts/BYekan.ttf') format('truetype');
 }
 body{
     margin: 0px;
