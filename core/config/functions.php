@@ -307,7 +307,10 @@ function uploadFild($name_id, $extraClass, $path, $maxsize, $valids, $itemLimit 
                         <span>Drop  here to upload</span>
                     </div>-->
             <div class="qq-upload-button-selector qq-upload-button">
-                <div>انتخاب فایل</div>
+                <div>
+                انتخاب فایل
+                <i class="fa fa-cloud-upload"></i>
+                </div>
             </div>
             <div class="qq-upload-list-selector qq-upload-list english">
                 <div>
