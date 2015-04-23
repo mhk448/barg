@@ -411,11 +411,11 @@ function selectPayMethod($senderQuery) {
 
         <br/>
 
-        <a href<?= '="add-credit?type=bank&sq=' . $senderQuery . '&p=' . $addPrice . '"'; ?> class="popup" >
+<!--        <a href<?= '="add-credit?type=bank&sq=' . $senderQuery . '&p=' . $addPrice . '"'; ?> class="popup" >
             <div  class="popup active_btn" style="font-size: 14px;padding: 5px 10px;width: 300px;">
                 پرداخت از طریق شماره حساب و ثبت فیش واریزی
             </div>
-        </a>
+        </a>-->
     </div>
 
 <?php }
