@@ -161,9 +161,9 @@
                     <li class="treeview" >
                         <a class="side-ajax2" href="panel" ><i class="fa fa-home"></i>
                             صفحه نخست  پنل کاربری</a>
-<!--                        <ul  class="treeview-menu">
-                            <li style="display: none"></li>-->
-                            <!--<li><a class="side-ajax" href="panel" >آخرین رخدادها</a></li>-->
+                        <!--                        <ul  class="treeview-menu">
+                                                    <li style="display: none"></li>-->
+                        <!--<li><a class="side-ajax" href="panel" >آخرین رخدادها</a></li>-->
                         <!--</ul>-->
                     </li>
 
@@ -176,20 +176,20 @@
                         <ul  class="treeview-menu">
                             <? if ($user->isWorker()) { ?>
                                 <? if ($user->isOlderThan(1)) { ?>
-                                    <li><a class="side-ajax" href="bids" >پیشنهاد های من</a></li>
-                                    <li><a class="side-ajax" href="projects_all_<?php echo $user->id ?>" >پروژه‌های من</a></li>
+                                    <li><a class="side-ajax" href="bids" ><i class="fa fa-angle-left"></i>پیشنهاد های من</a></li>
+                                    <li><a class="side-ajax" href="projects_all_<?php echo $user->id ?>" ><i class="fa fa-angle-left"></i>پروژه‌های من</a></li>
                                     <? if ($user->isOlderThan(7)) { ?>
                                         <li>
-                                            <a class="side-ajax" href="projects_share_<?php echo $user->id ?>" >پروژه‌های گروهی من</a>
+                                            <a class="side-ajax" href="projects_share_<?php echo $user->id ?>" ><i class="fa fa-angle-left"></i>پروژه‌های گروهی من</a>
                                         </li>
                                     <? } ?>
                                 <? } ?>
-                                <li><a class="side-ajax" href="projects_open" >لیست پروژه ها</a></li>
+                                <li><a class="side-ajax" href="projects_open" ><i class="fa fa-angle-left"></i>لیست پروژه ها</a></li>
                                 <!--<li><a class="side-ajax" href="projects_open?typeonline=1" >پروژه های تایپ آنلاین</a></li>-->
                             <? } if ($user->isMaster()) { ?>
-                                <li><a class="" href="submit-project" >ارسال پروژه ی <?= $_ENUM2FA['fa']['work'] ?></a></li>
+                                <li><a class="" href="submit-project" ><i class="fa fa-angle-left"></i>ارسال پروژه ی <?= $_ENUM2FA['fa']['work'] ?></a></li>
                                 <!--<li><a class="" href="submit-project?out=ONLINE" >ارسال پروژه ی  فوری<span style="font-size: 10px">( آنلاین )</span></a></li>-->
-                                <li><a class="side-ajax" href="projects_all_<?php echo $user->id ?>" >پروژه های من</a></li>
+                                <li><a class="side-ajax" href="projects_all_<?php echo $user->id ?>" ><i class="fa fa-angle-left"></i>پروژه های من</a></li>
                             <? } ?>
                         </ul>
                     </li>
@@ -202,9 +202,9 @@
                                 <i class="fa fa-angle-right pull-left"></i>
                             </a>
                             <ul  class="treeview-menu">
-                                <li><a class="side-ajax" href="projects_run_<?php echo $user->id ?>" >پروژه های در حال اجرا</a></li>
-                                <li><a class="side-ajax" href="projects_finish_<?php echo $user->id ?>" >پروژه های تمام شده</a></li>
-                                <li><a class="side-ajax2" href="projects_open_<?php echo $user->id ?>" >پروژه های باز</a></li>
+                                <li><a class="side-ajax" href="projects_run_<?php echo $user->id ?>" ><i class="fa fa-angle-left"></i>پروژه های در حال اجرا</a></li>
+                                <li><a class="side-ajax" href="projects_finish_<?php echo $user->id ?>" ><i class="fa fa-angle-left"></i>پروژه های تمام شده</a></li>
+                                <li><a class="side-ajax2" href="projects_open_<?php echo $user->id ?>" ><i class="fa fa-angle-left"></i>پروژه های باز</a></li>
                             </ul>
                         </li>
                     <? } ?>
@@ -215,29 +215,30 @@
                         </a>
                         <ul  class="treeview-menu">
                             <? if ($user->isWorker()) { ?>
-                                <li><a class="side-ajax2" href="report-chart" >نمودار مالی</a></li>
+                                <li><a class="side-ajax2" href="report-chart"  ><i class="fa fa-angle-left"></i>نمودار مالی</a></li>
                             <? } ?>
-                            <li><a class="side-ajax2" href="report" >گزارش کلی</a></li>
-                            <li><a class="side-ajax2" href="add-credit" >افزایش اعتبار</a></li>
+                            <li><a class="side-ajax2" href="report"  ><i class="fa fa-angle-left"></i>گزارش کلی</a></li>
+                            <li><a class="side-ajax2" href="add-credit"  ><i class="fa fa-angle-left"></i>افزایش اعتبار</a></li>
                             <? if ($user->isWorker() || $user->getCredit() > 0) { ?>
-                                <li><a class="side-ajax2" href="accounting" >درخواست واریز به حساب</a></li>
+                                <li><a class="side-ajax2" href="accounting"  ><i class="fa fa-angle-left"></i>درخواست واریز به حساب</a></li>
                             <? } ?>
                         </ul>
                     </li> 
-
-                    <li class="treeview">
-                        <a class=""><i class="fa fa-envelope-o"></i>
-                            پیامها
-                            <i class="fa fa-angle-right pull-left"></i>          
-                        </a>
-                        <ul  class="treeview-menu">
-                            <li><a class="side-ajax" href="send-message" >ارسال پیام</a></li>
-                            <li><a class="side-ajax" href="messages_inbox" >صندوق دریافت</a></li>
-                            <li><a class="side-ajax" href="messages_sent" >پیام های ارسال شده</a></li>
-                            <li><a class="side-ajax" href="smses" >صندوق پیامک</a></li>
-                        </ul>
-                    </li>
                     <? if ($user->isOlderThan(7)) { ?>
+                        <li class="treeview">
+                            <a class=""><i class="fa fa-envelope-o"></i>
+                                پیامها
+                                <i class="fa fa-angle-right pull-left"></i>          
+                            </a>
+                            <ul  class="treeview-menu">
+                                <li><a class="side-ajax" href="send-message"  ><i class="fa fa-angle-left"></i>ارسال پیام</a></li>
+                                <li><a class="side-ajax" href="messages_inbox"  ><i class="fa fa-angle-left"></i>صندوق دریافت</a></li>
+                                <li><a class="side-ajax" href="messages_sent"  ><i class="fa fa-angle-left"></i>پیام های ارسال شده</a></li>
+                                <li><a class="side-ajax" href="smses"  ><i class="fa fa-angle-left"></i>صندوق پیامک</a></li>
+                            </ul>
+                        </li>
+                    <? } ?>
+                    <? if (false AND $user->isOlderThan(7)) { ?>
                         <li class="treeview">
                             <a class=""><i class="fa fa-plus"></i>
                                 امکانات
@@ -248,12 +249,12 @@
                             </a>
                             <ul  class="treeview-menu">
                                 <? if ($user->isWorker()) { ?>
-                                    <li><a class="side-ajax" href="edit-group" >گروه کاری </a></li>
-<!--                                    <li><a class="side-ajax" href="kart-request" > کارت بانک کارایران 
-                                            <img src="medias/images/theme/new.png" alt="" align="absmiddle" style=""/>
-                                        </a></li>-->
+                                    <li><a class="side-ajax" href="edit-group"  ><i class="fa fa-angle-left"></i>گروه کاری </a></li>
+                                    <!--                                    <li><a class="side-ajax" href="kart-request" > کارت بانک کارایران 
+                                                                                <img src="medias/images/theme/new.png" alt="" align="absmiddle" style=""/>
+                                                                            </a></li>-->
                                 <? } ?>
-                                <li><a class="side-ajax" href="refer" >کسب در آمد</a></li>
+                                <li><a class="side-ajax" href="refer"  ><i class="fa fa-angle-left"></i>کسب در آمد</a></li>
                             </ul>
                         </li>
                     <? } ?>
@@ -264,20 +265,20 @@
                             <i class="fa fa-angle-right pull-left"></i>
                         </a>
                         <ul  class="treeview-menu">
-                            <li><a class="side-ajax" href="edit-profile" >ویرایش اطلاعات</a></li>
+                            <li><a class="side-ajax" href="edit-profile"  ><i class="fa fa-angle-left"></i>ویرایش اطلاعات</a></li>
                             <? if ($user->isOlderThan(3)) { ?>
-                                <li><a class="side-ajax" href="edit-settings" >نحوه اطلاع رسانی</a></li>
+                                <li><a class="side-ajax" href="edit-settings"  ><i class="fa fa-angle-left"></i>نحوه اطلاع رسانی</a></li>
                             <? } ?>
                             <? if ($user->isWorker() || $user->isAgency()) { ?>
-                                <li><a class="side-ajax" href="edit-profile?edit=bank" >مشخصات بانکی</a></li>
+                                <li><a class="side-ajax" href="edit-profile?edit=bank" ><i class="fa fa-angle-left"></i>مشخصات بانکی</a></li>
                             <? } ?>
                             <? if ($user->isWorker()) { ?>
-                                <li><a class="side-ajax" href="ability" >تخصص های من</a></li>
+                                <li><a class="side-ajax" href="ability" ><i class="fa fa-angle-left"></i>تخصص های من</a></li>
                             <? } ?>
                             <? if ($user->isWorker() && isSubTranslate()) { ?>
-                                <li><a class="side-ajax" href="edit-credential" >ویرایش مدارک</a></li>
+                                <li><a class="side-ajax" href="edit-credential" ><i class="fa fa-angle-left"></i>ویرایش مدارک</a></li>
                             <? } ?>
-                            <li><a class="side-ajax" href="change-password" >تغییر رمز</a></li>
+                            <li><a class="side-ajax" href="change-password" ><i class="fa fa-angle-left"></i>تغییر رمز</a></li>
                         </ul>
                     </li>
 
@@ -288,10 +289,10 @@
                             <i class="fa fa-angle-right pull-left"></i>
                         </a>
                         <ul  class="treeview-menu">
-                            <li><a class="side-ajax" href="send-message_1_S1" >درخواست پشتیبانی</a></li>
-                            <li><a class="side-ajax" href="support" >گزارش درخواستهای قبلی</a></li>
+                            <li><a class="side-ajax" href="send-message_1_S1" ><i class="fa fa-angle-left"></i>درخواست پشتیبانی</a></li>
+                            <li><a class="side-ajax" href="support" ><i class="fa fa-angle-left"></i>گزارش درخواستهای قبلی</a></li>
                             <!--<li><a href<?= '="' . $_CONFIGS['Pathes']['Blog'] . '"' ?> target="_blank">سوالات متداول</a></li>-->
-                            <li><a href<?= '="' . $_CONFIGS['Site']['Sub']['Blog'] . "/type-sub/type-about" . '"'; ?> target="_blank" >ارتباط با ما</a></li>
+                            <li><a href<?= '="' . $_CONFIGS['Site']['Sub']['Blog'] . "/type-sub/type-about" . '"'; ?> target="_blank" ><i class="fa fa-angle-left"></i>ارتباط با ما</a></li>
                         </ul>
                     </li>
                     <? if ($user->hasFeature(User::$F_SUPPORT)) { ?>
@@ -301,7 +302,7 @@
                                 <i class="fa fa-angle-right pull-left"></i>
                             </a>
                             <ul  class="treeview-menu">
-                                <li><a class="side-ajax" href="manage-support?new=1" >درخواست های پشتیبانی</a></li>
+                                <li><a class="side-ajax" href="manage-support?new=1" ><i class="fa fa-angle-left"></i>درخواست های پشتیبانی</a></li>
                                 <!--<li><a class="side-ajax" href="support" ></a></li>-->
                             </ul>
                         </li>
