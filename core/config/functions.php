@@ -326,7 +326,7 @@ function uploadFild($name_id, $extraClass, $path, $maxsize, $valids, $itemLimit 
             </div>
         </div>
     </script>
-    <span class="input ' . $extraClass . '" style="width: auto;padding: 0">
+    <span class="input ' . $extraClass . '" style="width: 100%;max-width:200px; padding: 0">
         <span id="' . $name_id . '"  ></span>
         <input type="hidden" name="' . $name_id . '" id="' . $name_id . '_hidden" />
     </span>';
