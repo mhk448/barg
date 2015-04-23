@@ -10,10 +10,10 @@
 <!--<div class="clear">-->
 <!--</div>-->
 <audio id="audio-event">
-    <source src="/medias/sounds/splash/event.wav" type="audio/mp3">
+    <source src="/medias/sounds/splash/event.wav.html" type="audio/mp3">
 </audio>
 <audio id="audio-confirm">
-    <source src="/medias/sounds/splash/confirm.mp3" type="audio/mp3">
+    <source src="/medias/sounds/splash/confirm.mp3.html" type="audio/mp3">
 </audio>
 <? if (!$user->isAdmin()) { ?>
     <!-- Iran Web Festival -->
