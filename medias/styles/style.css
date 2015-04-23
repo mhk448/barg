@@ -1,8 +1,8 @@
 @font-face{
     font-family: 'BYekan';
     src: url('../fonts/WebYekan.eot?#') format('eot'),
-        url('../Fonts3/WebYekan.woff') format('woff'),
-        url('../Fonts3/WebYekan.ttf') format('truetype');
+        url('../fonts/WebYekan.woff') format('woff'),
+        url('../fonts/WebYekan.ttf') format('truetype');
 }
 body {
     margin: 0 auto;
