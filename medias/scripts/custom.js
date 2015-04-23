@@ -103,6 +103,7 @@ function initSideBox(){
     
 }
 
+var curPage="panel";
 function ajaxContentRedirect(href,dest_div){
     //    if(href=="panel"){
     //        location.href='/panel';
@@ -111,7 +112,17 @@ function ajaxContentRedirect(href,dest_div){
     //        location.href='/panel#'+href;
     //        return false;
     //    }else{
+    
     location.hash="#"+href;
+    curPage=href;
+    
+    try{
+        $(".main-sidebar .treeview-menu li").removeClass("active");
+    }catch(e){}
+    try{
+        $(".main-sidebar .treeview-menu a[href='"+curPage+"']").parent().addClass("active");
+    }catch(e){}
+    
     var href_loc=href.indexOf("#") == -1 ? href:href.substr(0, href.indexOf("#"));
     var href_hash=href.indexOf("#") == -1 ? "": href.substr(href.indexOf("#"));
     var href_q=href.indexOf("?") == -1 ? "?":"&";
