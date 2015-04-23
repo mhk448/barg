@@ -178,7 +178,7 @@
                                 <? if ($user->isOlderThan(1)) { ?>
                                     <li><a class="side-ajax" href="bids" ><i class="fa fa-angle-left"></i>پیشنهاد های من</a></li>
                                     <li><a class="side-ajax" href="projects_all_<?php echo $user->id ?>" ><i class="fa fa-angle-left"></i>پروژه‌های من</a></li>
-                                    <? if ($user->isOlderThan(7)) { ?>
+                                    <? if (FALSE AND $user->isOlderThan(7)) { ?>
                                         <li>
                                             <a class="side-ajax" href="projects_share_<?php echo $user->id ?>" ><i class="fa fa-angle-left"></i>پروژه‌های گروهی من</a>
                                         </li>
