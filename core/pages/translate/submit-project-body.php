@@ -390,7 +390,6 @@ echo 'var agencyForm=' . ($user->isAgency() ? 'true' : 'false') . ';';
                         <option  value="Private">واگذاری به مترجم مشخص</option>
                     </select>
                     <div id="specific" style="display: none" >
-                        <label class="help" >مترجم: </label>
                         <input  type="hidden"  id="worker" >
                         <input class="help" id="typistusername" value="انتخاب مترجم" style="width: 173px" type="button" onclick="showTypist()">
                         <div class="help_comment">
