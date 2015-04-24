@@ -480,13 +480,6 @@ function finalRewive($bank_trans, $amount, $senderQuery) {
         ));
         $in = $cdatabase->getInsertedId();
 
-
-        $MerchantID['type'] = '18986032';
-        $MerchantID['translate'] = '18986042';
-        $Password['type'] = 'y7KaM02RE2';
-        $Password['translate'] = 'XGhYFD9Yz2';
-
-
         $Price = $amount / 10; //Price By Toman
 
         $ReturnPath = $_CONFIGS['Site']['Sub']['Path'] . 'index.php?request=response&bank=parspal&sq=' . $senderQuery;
@@ -499,7 +492,19 @@ function finalRewive($bank_trans, $amount, $senderQuery) {
 
         $client = new SoapClient('http://merchant.parspal.com/WebService.asmx?wsdl');
 
-        $res = $client->RequestPayment(array("MerchantID" => $MerchantID[$subSite], "Password" => $Password[$subSite], "Price" => $Price, "ReturnPath" => $ReturnPath, "ResNumber" => $ResNumber, "Description" => $Description, "Paymenter" => $Paymenter, "Email" => $Email, "Mobile" => $Mobile));
+        $res = $client->RequestPayment(
+                array(
+                    "MerchantID" => $_CONFIGS['Site']['Sub']['bank']['parspal']['merchant'],
+                    "Password" => $_CONFIGS['Site']['Sub']['bank']['parspal']['password'],
+                    "Price" => $Price,
+                    "ReturnPath" => $ReturnPath,
+                    "ResNumber" => $ResNumber,
+                    "Description" => $Description,
+                    "Paymenter" => $Paymenter,
+                    "Email" => $Email,
+                    "Mobile" => $Mobile
+                )
+        );
 
         $PayPath = $res->RequestPaymentResult->PaymentPath;
         $Status = $res->RequestPaymentResult->ResultStatus;
