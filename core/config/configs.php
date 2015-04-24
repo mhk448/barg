@@ -46,8 +46,8 @@ $GLOBALS['_CONFIGS'] = array(
             'code' => "B",
             'bank' => array(
                 'parspal' => array(
-                    'merchant'=>'',
-                    'password'=>''
+                    'merchant'=>'0314103',
+                    'password'=>'v43tR7X7o'
                 )
             ),
         ),
