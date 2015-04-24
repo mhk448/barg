@@ -29,6 +29,12 @@ $GLOBALS['_CONFIGS'] = array(
             'fg_color' => "#bace39",
             'bg_color' => "#bace39",
             'code' => "T",
+            'bank' => array(
+                'parspal' => array(
+                    'merchant'=>'',
+                    'password'=>''
+                )
+            ),
         ),
         'translate' => array(
             'Name' => 'ترجمه‌ایران',
@@ -42,7 +48,13 @@ $GLOBALS['_CONFIGS'] = array(
             'SMS_Postfix' => "\nwww.Tarjomeiran.com",
             'fg_color' => "#b9e2ff",
             'bg_color' => "#b9e2ff",
-            'code' => "R",
+            'code' => "B",
+            'bank' => array(
+                'parspal' => array(
+                    'merchant'=>'',
+                    'password'=>''
+                )
+            ),
         ),
         'graphic' => array(
             'Name' => 'ترجمه‌ایران',
@@ -56,6 +68,12 @@ $GLOBALS['_CONFIGS'] = array(
             'fg_color' => "#b9e2ff",
             'bg_color' => "#b9e2ff",
             'code' => "G",
+            'bank' => array(
+                'parspal' => array(
+                    'merchant'=>'',
+                    'password'=>''
+                )
+            ),
         ),
     ),
     // Path Informations
