@@ -31,7 +31,7 @@ $list = $pager->getComList('messages', '*', 'WHERE verified>=0 AND ' . $folder, 
                         <th>به</th>
                     <? } ?>
                     <th>عنوان</th>
-                    <th width="80px">تاریخ</th>
+                    <th width="120px">تاریخ</th>
                     <th>ضمیمه</th>
                     <th width="">عملیات</th>
                 </tr>
