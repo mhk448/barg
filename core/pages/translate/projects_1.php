@@ -26,22 +26,24 @@ $my_prj = ($project->E_user_id > 0); // boolean
 ?>
 <div id="content-wrapper">
     <div id="content">
+        <br>
         <h1><img src="medias/images/icons/bullet.png" align="absmiddle" />
             <?php echo $project->getListName() ?></h1>
+        <hr/>
 
         <?= $pager->showSearchBox(); ?>
         <table width="100%" class="projects">
             <thead>
                 <tr>
                     <th style="font-size: 11px;font-weight: normal;">کد پروژه</th>
-                    <!--<th>عنوان</th>-->
+                    <th>عنوان</th>
                     <th>نوع</th>
                     <th>وضعیت</th>
-                    <th width="120px" >تاریخ ارسال</th>
-                    <th style="text-align: center">کارفرما</th>
-                    <!--<th width="20px" style="font-size: 10px;padding: 0px;font-weight: normal;">تعداد صفحات </th>-->
+                    <th width="88px" >تاریخ ارسال</th>
+                    <th>کارفرما</th>
+                    <th width="20px" style="font-size: 10px;padding: 0px;font-weight: normal;">تعداد صفحات </th>
                     <? if ($project->E_state == "Open") { ?>
-                        <!--<th>تخمین قیمت</th>-->
+                        <th>تخمین قیمت</th>
                     <? } else { ?>
                         <th>هزینه پروژه</th>
                         <? if ($my_prj) { ?>
@@ -61,11 +63,11 @@ $my_prj = ($project->E_user_id > 0); // boolean
                     $class = ($user->id == $p['user_id'] && !$my_prj) ? 'my-project' : '';
                     ?>
                     <tr class="<?= $class ?>" style="cursor: pointer" onclick="mhkform.ajax('project_'+<?= $p['id'] ?>+'?ajax=1','#ajax_content')">
-                        <td><p class="number" style="text-align: right;padding: 5px;"><?= $prj->getCode() ?></p></td>
-<!--                        <td><a class="ajax" <?= 'href="project_' . $p['id'] . '"' ?> style="display:block">
+                        <td><br/><p class="number" style="text-align: right;"><?= $prj->getCode() ?></p><br/></td>
+                        <td><a class="ajax" <?= 'href="project_' . $p['id'] . '"' ?> style="display:block">
                                 <?= $p['title']; ?>
                             </a>
-                        </td>-->
+                        </td>
                         <td><?= $_ENUM2FA['type'][$p['type']]; ?>
                             <p style="font-size: 10px;"><?= $_ENUM2FA['output'][$p['output']]; ?></p>
                         </td>
@@ -86,13 +88,13 @@ $my_prj = ($project->E_user_id > 0); // boolean
                             <br/>
                             <?= $u->displayCups(); ?>
                         </td>
-                        <!--<td><?= $p['guess_page_num'] ?></td>-->
+                        <td><?= $p['guess_page_num'] ?></td>
 
                         <? if ($project->E_state == "Open") { ?>
-<!--                            <td>
+                            <td>
                                 <span class="price"><?php echo $p['max_price'] ?></span>
                                 ریال    
-                            </td>-->
+                            </td>
                         <? } else { ?>
                             <td>
                                 <?

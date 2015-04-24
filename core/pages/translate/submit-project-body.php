@@ -143,7 +143,7 @@ echo 'var agencyForm=' . ($user->isAgency() ? 'true' : 'false') . ';';
             margin: 0;
         }
 
-        .number, .number-com, .number-end {
+        .submit .number, .number-com, .number-end {
             background-color: #333;
             border-radius: 100%;
             width: 32px;
@@ -158,7 +158,7 @@ echo 'var agencyForm=' . ($user->isAgency() ? 'true' : 'false') . ';';
             position: relative;
         }
 
-        .number:after, .number-com:after {
+        .submit .number:after, .number-com:after {
             content: "";
             position: absolute;
             width: 115px;
@@ -178,7 +178,7 @@ echo 'var agencyForm=' . ($user->isAgency() ? 'true' : 'false') . ';';
             right: 31px;	
         }
 
-        .number:after {
+        .submit .number:after {
             background-color: #3ab94e;
         }
 /*        .check-icon {
