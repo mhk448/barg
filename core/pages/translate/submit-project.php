@@ -75,3 +75,8 @@ echo 'var agencyForm=' . ($user->isAgency() ? 'true' : 'false') . ';';
         <? include 'submit-project-body.php'; ?>
     </div>
 </div>
+<?
+
+$_CONFIGS['Params'][1] = "all";
+$_CONFIGS['Params'][2] = $user->id;
+include 'projects.php';
