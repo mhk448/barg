@@ -159,7 +159,7 @@ h3{ font-size: 15px !important; }
     /*float: right;*/
 }
 .form{
-    padding: 20px;
+    padding: 0 20px;
 }
 .form label{
     float: right;

@@ -22,8 +22,8 @@ mhkform = {
         mhkform.forceClose();//close old form
         this.aHeight = $(document).height();
         this.aWidth = $(document).width();
-        cover_css="z-index:90;display:none;position:fixed; top:0; left:0; background:rgba(0, 0, 0, 0.6);";
-        form_css="background: url('medias/images/icons/trans.png') #EEE;direction:rtl;box-shadow:0px 3px 7px #333; -moz-box-shadow:0px 3px 7px #333; -webkit-box-shadow:0px 3px 7px #333; -moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px; -khtml-border-radius:4px; position:absolute; z-index:95; min-width:200px; min-height:50px;  max-width:95%; position:fixed;";
+        cover_css="z-index:1090;display:none;position:fixed; top:0; left:0; background:rgba(0, 0, 0, 0.6);";
+        form_css="background: url('medias/images/icons/trans.png') #EEE;direction:rtl;box-shadow:0px 3px 7px #333; -moz-box-shadow:0px 3px 7px #333; -webkit-box-shadow:0px 3px 7px #333; -moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px; -khtml-border-radius:4px; position:absolute; z-index:1095; min-width:200px; min-height:50px;  max-width:65%; position:fixed;";
         form0_css="";
         div_css="cursor:move;padding:10px;";//overflow-y: auto;
         div2_css="cursor:default;border-width:2px;border-style:solid;background:#eee;text-align:center;padding:10px;color:#333;overflow-y: auto;border-radius:4px;";
