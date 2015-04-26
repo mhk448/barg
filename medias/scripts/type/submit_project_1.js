@@ -452,7 +452,7 @@ function helpMaxPrice(){
 //    }, "json");
 //}
 filename='';
-fileserver="http://file.typeiran.xzn.ir";
+fileserver="http://file.bargardoon.xzn.ir";
 function getFileNameAnduploadFile(){
     $.getJSON(fileserver,
     {
