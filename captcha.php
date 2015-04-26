@@ -17,7 +17,7 @@ if (isset($_SESSION['_CAPTCHA_'])) {
     }
     $str = (string) $_SESSION['_CAPTCHA_'];
     for ($i = 0; $i < $length; $i++)
-        imagettftext($img, 20, rand(-30, 30), (($i * 20) + 10), 20, $fore_color, "medias/Fonts/COOPBL.TTF", $str[$i]);
+        imagettftext($img, 20, rand(-30, 30), (($i * 20) + 10), 20, $fore_color, "medias/fonts/COOPBL.TTF", $str[$i]);
     imagecolortransparent($img, $white);
     imagegif($img);
 }
