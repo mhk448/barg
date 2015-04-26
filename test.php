@@ -61,7 +61,7 @@ return;
 //exit;
 //
 //if (!(isset($_REQUEST['boogh']) || $_REQUEST['request'] == '/users' ||$user->isAdmin())) {
-//    header('Location: http://soon.typeiran.com');
+//    header('Location: http://soon.Bargardoon.com');
 //    header('Location: constructing.html');
 //    exit;
 //}
