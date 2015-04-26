@@ -349,7 +349,7 @@ echo 'var agencyForm=' . ($user->isAgency() ? 'true' : 'false') . ';';
                     </div>
                       <!--<input  type="button" value="پیشرفته" onclick="$('.advance').slideToggle()" style="width: 70px;margin-left: 10px">-->
                     <input  type="button" class="wait_files btn btn-block btn-lg btn-info margin-top-20" value="تایید" onclick="createFactor();
-                            sendForm();" style="width: 100%;color: green">
+                            " style="width: 100%;color: green">
 
                 </div>
             </div>
@@ -382,7 +382,7 @@ echo 'var agencyForm=' . ($user->isAgency() ? 'true' : 'false') . ';';
                     <hr />
 
                     <select class="help" id="type" onchange="changeMethod();" style="">
-                        <!--<option value="Protected" selected="selected">پروژه توسط مرکز ترجمهایران انجام شود</option>-->
+                        <!--<option value="Protected" selected="selected">پروژه توسط مرکز  انجام شود</option>-->
                         <? if ($user->isAgency()) { ?>
                             <option value="Agency" id="agency_type">پروژهای نمایندگی</option>
                         <? } ?>

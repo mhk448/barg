@@ -55,7 +55,7 @@ if ($auth->validate('AddBidForm', array())) {
         if ($bid->add($project)) {
             $message->addMessage('پیشنهاد شما با موفقیت ارسال گردید.<br> جهت مشاهده پیشنهادهای خود به <a href="bids">صفحه پیشنهادهای من</a> مراجعه نمایید.');
         } else {
-            $message->addMessage('شما نمی توانید این پیشنهاد را ویرایش کنید');
+//            $message->addMessage('شما نمی توانید این پیشنهاد را ویرایش کنید');
         }
     }
 }
@@ -235,61 +235,59 @@ if (isset($_REQUEST["showBidForm"])) {
             <? } ?>
 
             <?php
-            if ($project->state == 'Open' AND
-                    ($project->type != Project::$T_PRIVATE || $project->private_typist_id == $user->id ) AND
-                    (!$userSentBid->id || $userSentBid->accepted == 0 || ($userSentBid->accepted == -2 && $userSentBid->dateline < time() - 2 * 60) )) {
+            if ($project->state == 'Open' AND ( $project->type != Project::$T_PRIVATE || $project->private_typist_id == $user->id ) AND ( !$userSentBid->id || $userSentBid->accepted == 0 || ($userSentBid->accepted == -2 && $userSentBid->dateline < time() - 2 * 60) )) {
                 ?>
                 <div class="info-box">
                     <a href<?= '="' . $action_str . '?showBidForm=1"' ?> class="popup" >
                         <img src="medias/images/theme/download1.png" />
-                        <? if ($userSentBid->id) { ?>
+        <? if ($userSentBid->id) { ?>
                             ویرایش پیشنهاد
                         <? } else { ?>
                             ارسال پیشنهاد
                         <? } ?>
                     </a>
                     <div ><strong><?= $_ENUM2FA['fa']['worker'] ?> گرامی</strong><br />
-                        <? if ($project->type == 'Agency') { ?>
+        <? if ($project->type == 'Agency') { ?>
                             در هنگام ارسال پیشنهاد، زبان و قیمت پروژه را بررسی نمایید
                         <? } else { ?>
                             در هنگام ارسال پیشنهاد، قیمت پیشنهادی خود را در کادر مربوطه وارد نمایید
                         <? } ?>
                     </div>
                 </div>
-                <?
-                if ($userSentBid->id && $userSentBid->accepted != -2) {
-                    echo $userSentBid->displayBid(' ');
-                }
-            } elseif (isCurrentWorker()) {
-                $ff = $project->getFinalFile();
-                $index = 1;
-                if (count($ff) > 0) {
-                    foreach ($ff as $f) {
+        <?
+        if ($userSentBid->id && $userSentBid->accepted != -2) {
+            echo $userSentBid->displayBid(' ');
+        }
+    } elseif (isCurrentWorker()) {
+        $ff = $project->getFinalFile();
+        $index = 1;
+        if (count($ff) > 0) {
+            foreach ($ff as $f) {
 
-                        if ($project->output == 'ONLINE' && $f['final_file'] == 'ONLINE')
-                            $dl_link = 'typeonline_' . $project->id . '?v=2007';
-                        else
-                            $dl_link = 'uploads/' . $subSite . '/final/' . $f['final_file'];
-                        ?>
+                if ($project->output == 'ONLINE' && $f['final_file'] == 'ONLINE')
+                    $dl_link = 'typeonline_' . $project->id . '?v=2007';
+                else
+                    $dl_link = 'uploads/' . $subSite . '/final/' . $f['final_file'];
+                ?>
                         <div class="info-box">
                             <a download="<?= "Project_" . $project->getCode() . "_File_" . $index . "." . $files->extension($dl_link); ?>" href<?= '="' . $dl_link . '"' ?>  target="_blank">
                                 <img src="medias/images/theme/download1.png" />
                                 دانلود فایل نهایی
-                                <?= $index++ ?>
+                <?= $index++ ?>
                             </a>
                             <div>
                                 تعداد 
-                                <?= $f['pages'] ?> 
+                <?= $f['pages'] ?> 
                                 صفحه توسط 
                                 شما
                                 در تاریخ 
-                                <?= $persiandate->date('d F Y ساعت H:i', $f['dateline']) ?> 
+                <?= $persiandate->date('d F Y ساعت H:i', $f['dateline']) ?> 
                                 ثبت شده است
                                 <br>
-                                <?= $f['message'] ?>
+                <?= $f['message'] ?>
                             </div>
                         </div>
-                    <?php } ?>
+            <?php } ?>
                 <?php } ?>
 
                 <? if ($project->typist_id == $user->id || $user->isAdmin()) { ?>
@@ -305,10 +303,10 @@ if (isset($_REQUEST["showBidForm"])) {
                     </div>
 
 
-                    <? if ($project->state == 'Run') { ?>
+            <? if ($project->state == 'Run') { ?>
                         <script type="text/javascript">
-                            function selectUser(id,username){
-                                mhkform.ajax("project_<?= $project->id ?>?showShareForm=1&ajax=1$addUser=1&uid="+id+"","");
+                            function selectUser(id, username) {
+                                mhkform.ajax("project_<?= $project->id ?>?showShareForm=1&ajax=1$addUser=1&uid=" + id + "", "");
                             }
                         </script>
                         <div class="info-box">
@@ -318,11 +316,11 @@ if (isset($_REQUEST["showBidForm"])) {
                             </a>
                             <div ><strong><?= $_ENUM2FA['fa']['worker'] ?> گرامی</strong><br />
                                 شما می توانید پروژه را با سایر 
-                                <?= $_ENUM2FA['fa']['worker'] ?>
+                <?= $_ENUM2FA['fa']['worker'] ?>
                                 به اشتراک بگذارید
                             </div>
                         </div>
-                    <? } ?>
+            <? } ?>
 
                     <? if (!$project->isShared() && $project->state == 'Run' && count($user->getActiveGroups()) > 0) { ?>
                         <div class="info-box">
@@ -334,7 +332,7 @@ if (isset($_REQUEST["showBidForm"])) {
                                 شما می توانید پروژه را با به صورت گروهی انجام دهید
                             </div>
                         </div>
-                    <? } ?>
+            <? } ?>
                 <?php } ?>
             <? } ?>
             <?
@@ -349,19 +347,19 @@ if (isset($_REQUEST["showBidForm"])) {
                             <a href<?= '="' . $dl_link . '"' ?>  target="_blank">
                                 <img src="medias/images/theme/download1.png" />
                                 فایل 
-                                <?= $name ?>
+                <?= $name ?>
                             </a>
                             <div>
                                 یک فایل توسط 
-                                <?= $name ?> 
+                <?= $name ?> 
                                 در تاریخ 
                                 <?= $persiandate->date('d F Y ساعت H:i', $f['dateline']) ?> 
                                 ارسال شده است
                                 <br>
-                                <?php echo $f['message'] ?>
+                <?php echo $f['message'] ?>
                             </div>
                         </div>
-                    <? } ?>
+            <? } ?>
                 <? } ?>
 
                 <div class = "info-box">
@@ -395,7 +393,7 @@ if (isset($_REQUEST["showBidForm"])) {
                 </div>
 
 
-                <? if ($project->state == 'Finish' && !$project->group_split_info && ($project->typist_id == $user->id || $user->isAdmin())) { ?>
+        <? if ($project->state == 'Finish' && !$project->group_split_info && ($project->typist_id == $user->id || $user->isAdmin())) { ?>
                     <div class="info-box">
                         <a href<?= '="' . $action_str . '?showCreditGroupForm=1"' ?> class="popup" >
                             <img src="medias/images/theme/download1.png" />
@@ -405,7 +403,7 @@ if (isset($_REQUEST["showBidForm"])) {
                             دستمزد انجام پروژه را بین اعضای گروه تقسیم کنید
                         </div>
                     </div>
-                <? } ?>
+        <? } ?>
                 <? if ($project->group_split_info) { ?>
                     <? $us = json_decode($project->group_split_info, TRUE) ?>
                     <br/>
@@ -415,7 +413,7 @@ if (isset($_REQUEST["showBidForm"])) {
                                 جدول تقسیم دستمزد
                             </td>
                         </tr>
-                        <? $sum_split_price = 0; ?>
+            <? $sum_split_price = 0; ?>
                         <? foreach ($us as $uid => $split_price) { ?>
                             <? $sum_split_price+=$split_price; ?>
                             <tr>
@@ -425,7 +423,7 @@ if (isset($_REQUEST["showBidForm"])) {
                                     <label>ریال</label>
                                 </td>
                             </tr>
-                        <? } ?>
+            <? } ?>
                         <tr>
                             <td>جمع:</td>
                             <td>
@@ -435,7 +433,7 @@ if (isset($_REQUEST["showBidForm"])) {
                         </tr>
                     </table>
                     <br/>
-                <? } ?>
+        <? } ?>
                 <?
                 if ($project->isShared()) {
                     $out = "";
@@ -467,12 +465,12 @@ function showBidForm($action_str, $userSentBid) {
     <h2>ارسال پیشنهاد</h2>
     <hr>
     <?php if (isSubType() && $project->type != 'Agency') { ?>
-        <div style="float: left;"><br/>نرخنامه تایپایران<br/><?= SHOW_PRICE_TABLE("user"); ?></div>
+        <div style="float: left;"><br/>نرخنامه <br/><?= SHOW_PRICE_TABLE("user"); ?></div>
     <? } ?>
     <div style="float: right;padding: 5px 20px;width: 650px;text-align: justify;">
         <b>نکات:‌</b>
         <ul class="disc">
-            <?= Content::BODY(Content::$NOTE_PROJECT_BID); ?>
+    <?= Content::BODY(Content::$NOTE_PROJECT_BID); ?>
             <?php if ($project->type == 'Agency') { ?>
                 <li>
                     قیمت بر اساس نرخ استاندارد محاسبه میشود،
@@ -487,7 +485,7 @@ function showBidForm($action_str, $userSentBid) {
 
                     جدا خودداری نمایید
                 </li>
-            <?php } else { ?>
+    <?php } else { ?>
                 <?= Content::BODY(Content::$NOTE_PROJECT_BID_NO_AGENCY); ?>
                 <li>
                     قیمت پیشنهادی خود را در کادر مخصوص وارد نمایید.
@@ -498,11 +496,11 @@ function showBidForm($action_str, $userSentBid) {
                     خواهد بود.
                     قیمت به پیشنهادی به ازای
                     <span style="color: red">
-                        <?= $_ENUM2FA['bid_type'][$project->bid_type]; ?>
+        <?= $_ENUM2FA['bid_type'][$project->bid_type]; ?>
                     </span>
                     خواهد بود
                 </li>
-            <?php } ?>
+    <?php } ?>
         </ul>    
 
 
@@ -510,13 +508,13 @@ function showBidForm($action_str, $userSentBid) {
             <input type="hidden" name="formName" value="AddBidForm" />
             <input type="hidden" name="pid" value="<?php echo $project->id ?>" />
             <input type="hidden" name="bt" value="<?php echo $project->bid_type ?>" />
-            <?php if ($project->type == 'Agency') { ?>
+    <?php if ($project->type == 'Agency') { ?>
                 <label style="width:300px">قیمت   <?= $_ENUM2FA['bid_type'][$project->bid_type]; ?>
-                    <? echo $_PRICES['worker'][$project->lang] ?>
+                <? echo $_PRICES['worker'][$project->lang] ?>
                     ریال
                 </label>
-            <input type="hidden" name="er" value="<?= $project->max_price ?>"/>
-            <?php } else { ?>
+                <input type="hidden" name="er" value="<?= $project->max_price ?>"/>
+    <?php } else { ?>
                 <? $bg_col[Bid::$TYPE_FULL] = "fd91ff"; ?>
                 <? $bg_col[Bid::$TYPE_PERMIN] = "ccccff"; ?>
                 <? $bg_col[Bid::$TYPE_PERPAGE] = "ff6666"; ?>
@@ -528,7 +526,7 @@ function showBidForm($action_str, $userSentBid) {
                 </label>
                 <input type="text" name="p" required="required" class="appt numberfild help" style="background-color: <?= "#" . $bg_col[$project->bid_type]; ?>;width:100px" <?= (isSubType() ? '' : '') ?> onkeyup="apptFun();" value="<?= $userSentBid->price ?>"/>
                 <span style="color: red">
-                    <?= $_ENUM2FA['fa']['worker'] ?> محترم مبلغ پیشنهادی به ازای 
+        <?= $_ENUM2FA['fa']['worker'] ?> محترم مبلغ پیشنهادی به ازای 
                     <?= $_ENUM2FA['bid_type'][$project->bid_type]; ?>
                     محاسبه خواهد شد
                 </span>
@@ -537,13 +535,13 @@ function showBidForm($action_str, $userSentBid) {
                 </div>
 
                 <script type="text/javascript">
-                    function apptFun(){
-                        var PT=<?= $worker_price; ?>;
+                    function apptFun() {
+                        var PT =<?= $worker_price; ?>;
                         var p = parseInt($(".appt").val());
                         $("#app").html(p);
                         $("#ptt").html(Math.round(p * PT));
-                        $("#pttt").html(Math.round(p * PT)/10);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                        $("#pttt").html(Math.round(p * PT) / 10);
+
                         $("#app").addClass('price');
                         $("#ptt").addClass('price');
                         $("#pttt").addClass('price');
@@ -551,20 +549,21 @@ function showBidForm($action_str, $userSentBid) {
                     }
                     initHelpBox();
                 </script>
-
-            <label style="width: 150px;">بیعانه</label>
-            <input type="text" name="er" required="required" class="numberfild help" style="width:100px"  value="<?= $userSentBid->earnest ?>"/>
-            <div class="help_comment">
-مبلغی را که مایلید کارفرما به عنوان بیعانه پرداخت کند را وارد نمایید
-            </div>
+        <? if ($project->bid_type != Bid::$TYPE_FULL) { ?>
+                    <label style="width: 150px;">بیعانه</label>
+                    <input type="text" name="er" required="required" class="numberfild help" style="width:100px"  value="<?= $userSentBid->earnest ?>"/>
+                    <div class="help_comment">
+                        مبلغی را که مایلید کارفرما به عنوان بیعانه پرداخت کند را وارد نمایید
+                    </div>
+        <? } ?>
             <?php } ?>
-            
+
             <label style="width: 150px;">توضیح و پیام</label>
             <textarea name="m" style="width:30%; height:100px;"><?= $userSentBid->message ?></textarea>
             <!--                <label>فایل ضمیمه (ZIP)</label>
                             <input type="file" name="fl" style="width:300px" />-->
 
-            <?php if ($project->type == 'Agency') { ?>
+    <?php if ($project->type == 'Agency') { ?>
             <?php } else { ?>
                 <div class="input" style="padding-right: 20px;display: inline-block;float: right;margin-right: 5px; height:100px;">
                     <ul >
@@ -575,7 +574,7 @@ function showBidForm($action_str, $userSentBid) {
                         <li><b style="color: red">معادل: <span id="pttt" class="price">0</span> تومان</b></li>
                     </ul>
                 </div>
-            <?php } ?>
+    <?php } ?>
 
             <label style="width: 150px;"> </label>
             <input type="checkbox"  checked="checked" onclick="return false;"/>
@@ -583,7 +582,7 @@ function showBidForm($action_str, $userSentBid) {
                 تایید قوانین این مرکز
             </div>
             <label style="width: 150px;"> </label>
-            <? if ($userSentBid->id) { ?>
+    <? if ($userSentBid->id) { ?>
                 <input type="hidden" value="Edit" name="mode" />
                 <input type="submit" value="ویرایش" name="submit" id="submit" style="" />
             </form>
@@ -593,10 +592,10 @@ function showBidForm($action_str, $userSentBid) {
                 <input type="hidden" value="Delete" name="mode" />
                 <input type="submit" value="حذف" name="submit" style="" />
 
-            <? } else { ?>
+    <? } else { ?>
                 <input type="hidden" value="Add" name="mode" />
                 <input type="submit" value="ارسال پیشنهاد" name="submit" id="submit"  style="" />
-            <? } ?>
+    <? } ?>
 
         </form>
 
@@ -622,12 +621,12 @@ function showFinalForm($action_str) {
     <div style="text-align: right">
         <b>نکات:‌</b>
         <ul class="disc">
-            <?php if ($project->type == 'Agency') { ?>
+    <?php if ($project->type == 'Agency') { ?>
             <?php } else { ?>
                                                                                                                                                                                                                 <!--                <li><b>قیمت پروژه: <?php echo number_format($project->accepted_price) ?> ریال</b></li>
                                                                                                                                                                                                                 <li>کارمزد مرکز: <?= (1 - $_PRICES['P_TYPIST']) * 100; ?>%</li>
                                                                                                                                                                                                                 <li><b>میزان عایدی شما: <?php echo number_format(($project->accepted_price * $_PRICES['P_TYPIST'])) ?> ریال</b></li>-->
-            <?php } ?>
+    <?php } ?>
             <?php if ($project->output != 'ONLINE') { ?>
                 <?= Content::BODY(Content::$NOTE_PROJECT_FINAL_FILE); ?>
             <?php } ?>
@@ -637,7 +636,7 @@ function showFinalForm($action_str) {
     <form method="post" class="form" action<?= '="' . $action_str . '"'; ?> enctype="multipart/form-data">
         <input type="hidden" name="formName" value="SubmitFinalFileForm" />
         <input type="hidden" name="pid" value="<?php echo $project->id ?>" />
-        <?php if ($project->type == 'Agency') { ?>
+    <?php if ($project->type == 'Agency') { ?>
             <label>توضیح و پیام:</label>
             <textarea name="m" style="width:300px; height:120px;"></textarea>
             <label>فایل نهایی:</label>
@@ -646,7 +645,7 @@ function showFinalForm($action_str) {
             <input type="text" name="pp" class="numberfild"/>
             <label> </label>
             <input type="submit" value="ارسال" name="submit" id="submit" />
-        <?php } elseif ($project->output != 'ONLINE') { ?>
+    <?php } elseif ($project->output != 'ONLINE') { ?>
             <label>توضیح و پیام:</label>
             <textarea name="m" style="width:300px; height:120px;"></textarea>
             <label>فایل نهایی:</label>
@@ -655,14 +654,14 @@ function showFinalForm($action_str) {
             <input type="text" name="pp" class="numberfild"/>
             <label> </label>
             <input type="submit" value="ارسال" name="submit" id="submit" />
-        <?php } else { ?>
+    <?php } else { ?>
             <input type="hidden" name="m" value="فایل نهایی شما آماده شد" />
             <label><?= $fabidtype[$project->bid_type] ?>:</label>
             <input type="text" name="pp" class="numberfild"/>
             <!--<input type="hidden" name="pp" value="<?= $project->guess_page_num ?>" />-->
             <label> </label>
             <input type="submit" value="تایید و ثبت" name="submit" id="submit" />
-        <?php } ?>
+    <?php } ?>
     </form>
     <div class="clear"></div>
     <br/><br/>
@@ -696,7 +695,7 @@ function showAddGroupForm($action_str) {
             <label>عنوان گروه:</label>
             <input type="text" name="" value="<?= $group->title; ?>" readonly="readonly" />
             <input type="hidden" name="gid" value="<?= $group->id; ?>" />
-            <? foreach ($mems as $mem) { ?>
+        <? foreach ($mems as $mem) { ?>
                 <?
                 if ($mem['user_id'] != $user->id) {
                     $uname = $user->getNickname($mem['user_id']);
@@ -707,7 +706,7 @@ function showAddGroupForm($action_str) {
                         <!--<label></label>-->
                         <textarea name="mt_<?= $mem['user_id'] ?>" placeholder="توضیحات برای کاربر <?= $uname; ?>"></textarea>    
                     </span>
-                <? } ?>
+            <? } ?>
             <? } ?>
             <label></label>
             <input type="submit" value="تایید " name="submit" id="submit" />
@@ -798,29 +797,29 @@ function showCreditGroupForm($action_str) {
 
         <label>هزینه پروژه</label>
         <input type="text" class="numberfild" value="<?= $project->getWorkerPrice(); ?>" disabled="disabled" />
-        <? foreach ($mems as $mem) { ?>
+    <? foreach ($mems as $mem) { ?>
             <? if ($mem['user_id'] != $user->id) { ?>
                 <label><?= $_ENUM2FA['fa']['worker'] ?> <?= $user->getNickname($mem['user_id']) ?>:</label>
                 <input type="text" name="m_<?= $mem['user_id'] ?>" class="numberfild mem_group" onkeyup="culc_credit()" value="0" />
-            <? } ?>
+        <? } ?>
         <? } ?>
         <label>سهم شما(<?= $user->getNickname() ?>):</label>
         <input type="text" name="m_<?= $user->id ?>" class="numberfild my_credit" readonly="readonly" value="<?= $project->getWorkerPrice(); ?>"/>
 
         <script type="text/javascript">
-            $p_price=<?= $project->getWorkerPrice() ?>;
-            function culc_credit(){
-                sumGC=0;
-                var m=$('.mem_group');
-                for(var i=0;i<m.length;i++){
+            $p_price =<?= $project->getWorkerPrice() ?>;
+            function culc_credit() {
+                sumGC = 0;
+                var m = $('.mem_group');
+                for (var i = 0; i < m.length; i++) {
                     sumGC += parseInt($(m[i]).val());
                 }
                 $('.my_credit').val($p_price - sumGC);
-                if(!sumGC || $p_price < sumGC){
+                if (!sumGC || $p_price < sumGC) {
                     $('.submit_credit').attr("disabled", "disabled");
                     $('.submit_credit').hide();
                     $('.invalid_msg').show();
-                }else{
+                } else {
                     $('.submit_credit').removeAttr("disabled");
                     $('.submit_credit').show();
                     $('.invalid_msg').hide();

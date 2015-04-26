@@ -78,11 +78,16 @@ abstract class BaseBid {
 //            $message->addError('شما پیش از این پیشنهاد خود را ارسال نموده اید.');
 //            return false;
 //        }
-        if ($project->lock_price > $user->getCredit()) {
-            $message->displayError('شما حداقل اعتبار مورد نیاز برای پیشنهاد به این پروژه را ندارید. &nbsp;&nbsp;'
+//        
+        $pr = (isset($_POST['p'])) ? (int) $_POST['p'] : 0;
+        $type = (isset($_POST['bt'])) ? $_POST['bt'] : self::$TYPE_PERPAGE;
+//        $lock_price=$project->lock_price;
+        $lock_price= roundPrice($pr*2/10);
+        if ($lock_price > $user->getCredit()) {
+            $message->addError('شما حداقل اعتبار مورد نیاز برای پیشنهاد به این پروژه را ندارید. &nbsp;&nbsp;'
                     . '<br/> اعتبار شما:‌ ' . $user->getCredit() . ' ریال '
                     . '<br/><a href="' . $_CONFIGS['Site']['Sub']['Blog'] . '/type-help/type-why-typist-stakeholder"' . ' target="_blank">چرا باید این میزان اعتبار را داشته باشم؟</a> &nbsp;&nbsp;&nbsp; '
-                    . '<br/><a href="add-credit?need_p=' . $project->lock_price . '" class="active_btn popup">افزایش اعتبار</a>');
+                    . '<br/><a href="add-credit?need_p=' . $lock_price . '" class="active_btn popup">افزایش اعتبار</a>');
 
             return false;
         }
@@ -95,15 +100,15 @@ abstract class BaseBid {
                 return false;
             }
         }
-        $pr = (isset($_POST['p'])) ? (int) $_POST['p'] : 0;
-        $type = (isset($_POST['bt'])) ? $_POST['bt'] : self::$TYPE_PERPAGE;
+        
 
         $mode = (isset($_POST['mode'])) ? $_POST['mode'] : 'Add';
         if ($database->selectField('bids', 'id', $database->whereId($user->id, 'user_id') . " AND project_id = " . (int) $_POST['pid']))
             $mode = "Edit";
 
         $accepted = $this->checkValidate($project, $pr);
-        $earnest = intval($_POST['er']);
+//        $earnest = intval($_POST['er']);
+        $earnest = $pr;
 
         if ($mode == "Add") {
             $database->insert('bids', array(

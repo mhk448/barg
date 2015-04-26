@@ -535,7 +535,7 @@ class BaseProject {
         }
 
         $accepted_price = ($this->type == 'Agency') ? 0 : $bid_price;
-//        $lock_price = ($this->type == 'Agency') ? $this->lock_price : $bid_price;
+        $lock_price = ($this->type == 'Agency') ? $this->lock_price : $bid_price;
         //only for monagese
         $earnest = ( $this->selection_method == 'li') ? $accepted_price : $this->earnest;
 
@@ -543,7 +543,7 @@ class BaseProject {
             'typist_id' => intval($bid['user_id']),
             'state' => 'Run',
             'earnest' => $earnest,
-//            'lock_price' => $lock_price,
+            'lock_price' => $lock_price,
             'stakeholder_date' => time(), // update needed for worker can cancel after 2 hour
             'expire_time' => time() + $this->expire_interval,
             'accepted_price' => $accepted_price
