@@ -119,7 +119,7 @@
                 <div id="header">
                     <? include 'header-top-menu.php'; ?>
                     <div style=" background-color: white;
-                         /*background-image: url('cmedias/images/theme/typeiran_logo_bg.png');*/
+                         /*background-image: url('cmedias/images/theme/bargardoon_logo_bg.png');*/
                          /*background-image: url('medias/images/theme/bg-home.png');*/
                          background: url('medias/images/theme/body-bg.png') repeat scroll 0 0 #FFFFFF;
                          /*display: none;*/

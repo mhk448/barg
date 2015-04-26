@@ -22,7 +22,7 @@
         <div class="bg-gradian" style="
              padding: 8px;
              ">
-            <img src="medias/images/theme/typeiran_logo.png" style="width: 70%"  />
+            <img src="medias/images/theme/bargardoon_logo.png" style="width: 70%"  />
         </div>
     </div>
     <? if ($user->isUser()) { ?>
@@ -450,7 +450,7 @@
 <!--        <div style="text-align: center">
             <br/>
             <a href="http://bargardoon.com" target="_blank">
-                <img style="width: 60%" src="/medias/images/theme/typeiran_logo.png" alt="  تایپ فوری"/>
+                <img style="width: 60%" src="/medias/images/theme/bargardoon_logo.png" alt="  تایپ فوری"/>
             </a>
         </div>-->
     <? }if (!isSubTranslate()) { ?>

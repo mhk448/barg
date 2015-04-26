@@ -85,7 +85,7 @@ function adduser() {
             'rate' => 0,
             'finished_projects' => 0,
             'rejected_projects' => 0,
-            'presenter_id' => User::$TYPEIRAN,
+            'presenter_id' => User::$BARGARDOON,
             'level' => 2,
             'verified' => Event::$V_ACC,
         );
@@ -100,8 +100,8 @@ function adduser() {
 
         if ($oldRes['credits']) {
             $message->addMessage(' credits: ' . $oldRes['credits'] . ' id is: ' . $oldRes['id'] . ' added ');
-            $creditlog->add($oldRes['id'], $oldRes['credits'], 'users', User::$TYPEIRAN, "انتقال وجه از نسخه قدیم تایپایران");
-            $creditlog->sub(User::$TYPEIRAN, $oldRes['credits'], 'users', $oldRes['id'], "انتقال وجه از نسخه قدیم تایپایران");
+            $creditlog->add($oldRes['id'], $oldRes['credits'], 'users', User::$BARGARDOON, "انتقال وجه از نسخه قدیم تایپایران");
+            $creditlog->sub(User::$BARGARDOON, $oldRes['credits'], 'users', $oldRes['id'], "انتقال وجه از نسخه قدیم تایپایران");
         }
         if ($oldRes['locked_credits']) {
             $message->addMessage(' locked_credits: ' . $oldRes['locked_credits'] . ' id is: ' . $oldRes['id'] . ' added ');

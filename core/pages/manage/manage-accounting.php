@@ -48,8 +48,8 @@ foreach ($prjType0 as $value) {
     $prjType['sum']['elmend_prices'] = $prjType['sum']['elmend_prices'] + $value['elmend_prices'];
 }
 
-$u_typeiran = new User(User::$TYPEIRAN);
-$u_typeiran_p = $u_typeiran->getCredit(TRUE) * -1;
+//$u_typeiran = new User(User::$TYPEIRAN);
+//$u_typeiran_p = $u_typeiran->getCredit(TRUE) * -1;
 $u_elmend = new User(User::$ELMEND);
 $u_elmend_p = $u_elmend->getCredit(TRUE);
 $u_50 = new User(50);
@@ -127,12 +127,12 @@ $u_51_p = $u_51->getCredit(TRUE) * -1;
                     <th style="text-align: center">مبلغ</th>
                     <th></th>
                 </tr>
-                <tr>
+<!--                <tr>
                     <td>نسخه قدیم</td>
                     <td>---</td>
                     <td class="price number" ><?= $u_typeiran_p ?></td>
                     <td>ریال</td>
-                </tr>
+                </tr>-->
                 <tr>
                     <td>کاربر Admin</td>
                     <td class="" >---</td>
@@ -154,7 +154,7 @@ $u_51_p = $u_51->getCredit(TRUE) * -1;
                 <tr>
                     <td>جمع کل</td>
                     <td>---</td>
-                    <td class="price number" ><?= $u_typeiran_p + $u_50_p + $u_51_p + $CreAll['prices'] ?></td>
+                    <td class="price number" ><?= $u_50_p + $u_51_p + $CreAll['prices'] ?></td>
                     <td>ریال</td>
                 </tr>
                 <tr>
@@ -172,7 +172,7 @@ $u_51_p = $u_51->getCredit(TRUE) * -1;
                 <tr>
                     <td> جمع کل به همراه سود</td>
                     <td>---</td>
-                    <td class="price number" ><?= $u_typeiran_p + $u_50_p + $u_51_p + $CreAll['prices'] - $u_elmend_p + ($smsAll['prices'] / 4) ?></td>
+                    <td class="price number" ><?=  $u_50_p + $u_51_p + $CreAll['prices'] - $u_elmend_p + ($smsAll['prices'] / 4) ?></td>
                     <td>ریال</td>
                 </tr>
 

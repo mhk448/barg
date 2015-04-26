@@ -3,11 +3,11 @@
 if (isset($_GET['bank']) && $_GET['bank'] == 'parspal') {
 
     if (isset($_POST['status']) && $_POST['status'] == 100) {
-        $MerchantID = '1898603';
-        $Password = 'y7KaM02RE';
+        $MerchantID = $_CONFIGS['Site']['Sub']['bank']['parspal']['merchant'];
+        $Password = $_CONFIGS['Site']['Sub']['bank']['parspal']['password'];
 
         $Refnumber = $_POST['refnumber'];
-        $Resnumber = $_POST['resnumber']; // typeiran id
+        $Resnumber = $_POST['resnumber']; // bargardoon id
 
         $Price = $cdatabase->selectField("payments", 'price', $cdatabase->whereId($Resnumber));
         $Price = intval($Price) / 10;

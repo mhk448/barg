@@ -557,7 +557,7 @@ define(_HELP_PATH_, '');
                                 }
                                 ?>
                                 <div class="user-mini-info" style="padding:0px;background:none;">
-                                    <!--<img src="medias/images/theme/typeiran_logo.png" alt="" style="width:90%"/>-->
+                                    <!--<img src="medias/images/theme/bargardoon_logo.png" alt="" style="width:90%"/>-->
                                     <br/>
                                     <br/>
                                     <br/>

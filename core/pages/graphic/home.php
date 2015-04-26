@@ -89,7 +89,7 @@ $users_active = json_decode($system->homeRate_userActive['value'], TRUE);
                         <img 
                             style="margin-top: -30px;cursor: pointer"
                             alt=""
-                            src="medias/images/theme/typeiran_logo.png"
+                            src="medias/images/theme/bargardoon_logo.png"
                             onclick="$('#ddd').slideUp();$('#dde').slideUp();$('#fff').slideDown();"
                             />
                         <br/>
@@ -572,7 +572,7 @@ $users_active = json_decode($system->homeRate_userActive['value'], TRUE);
                                 }
                                 ?>
                                 <div class="user-mini-info" style="padding:0px;background:none;">
-                                    <!--<img src="medias/images/theme/typeiran_logo.png" alt="" style="width:90%"/>-->
+                                    <!--<img src="medias/images/theme/bargardoon_logo.png" alt="" style="width:90%"/>-->
                                     <br/>
                                     <br/>
                                     <br/>
