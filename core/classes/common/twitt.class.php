@@ -102,7 +102,7 @@ class Twitt {
                      src<?= '="http://bargardoon.com/user/avatar/UA_' . $user->id . '.png"'; ?> 
                      width="40" height="40" />
                 <input type="hidden" id="reply_id_input" value="0"/>
-                <div style="float: right;width: 400px;">
+                <div style="float: right;width: 86%;">
                     <textarea id="text_input" maxlength="500" style="width: 99%;height: 50px;padding: 5px"></textarea>
                     <a style="padding: 0px 18px;float: left" class="active_btn" id="twitt_send_btn" onclick="mhktwitt.send('#text_input', '#reply_id_input','#twitt_send_btn','#twitt_send_loader');" >ثبت</a>
                     <a style="padding: 0px 10px;float: right" class="active_btn" id="twitt_send_btn" onclick="mhkform.ajax('twitts?timg=0&ajax=1');" >افزودن تصویر</a>
