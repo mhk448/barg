@@ -34,7 +34,7 @@
                                 <br/>
                                 <a <?= 'href="user_' . $row['from_id'] . '"' ?> target="_blank"><?= $user->getNickname($row['from_id']) ?></a>
                             </div>
-                            <div style="padding: 10px;border-radius: 10px;text-align: right; width: 65%;float: right;background-color: #f0f0f0" >
+                            <div style="padding: 10px;border-radius: 10px;text-align: right; width: 65%;float: right;background-color: #fff" >
                                 <div style="min-height: 80px;max-height: 200px;overflow-y: auto" >
                                     <a <?= 'href="message_' . $row['id'] . (($row['is_support']) ? ('_S' . $row['is_support']) : '') . '"' ?>>
                                         <?php echo $row['title'] ?>
@@ -54,7 +54,8 @@
                 </div>
             </div>
             <div  class="col-md-6">
-                dd
+                 <? echo $twitt->display("twitt", 0, 10); ?>
+                <a class="active_btn" href="/twitts">بیشتر ...</a>
             </div>
         <div class="clear"> </div>
         <hr/>
@@ -171,7 +172,7 @@
                             <th>عنوان</th>
                             <th>نوع</th>
                             <th>وضعیت</th>
-                            <th width="100">تاریخ ارسال</th>
+                            <th width="130">تاریخ ارسال</th>
                             <!--<th width="20px" style="font-size: 10px;">تعداد صفحات </th>-->
                             <!--<th>حداکثر قیمت</th>-->
                             <!--<th>هزینه پروژه</th>-->

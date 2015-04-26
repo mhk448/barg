@@ -126,6 +126,9 @@ function createFactor(){
     if(!checkForm1(data))
         return;
     
+    sendForm();
+    return;
+    
     $("#form1").hide();
     $("#form3").show();
     
