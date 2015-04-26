@@ -4,10 +4,7 @@ if (!$user->isSignin()) {
     showFastReg();
 }
 ?>
-<script type="text/javascript">
-    subSite = '<?= $subSite; ?>';
-    theme_bg_color = '<?= $_CONFIGS['Site'][$subSite]['bg_color'] ?>';
-</script>
+
 <div class="bg-theme"
      style="
      height: 20px;

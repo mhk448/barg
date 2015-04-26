@@ -40,7 +40,7 @@
         <!--<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />-->
         <link href="<?= _HELP_PATH_ ?>medias/styles/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <!-- Ionicons 2.0.0 -->
-        
+
         <!--<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />-->    
         <!-- Theme style -->
         <link href="<?= _HELP_PATH_ ?>medias/styles/AdminLTE.css" rel="stylesheet" type="text/css" />
@@ -54,6 +54,8 @@
     </head>
     <body class="skin-green fixed" >
         <script type="text/javascript">
+            subSite = '<?= $subSite; ?>';
+            theme_bg_color = '<?= $_CONFIGS['Site'][$subSite]['bg_color'] ?>';
             curUser = {};
         </script>
         <? if ($user->isSignin()) { ?>
@@ -207,7 +209,7 @@
                                                     <span style="color: black;">درجه:</span>
                                                     <!--            <div class="classification">
                                                                     <div class="cover"></div>
-                                                                    <div class="progress" style="width: <? //echo ($user->rank * 10) . '%;'                                                                    ?>">
+                                                                    <div class="progress" style="width: <? //echo ($user->rank * 10) . '%;'                                                                     ?>">
                                                                     </div>
                                                                 </div>-->
                                                     <?= ($user->rate) . ' از 7' ?>
@@ -234,9 +236,9 @@
                                                     </div>
                                                 <? } ?>
                                             </div>
-                                            
+
                                             <div style="clear: both"/>
-                                            
+
                                         </p>
                                     </li>
                                     <!-- Menu Body -->
