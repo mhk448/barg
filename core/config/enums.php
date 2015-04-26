@@ -96,7 +96,7 @@ $GLOBALS['_ENUM2FA'] = array(
         'payments' => 'پرداخت وجه',
         'payouts' => 'دریافت وجه',
         'review_requests' => 'بازبینی',
-        'typeiran' => 'سایت قدیم تایپایران',
+//        'bargardoon' => 'سایت قدیم ',
         'groups' => ' انجام گروهی پروژه ',
     ),
     // bid_type

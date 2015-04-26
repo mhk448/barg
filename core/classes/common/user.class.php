@@ -16,7 +16,7 @@ class User {
     public static $SUPORT = 2; // residegi be shekayat
     public static $ELMEND = 3; // bahs mali
     public static $SMS = 4; // bahs mali sms
-    public static $TYPEIRAN = 7; // bahs mali old site typeirn
+    public static $BARGARDOON = 7; // bahs mali old site typeirn
     public static $TYPIST = 8; // test// nc? worker
     public static $USER = 9; //test
     public static $AGENCY = 10; //test
