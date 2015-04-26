@@ -21,7 +21,6 @@ function showProjectInfo() {
             </div>
             <div class="pero-r1s2">
                 <a id="pero-r1s2" href<?= '="project_' . $project->id . '"'; ?>>
-                    عنوان :
                     <?= $project->title ?>
                 </a>
                 <br/>
@@ -37,22 +36,19 @@ function showProjectInfo() {
                 <tr>
                     <td style="">
                         پیشنهادات: 
-                        <br/>
                         <?= $project->getBidsCount() ?>
                         پیشنهاد
                     </td>
                     <td style="">نوع ترجمه: 
-                        <br/>
                         <?= $_ENUM2FA['type'][$project->type] ?>
                     </td>
                     <td style="">زبان ترجمه: 
-                        <br/>
                         <? $l = explode("2", $project->lang); ?>
                         <?= $_ENUM2FA['lang'][$l[0]]; ?>
                         به
                         <?= $_ENUM2FA['lang'][$l[1]]; ?>
                     </td>
-                    <td style="color: black;">
+<!--                    <td style="color: black;">
                         <span class="help" style="color: white;">
                             سطح ترجمه:
                             <br/>                            
@@ -60,8 +56,8 @@ function showProjectInfo() {
                                 <?= $_ENUM2FA['level'][$project->level]; ?>
                             </span>
                         </span>
-                    </td>
-                    <td style="color: black;">
+                    </td>-->
+<!--                    <td style="color: black;">
                         <span class="help" style="color: white;">
                             موضوع:
                             <br/>                            
@@ -69,8 +65,8 @@ function showProjectInfo() {
                                 <?= $project->subject; ?>
                             </span>
                         </span>
-                    </td>
-                    <td style="color: black;">
+                    </td>-->
+<!--                    <td style="color: black;">
                         <? if ($project->type == 'Agency') { ?>
                             <span class="help" style="color: white;">
                                 تعداد کلمات:
@@ -94,9 +90,9 @@ function showProjectInfo() {
                         <div class="help_comment" style="color: black;" >
                             این تعداد به صورت تخمینی توسط کارفرما ثبت شده است
                         </div>
-                    </td>
+                    </td>-->
                     <? if (($user->isWorker() || $user->isAdmin()) && $project->type != 'Agency') { ?>
-                        <td style="color: black;display: none;">
+<!--                        <td style="color: black;display: none;">
                             <span class="help" style="color: white;">
                                 تخمین سیستم:
                                 <br/>
@@ -112,10 +108,10 @@ function showProjectInfo() {
                             <div class="help_comment" style="color: black;" >
                                 این قیمت براساس زبان و تعداد صفحاتی که کافرما وارد کرده محاسبه می شود
                             </div>
-                        </td>
+                        </td>-->
                     <? } ?>
                     <? if ($project->output != 'ONLINE') { ?>
-                        <td style="">
+<!--                        <td style="">
                             <?php
                             if ($project->type == 'Agency') {
                                 echo 'قیمت هر کلمه';
@@ -138,7 +134,7 @@ function showProjectInfo() {
                                 echo '</span>';
                             }
                             ?> ریال 
-                        </td>
+                        </td>-->
                     <? } ?>
                 </tr>
             </table>

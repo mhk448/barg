@@ -6,7 +6,7 @@
         Purpose of the stylesheet follows.
 */
 
-hr{height: 2px;width: 90%;border: none;background-color: #00A65A;}
+hr{height: 2px !important;width: 90%;border: none;background-color: #00A65A;}
 .color{color:#00A65A }
 input,textarea,select{
     border: solid 1px #008749

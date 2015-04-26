@@ -301,8 +301,8 @@ ul.panel li{ display:inline; width:170px; float:right; padding:10px; border:1px 
 table.projects{ border:1px solid #AAA; border-radius: 5px;}
 table.projects th{
     text-align:right;
-    font-weight:bold; 
-    padding: 3px 5px;
+    /*font-weight:bold;*/ 
+    padding: 1px 5px;
     background-color: rgb(0, 166, 90);
     border-top-style: solid;
     border-top-width: 4px;
