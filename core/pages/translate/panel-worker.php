@@ -3,54 +3,8 @@
         <?php $message->display() ?>
 
         <!-- End Success Box -->	
-        <div style="width: 100%;float: left;text-align:justify; display: none;">
-            <div style="width: 48%;float: right">
-
-                <p style="font-size:14pt">تایپیست گرامی</p>
-                <p style="font-size:12pt;line-height: 2;">
-                    شما در این مرکز می توانید به کسب درآمد بپردازید، برای این کار قبل از شروع کار بخش  
-                    <a href<?= '="' . $_CONFIGS['Site']['Sub']['Blog'] . "/type-help" . '"'; ?> target="_blank">
-                        راهنما
-                    </a>
-                    را به دقت مطالعه نمایید و به لیست پروژه ها بروید تا در پروژه ها پیشنهادتان را برای انجام کار ارسال کنید. همچنین در سیستم جدید بخش ترجمه آنلاین راه اندازی شده که در آن مراحل انجام کار و ترجمه، آنلاین می باشد. برای راهنمای بخش 
-                    <a href<?= '="' . $_CONFIGS['Site']['Sub']['Blog'] . "/type-help/submit-typeonline" . '"'; ?> target="_blank">
-                        اینجا
-                    </a>
-                    را کلیک کنید و جهت عضویت در این بخش بر روی لینک زیر کلیک نمایید . همچنین شما می توانید از سایر مجریان متمایز تر باشید  برای مشاهده امتیازات ویژه شدن 
-                    <a href<?= '="' . $_CONFIGS['Site']['Sub']['Blog'] . "/type-rols/type-special" . '"'; ?> target="_blank">
-                        اینجا
-                    </a>
-                    را کلیک کنید و برای ویژه شدن بر روی لینک زیر کلیک نمایید.
-                </p>
-                <hr/>
-                <div style="text-align: center">
-                   
-                    <div class="button-panel active_btn" >
-                        <a href="projects_open" class="ajax">
-                            <h2>
-                                لیست پروژه های باز
-                            </h2>
-                            <p>
-                                مناقصه ای
-                            </p>
-                        </a>
-                    </div>
-                    <div class="button-panel active_btn" >
-                        <a href=""  class="" onclick="mhkform.info('به زودی  ...')">
-                            <h2>
-                                مجری ویژه
-                            </h2>
-                            <p>
-                                تایپیست ویژه شوید
-                            </p>
-                        </a>
-                    </div>
-                </div>
-                <hr/>
-                <p>&nbsp;</p>
-            </div>
-
-            <div style="width: 48%;float: left">
+        <div>
+            <div class="col-md-6">
                 <?
                 $default = ' <p style="font-size:14pt">به ' . $_CONFIGS['Site']['Sub']['NickName'] . ' خوش آمدید!</p>
                 <p style="font-size:12pt;line-height: 2;">نسخه جدید این مرکز با امکانات فراوان راه اندازی شد. برای دیدن لیست امکانات جدید 
@@ -60,7 +14,12 @@
                 ';
                 ?>
                 <? $userlevel->displayLevelQuestion($user, $default); ?>
+                
+                
+                
                 <hr/>
+                
+                
                 <div style="width: 100%;">
                     <div style="padding: 10px"></div>
                     <div style="width: 100%;">
@@ -93,79 +52,14 @@
                     <img  src="medias/images/theme/panel_msg.png"
                           style="width: 70%; float:left; padding-left:25px;"/>
                 </div>
-                <hr/>
             </div>
+            <div  class="col-md-6">
+                dd
+            </div>
+        <div class="clear"> </div>
+        <hr/>
         </div>
-        <div style="width: 100%;float: left; display: none;">
-            <div style="width: 48%;float: right; margin-top:20px;">
-                <div>
-                    <ul>
-                        <li>
-                            <a href<?= '="' . $_CONFIGS['Site']['Sub']['Blog'] . "/type-help/submit-project" . '"'; ?> target="_blank">
-                                چگونه یک پروژه رو ثبت کنیم؟
-                            </a>
-                        </li>
-                        <li>
-                            <a href<?= '="' . $_CONFIGS['Site']['Sub']['Blog'] . "/type-help/select-typist" . '"'; ?> target="_blank">
-                                چگونه یک مجری خوب را انتخاب کنیم؟
-                            </a>
-                        </li>
-                        <li>
-                            <a href<?= '="' . $_CONFIGS['Site']['Sub']['Blog'] . "/type-help/type-pay" . '"'; ?> target="_blank">
-                                چه زمانی وجه پروژه رو به مجری میدهم؟
-                            </a>
-                        </li>
-                        <li>
-                            <a href<?= '="' . $_CONFIGS['Site']['Sub']['Blog'] . "/type-help/type-many-page" . '"'; ?> target="_blank">
-                                چگونه می تونم حجم زیادی از صفحات رو در مدت زمان کمی ترجمه کنم ؟
-                            </a>
-                        </li>
-                        <li>
-                            <a href<?= '="' . $_CONFIGS['Site']['Sub']['Blog'] . "/type-help/type-req-rev" . '"'; ?> target="_blank">
-                                اگر پس از دریافت فایل نواقص و یا اشکالی بود چه کار باید بکنم؟
-                            </a>
-                        </li>
-                    </ul>
-                    <p>&nbsp;</p>
-                </div>
-            </div>
-            <div class="panel_link" style="width: 48%;float: left; margin-top:20px;">
-                <!--<div style="width:50%;float:left;">-->
-                <a class="active_btn" style="width:125px;background-color: #ff7f27"
-                   href<?= '="' . $_CONFIGS['Site']['Sub']['Blog'] . "/type-help/agency" . '"'; ?> target="_blank">
-                    دریافت نمایندگی
-                </a>
-                <a class="active_btn" style="width:125px;background-color: #ed1c24"
-                   href<?= '="' . $_CONFIGS['Site']['Sub']['Blog'] . "/type-help/type-employ" . '"'; ?> target="_blank">
-                    <nobr>
-                        استخدام تایپیست ثابت
-                    </nobr>
-                </a>
-                <a class="active_btn" style="width:125px;background-color: #fd7edb"
-                   href<?= '="' . $_CONFIGS['Site']['Sub']['Blog'] . "/type-help/type-discount" . '"'; ?> target="_blank">
-                    دریافت کارت تخفیف
-                </a>
-                <!--</div>-->
-                <!--<div style="width:50%;float:right;">-->
-                <a class="active_btn" style="width:125px;background-color: #a349a4"
-                   href<?= '="user-list_agency"'; ?> target="_blank">
-                    لیست نمایندگی ها
-                </a>
-                <a class="active_btn" style="width:125px;background-color: #00a2e8"
-                   href<?= '="user-list_worker"'; ?> target="_blank">
-                    لیست تایپیست ها
-                </a>
-                <a class="active_btn" style="width:125px;background-color: #3f48cc"
-                   href<?= '="' . $_CONFIGS['Site']['Sub']['Blog'] . "/type-help/type-work" . '"'; ?> target="_blank">
-                    کسب درآمد
-                </a>
-                <!--</div>-->
-
-                <p>&nbsp;</p>
-            </div>
-        </div>
-
-
+     
 
 
 
@@ -233,8 +127,8 @@
 
 
 
-        <div style="width: 100%;float: left">
-            <div style="width: 48%;background: #f0f0f0;float: right">
+        <div>
+            <div  class="col-md-6">
                 <div id="topmenu-panel">
                     آخرین رخدادها</div>
                 <table class="projects" style="width:100%;">
@@ -266,10 +160,7 @@
                 <div class="clear"></div>
             </div>
 
-            <!--                <div style="width: 100%;padding: 10px" class="clear">
-                            </div>-->
-
-            <div style="width: 48%;background: #f0f0f0;float: right;margin-right: 20px">
+            <div  class="col-md-6">
                 <div id="topmenu-panel">
                     آخرین پروژه ها
                 </div>

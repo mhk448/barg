@@ -151,9 +151,9 @@ if ($_REQUEST['type'] == "panel_projects") {
             $p = new Project($p['id']);
             $l[$index][] = getJsonTableInfo('project_' . $p->id);
             if ($p->verified > 0 || $p->user_id == $user->id || $p->typist_id == $user->id) {
-                $l[$index][] = '<a href="project_' . $p->id . '" class="dark">' . $p->title . '</a>';
+                $l[$index][] = '<a href="project_' . $p->id . '" class="dark number">B' . $p->id . '</a>';
             } else {
-                $l[$index][] = '<a href="#" class="dark">' . $p->title . '</a>';
+                $l[$index][] = '<a href="#" class="dark number">B' . $p->id . '</a>';
             }
             $l[$index][] = $_ENUM2FA['type'][$p->type] .
                     '<p style="font-size: 10px;">' . $_ENUM2FA['output'][$p->output] . '</p>';

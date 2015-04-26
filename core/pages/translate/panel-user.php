@@ -54,8 +54,8 @@
 
                 <div class="clear"></div>
             </div>
-            <hr/>
             <div class="clear"></div>
+            <hr/>
         </div>
         <!--        <div style="width: 100%;float: left">
                     <div style="width: 48%;float: right; margin-top:20px;">
@@ -175,11 +175,11 @@
             <table  class="projects" style="width:100%;">
                 <thead>
                     <tr>
-                        <!--<th>کد پروژه</th>-->
-                        <th>عنوان</th>
+                        <th>کد پروژه</th>
+                        <!--<th>عنوان</th>-->
                         <th>نوع</th>
                         <th>وضعیت</th>
-                        <th width="100">تاریخ ارسال</th>
+                        <th width="130">تاریخ ارسال</th>
                         <!--<th width="20px" style="font-size: 10px;">تعداد صفحات </th>-->
                         <!--<th>حداکثر قیمت</th>-->
                         <!--<th>هزینه پروژه</th>-->
@@ -193,11 +193,11 @@
                     foreach ($last_prj as $p) {
                         ?>
                         <tr class="">
-                            <!--<td><br/><p class="number" style="text-align: right;">T<?php echo $p['id'] ?></p><br/></td>-->
-                            <td><a class="ajax" <?= 'href="project_' . $p['id'] . '"' ?> style="display:block">
+                            <td><br/><p class="number" style="text-align: right;">B<?php echo $p['id'] ?></p><br/></td>
+<!--                            <td><a class="ajax" <?= 'href="project_' . $p['id'] . '"' ?> style="display:block">
                                     <?= $p['title']; ?>
                                 </a>
-                            </td>
+                            </td>-->
                             <td><?= $_ENUM2FA['type'][$p['type']]; ?>
                                 <p style="font-size: 10px;"><?= $_ENUM2FA['output'][$p['output']]; ?></p>
                             </td>
