@@ -15,6 +15,10 @@ input,textarea,select{
 .bg-theme { 
     background-color: #00A65A;
 }
+
+.bg-theme a{
+    color: white !important;   
+}
 .br-theme { 
     border-color: #00A65A;
     border-width: 1px;
