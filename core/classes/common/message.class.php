@@ -28,16 +28,18 @@ class Message {
 
     public function display() {
         if ($this->errors_count > 0) {
-            echo '<div class="error"><ul>';
-            for ($i = 0; $i < $this->errors_count; $i++)
-                echo '<li>' . $this->errors[$i] . '</li>';
-            echo '</ul></div>';
+            echo '<div class="alert callout alert-danger" style="text-align:right;">';
+            for ($i = 0; $i < $this->errors_count; $i++){
+                echo '<p><i class="icon fa fa-warning"></i>' . $this->errors[$i] . '</p>';
+            }
+            echo '</div>';
         }
         if ($this->messages_count > 0) {
-            echo '<div class="message"><ul>';
-            for ($i = 0; $i < $this->messages_count; $i++)
-                echo '<li>' . $this->messages[$i] . '</li>';
-            echo '</ul></div>';
+            echo '<div class="alert callout alert-success" style="text-align:right;">';
+            for ($i = 0; $i < $this->messages_count; $i++){
+                echo '<p><i class="icon fa fa-check"></i>' . $this->messages[$i] . '</p>';
+            }
+            echo '</div>';
         }
     }
 

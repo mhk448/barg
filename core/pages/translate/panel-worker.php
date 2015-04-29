@@ -14,53 +14,71 @@
                 ';
                 ?>
                 <? $userlevel->displayLevelQuestion($user, $default); ?>
-                
-                
-                
+
+
+
                 <hr/>
-                
-                
-                <div style="width: 100%;">
-                    <div style="padding: 10px"></div>
-                    <div style="width: 100%;">
-                        <?php
-                        if (count($last_msg) != 0) {
-                            $row = $last_msg[0];
-                            ?>
-                            <div style="width: 20%; padding-right:20px; float:right; text-align:center;" >
-                                <br/>
-                                <br/>
-                                از طرف:
-                                <br/>
-                                <a <?= 'href="user_' . $row['from_id'] . '"' ?> target="_blank"><?= $user->getNickname($row['from_id']) ?></a>
-                            </div>
-                            <div style="padding: 10px;border-radius: 10px;text-align: right; width: 65%;float: right;background-color: #fff" >
-                                <div style="min-height: 80px;max-height: 200px;overflow-y: auto" >
-                                    <a <?= 'href="message_' . $row['id'] . (($row['is_support']) ? ('_S' . $row['is_support']) : '') . '"' ?>>
-                                        <?php echo $row['title'] ?>
-                                    </a>
-                                    <br>
-                                    <?php echo nl2br($row['body']) ?>
-                                </div>
-                                <?php echo $persiandate->date('d F Y ساعت H:i:s', $row['dateline']) ?>
-                                <a style="float: left;" <?= 'href="message_' . $row['id'] . (($row['is_support']) ? ( '_S' . $row['is_support']) : '') . '"' ?>>
-                                    ادامه مطلب
-                                </a>
-                            </div>
-                        <?php } ?>
-                    </div>
-                    <img  src="medias/images/theme/panel_msg.png"
-                          style="width: 70%; float:left; padding-left:25px;"/>
+
+                <div class="bg-green-active topmenu-panel">
+                    <i class="fa fa-briefcase"></i>
+                    پروژه های باز
                 </div>
+                <table  class="projects" style="width:100%;">
+                    <thead>
+                        <tr>
+                            <!--<th>کد پروژه</th>-->
+                            <th>عنوان</th>
+                            <th>نوع</th>
+                            <th>وضعیت</th>
+                            <th>زمان ارسال</th>
+                            <!--<th width="20px" style="font-size: 10px;">تعداد صفحات </th>-->
+                            <!--<th>حداکثر قیمت</th>-->
+                            <!--<th>هزینه پروژه</th>-->
+                            <th style="font-size: 8px;">پیشنهاد</th>
+                        </tr>
+                    </thead>
+                    <tbody id="panel_projects_open_tbody">
+
+                        <?php
+                        $i = 0;
+                        foreach ($last_prj as $p) {
+                            ?>
+                            <tr class="">
+                                <!--<td><br/><p class="number" style="text-align: right;">T<?php echo $p['id'] ?></p><br/></td>-->
+                                <td><a class="ajax" <?= 'href="project_' . $p['id'] . '"' ?> style="display:block">
+                                        <?= $p['title']; ?>
+                                    </a>
+                                </td>
+                                <td><?= $_ENUM2FA['type'][$p['type']]; ?>
+                                    <p style="font-size: 10px;"><?= $_ENUM2FA['output'][$p['output']]; ?></p>
+                                </td>
+                                <td><?= $p['verified'] == 1 ? $_ENUM2FA['state'][$p['state']] : ( $_ENUM2FA['verified'][$p['verified']] ); ?>
+                                </td>
+                                <td><?php echo $persiandate->date('d F', $p['submit_date']) ?></td>
+                                <!--<td><? // echo $p['guess_page_num']                  ?></td>-->
+    <!--                                    <td>
+                                    <span class="price"><?php // echo $p['max_price']                  ?></span>
+                                    ریال    
+                                </td>-->
+    <!--                                    <td>
+                                </td>-->
+                                <td>
+                                    <?= $project->getBidsCount($p['id']) ?>
+                                </td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+
             </div>
             <div  class="col-md-6">
-                 <? echo $twitt->display("twitt", 0, 10); ?>
+                <? echo $twitt->display("twitt", 0, 10); ?>
                 <a class="active_btn" href="/twitts">بیشتر ...</a>
             </div>
-        <div class="clear"> </div>
-        <hr/>
+            <div class="clear"> </div>
+            <hr/>
         </div>
-     
+
 
 
 
@@ -130,14 +148,15 @@
 
         <div>
             <div  class="col-md-6">
-                <div id="topmenu-panel">
+                <div class="bg-green-active topmenu-panel">
+                    <i class="fa fa-bell"></i>
                     آخرین رخدادها</div>
                 <table class="projects" style="width:100%;">
                     <thead>
                         <tr>
                             <th>شناسه</th>
                             <th>عنوان</th>
-                            <th>تاریخ</th>
+                            <th>زمان</th>
                             <th>عملیات</th>
                         </tr>
                     </thead>
@@ -162,7 +181,8 @@
             </div>
 
             <div  class="col-md-6">
-                <div id="topmenu-panel">
+                <div class="bg-green-active topmenu-panel">
+                    <i class="fa fa-briefcase fa-"></i>
                     آخرین پروژه ها
                 </div>
                 <table  class="projects" style="width:100%;">
@@ -172,7 +192,7 @@
                             <th>عنوان</th>
                             <th>نوع</th>
                             <th>وضعیت</th>
-                            <th width="130">تاریخ ارسال</th>
+                            <th>زمان ارسال</th>
                             <!--<th width="20px" style="font-size: 10px;">تعداد صفحات </th>-->
                             <!--<th>حداکثر قیمت</th>-->
                             <!--<th>هزینه پروژه</th>-->
@@ -197,9 +217,9 @@
                                 <td><?= $p['verified'] == 1 ? $_ENUM2FA['state'][$p['state']] : ( $_ENUM2FA['verified'][$p['verified']] ); ?>
                                 </td>
                                 <td><?php echo $persiandate->date('d F', $p['submit_date']) ?></td>
-                                <!--<td><? // echo $p['guess_page_num']                 ?></td>-->
+                                <!--<td><? // echo $p['guess_page_num']                  ?></td>-->
     <!--                                    <td>
-                                    <span class="price"><?php // echo $p['max_price']                 ?></span>
+                                    <span class="price"><?php // echo $p['max_price']                  ?></span>
                                     ریال    
                                 </td>-->
     <!--                                    <td>
@@ -222,11 +242,14 @@
     </div>
 </div>
 <script type="text/javascript">
-    function afterCompose(){
-        curVer['panel_projects']=0;
-        curVer['panel_events']=0;
-        updateData('panel_projects', 10*60*1+5,5);
-        updateData('panel_events', 5*60*1+5,5);
+    function afterCompose() {
+        curVer['panel_projects'] = 0;
+        curVer['panel_projects_open'] = 0;
+        curVer['panel_events'] = 0;
+        updateData('panel_projects', 10 * 60 * 1 + 5, 5);
+        updateData('panel_events', 5 * 60 * 1 + 5, 5);
+        updateData('panel_projects_open', 5 * 60 * 1 + 5, 5);
+
     }
     afterCompose();
 </script>

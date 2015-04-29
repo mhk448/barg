@@ -32,11 +32,11 @@ a:hover{
 a.dark{ color: #000; }
 a.dark:hover{}
 a.link{
-     /*text-decoration: underline;*/
-     color: blue;
+    /*text-decoration: underline;*/
+    color: blue;
 }
 b {font-weight: bold;}
-
+h2 { font-size: 17px; }
 .big{font-size: 16px;line-height: 2}
 /*/////////// common ///////////*/
 .clear { clear: both }
@@ -302,10 +302,10 @@ table.projects{ border:1px solid #AAA; border-radius: 5px;}
 table.projects th{
     text-align:right;
     /*font-weight:bold;*/ 
-    padding: 1px 5px;
-    background-color: rgb(0, 166, 90);
-    border-top-style: solid;
-    border-top-width: 4px;
+    padding: 2px 5px;
+    background-color: #00A7D0;
+    /*border-top-style: solid;*/
+    /*border-top-width: 4px;*/
     color: white;
     /*background-position: center center;*/
     /*background-repeat: repeat-x;*/
@@ -316,17 +316,19 @@ table.projects th{
     /*background-image: url("../images/theme/body-bg.png");*/
 
 }
-table.projects td{ padding: 4px 8px; border-bottom:1px solid #AAA;}
-table.projects tr.odd { background:#FFF; }
-table.projects tr:nth-child(odd) {background-color: #FFF;border-bottom-style: solid}
-table.projects tr.even { background:#EEE; }
-table.projects tr:nth-child(even) {background-color: #EEE;border-bottom-style: solid}
-table.projects tr:hover td{ padding: 4px 8px; border-bottom:2px solid #666;}
-h2 { font-size: 17px; }
+table.projects td{ padding: 4px 2px;}
+table.projects tbody tr{border-bottom-width: 1px}
+table.projects tbody tr.odd { background:#FFF; }
+table.projects tbody tr:nth-child(odd) {background-color: #FFF;border-bottom-style: solid}
+table.projects tbody tr.even { background:#EEE; }
+table.projects tbody tr:nth-child(even) {background-color: #EEE;border-bottom-style: solid}
+table.projects tbody tr:hover td{ border-bottom:1px solid #00A7D0;}
+
 table.projects thead tr { 
+    border:none;
 }
 table.projects thead th { 
-
+    border:none;
 }
 .classification { 
     position: relative;

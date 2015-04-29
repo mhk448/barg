@@ -27,13 +27,15 @@
     background-repeat:no-repeat;
 }
 /*-----    project    ------------*/
-#topmenu-panel{
-    background-image:url('../images/theme/sub_menu_bg.jpg');
-    background-repeat:repeat-x;
-    font-size:14pt;
+#topmenu-panel, .topmenu-panel{
+    /*background-image:url('../images/theme/sub_menu_bg.jpg');*/
+    /*background-repeat:repeat-x;*/
+    /*background-color: #00A65A;*/
+    font-size:11pt;
     text-align:center;
     color:#373737;
     padding: 3px;
+    border-bottom: 1px solid white;
 }
 #sidebarperoject{
     background-image: url('../images/theme/bgperoject.jpg');
