@@ -95,7 +95,6 @@ class Twitt {
         global $user;
         ?>
         <script type="text/javascript" src="medias/scripts/twitt.js?v=5" ></script>
-        <script type="text/javascript" src="medias/scripts/jquery.timeago.js" ></script>
         <? if ($user->isSignin()) { ?>
             <div class="br-theme" style="border-bottom-style:solid;padding: 10px">
                 <img class="user-avator" style="float: right;margin: 0 5px 5px 5px;"

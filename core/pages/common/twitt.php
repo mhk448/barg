@@ -8,8 +8,7 @@ $t = $pager->getParamById('twitts',FALSE);
 <div id="content-wrapper">
     <div id="content">
         <div style="width: 500px;">
-            <script type="text/javascript" src="medias/scripts/jquery.timeago.js" ></script>
-
+            
             <?
             $e = '<div id="div_content_twitt_id_' . $t['id'] . '" style="border-width:1px;border-top-style:dashed;padding: 10px;background-color:' . ($t['reply_id'] == 0 ? '#EEE' : '#DDD') . '" class="twitt-content br-theme" >'
                     . '<img class="user-avator" style="float: right;margin: 0 5px 5px 5px;" src="http://bargardoon.com/user/avatar/UA_' . $t['user_id'] . '.png" width="40" height="40" >'

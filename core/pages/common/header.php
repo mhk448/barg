@@ -34,7 +34,7 @@
         <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/bootstrap/js/bootstrap.min.js"></script> 
         <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/app.js"></script> 
         <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/jquery.slimscroll.min.js"></script> 
-
+        <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/jquery.timeago.js" ></script>
         <!-- Bootstrap 3.3.2 -->
         <link href="<?= _HELP_PATH_ ?>medias/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />    
         <!-- FontAwesome 4.3.0 -->
