@@ -22,7 +22,7 @@ input,textarea,select{
 div{
     border-color: #AC1;
 }
-#topmenu-event .content div.unread{
+#topmenu-event .content .unread{
     background: #BBD532;
 }
 .hour-theme:hover { 

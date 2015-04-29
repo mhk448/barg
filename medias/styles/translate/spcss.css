@@ -26,8 +26,9 @@ input,textarea,select{
 div{
     border-color: #00A65A;
 }
-#topmenu-event .content div.unread{
-    background: #00A65A;
+#topmenu-event .content .unread{
+    background: #59C594;
+    font-weight: bold;
 }
 .hour-theme:hover { 
     background-color: #00A65A;
