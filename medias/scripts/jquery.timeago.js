@@ -29,7 +29,7 @@
     } else if (typeof timestamp === "string") {
       return inWords($.timeago.parse(timestamp));
     } else if (typeof timestamp === "number") {
-      return inWords(new Date(timestamp));
+      return inWords(new mhkDate(timestamp));
     } else {
       return inWords($.timeago.datetime(timestamp));
     }
@@ -108,7 +108,7 @@
       s = s.replace(/T/," ").replace(/Z/," UTC");
       s = s.replace(/([\+\-]\d\d)\:?(\d\d)/," $1$2"); // -04:00 -> -0400
       s = s.replace(/([\+\-]\d\d)$/," $100"); // +09 -> +0900
-      return new Date(s);
+      return new mhkDate(s);
     },
     datetime: function(elem) {
       var iso8601 = $t.isTime(elem) ? $(elem).attr("datetime") : $(elem).attr("title");
@@ -193,7 +193,7 @@
   }
 
   function distance(date) {
-    return (new Date().getTime() - date.getTime());
+    return (new mhkDate().getTime() - date.getTime());
   }
 
   // fix for IE6 suckage

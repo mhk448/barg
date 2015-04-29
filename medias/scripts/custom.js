@@ -5,6 +5,13 @@ function test(a) {
 //    setTimeout("test(1)", 1*60*1000);
 }
 
+mhkDate_diff = 0;
+mhkDate = function (time) {
+    if (time)
+        return new Date(time);
+    return new Date(new Date().getTime() + serverTime_diff);
+};
+
 function initHelpBox() {
     ////////////////////////////////////////////////////////////
     //  help
@@ -252,7 +259,7 @@ function checkHashUrl() {
 }
 
 function mhkCounterDown(_id, _until, _format, _expire_id) {
-    var austDay = new Date();
+    var austDay = new mhkDate();
     austDay.setTime(_until * 1000);
     $(_id).countdown(austDay)
             .on('update.countdown', function (event) {
@@ -310,7 +317,7 @@ $(document).ready(function () {
 });
 
 function showCurTime() {
-    var d = new Date();
+    var d = new mhkDate();
     var h = d.getHours();
     var m = d.getMinutes();
     var s = d.getSeconds();
