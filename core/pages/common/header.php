@@ -28,6 +28,7 @@
 
 
         <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/mhkform.js?v=6"></script>
+        <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/mhkhelp.js?v=1"></script>
         <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/event.js?v=5"></script>
         <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/scripts/custom.js?v=8"></script>
         <script type="text/javascript" src="<?= _HELP_PATH_ ?>medias/bootstrap/js/bootstrap.min.js"></script> 
@@ -54,6 +55,8 @@
     </head>
     <body class="skin-green fixed" >
         <script type="text/javascript">
+            serverTime = <?= time(); ?>000;
+            serverTime_diff = serverTime - (new Date().getTime());
             subSite = '<?= $subSite; ?>';
             theme_bg_color = '<?= $_CONFIGS['Site'][$subSite]['bg_color'] ?>';
             curUser = {};

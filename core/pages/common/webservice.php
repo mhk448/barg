@@ -27,7 +27,7 @@ if ($_REQUEST['type'] == "hometable") {
             . "' AND `action`<>'" . Event::$A_PRIVATE
             . "' AND `action`<>'"
             . "' AND dateline > " . $ver
-            . " AND dateline < " . (time() -(60*3))
+            . " AND dateline < " . (time() - (60 * 3))
             . " ", 'ORDER BY dateline DESC', NULL, 16);
 
     $prj_count = $database->selectCount('projects');
@@ -115,9 +115,10 @@ if ($_REQUEST['type'] == "panel_events") {
             $l[$index][] = getJsonTableInfo('event_' . $e['id']);
             $l[$index][] = '<a onclick="mhkform.ajax(\'event_' . $e['id'] . '?ajax=1\')" class="dark">' . $e['id'] . '</a>';
             $l[$index][] = '<a onclick="mhkform.ajax(\'event_' . $e['id'] . '?ajax=1\')" class="dark">' . $e['title'] . '</a>';
-            $l[$index][] = $persiandate->date('d F Y', $e['dateline']) .
-                    '<p style="font-size: 10px;">ساعت: ' . $persiandate->date('H:i:s', $e['dateline']) . '</p>';
+//            $l[$index][] = $persiandate->date('d F Y', $e['dateline']) .
+//                    '<p style="font-size: 10px;">ساعت: ' . $persiandate->date('H:i:s', $e['dateline']) . '</p>';
 //            $l[$index][] = $a[$e['type']][$e['action']];
+            $l[$index][] = '<span class="timeago" title="' . date(DATE_ISO8601, $e['dateline']) . '"></span>';
             $l[$index][] = '<a onclick="mhkform.ajax(\'event_' . $e['id'] . '?ajax=1\')" class="dark"><img src="medias/images/icons/view.png" align="absmiddle" />  نمایش  </a>';
 
             $ver = $ver > $e['dateline'] ? $ver : $e['dateline'];
@@ -156,10 +157,11 @@ if ($_REQUEST['type'] == "panel_projects") {
                 $l[$index][] = '<a href="#" class="dark number">B' . $p->id . '</a>';
             }
             $l[$index][] = $_ENUM2FA['type'][$p->type] .
-                    '<p style="font-size: 10px;">' . $_ENUM2FA['output'][$p->output] . '</p>';
+                    '<span style="font-size: 10px;">' . $_ENUM2FA['output'][$p->output] . '</span>';
             $l[$index][] = $_ENUM2FA['state'][$p->state];
-            $l[$index][] = $persiandate->date('d F Y', $p->submit_date) .
-                    '<p style="font-size: 10px;">ساعت: ' . $persiandate->date('H:i:s', $p->submit_date) . '</p>';
+//            $l[$index][] = $persiandate->date('d F Y', $p->submit_date) .
+//                    '<p style="font-size: 10px;">ساعت: ' . $persiandate->date('H:i:s', $p->submit_date) . '</p>';
+            $l[$index][] = '<span class="timeago" title="' . date(DATE_ISO8601, $p->submit_date) . '"></span>';
             $l[$index][] = $p->getBidsCount();
 
             $ver = $ver > $p->submit_date ? $ver : $p->submit_date;
@@ -262,7 +264,7 @@ if ($_REQUEST['type'] == "typeonline_projects") {
                     . '<img src="medias/images/icons/bid.png" align="absmiddle" />
                             نمایش جزئیات
                         </a><br/>';
-            if ($p['state'] == 'Open' AND !$my_prj) {
+            if ($p['state'] == 'Open' AND ! $my_prj) {
                 $tmp.= '<a  onclick="mhkform.ajax(\'project_' . $p['id'] . '?ajax=1&showBidForm=1\')">'
                         . '<img src="medias/images/icons/bid.png" align="absmiddle" />
                                 ارسال پیشنهاد
