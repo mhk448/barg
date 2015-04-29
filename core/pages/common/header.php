@@ -344,7 +344,7 @@
                                 </ul>
                             </li>
                             <!-- Notifications: style can be found in dropdown.less -->
-                            <li class="dropdown notifications-menu mhkevent-win">
+                            <li class="dropdown notifications-menu mhkevent-win" id="topmenu-event">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="fa fa-bell-o"></i>
                                     <span class="label label-warning" id="mhkevent-counter">0</span>
@@ -353,10 +353,7 @@
                                     <li class="header">
                                         رخدادهای جدید
                                     </li>
-                                    <!--                                    <div id="topmenu-event"  class="mini-info-box mhkevent-win">
-                                                                        </div>-->
                                     <li>
-                                        <!-- inner menu: contains the actual data -->
                                         <ul class="menu content">
                                             <div style="display: none"></div>
                                         </ul>
