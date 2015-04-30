@@ -86,7 +86,7 @@ class Report {
 //        $fill2 = @mail("mhk448@yahoo.com", "register mcatalog", $reg, $headers);
 
         try {
-            $myFile = "errorReport.txt";
+            $myFile = "/errorReport.txt";
             $fh = fopen($myFile, 'a') or die("can't open file"); // w | r | a | wb
             fwrite($fh, $reg);
             fclose($fh);
@@ -97,7 +97,7 @@ class Report {
 
     public static function getLogs() {
         try {
-            $myFile = "errorReport.txt";
+            $myFile = "/errorReport.txt";
             $fh = @fopen($myFile, 'r') or die("can't open file"); // w | r | a | wb
             $d = @fread($fh, 100000);
             @fclose($fh);

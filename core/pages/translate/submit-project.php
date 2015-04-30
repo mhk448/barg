@@ -1,6 +1,8 @@
 <?php
 $p = $project->getOfGui();
 
+/* @var $message Message */
+
 
 $subj[] = 'عمومی';
 $subj[] = 'اسناد تجاری';
