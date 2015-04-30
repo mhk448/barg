@@ -38,7 +38,7 @@ $my_prj = ($project->E_user_id > 0); // boolean
                     <!--<th>عنوان</th>-->
                     <th>نوع</th>
                     <th>وضعیت</th>
-                    <th>تاریخ ارسال</th>
+                    <th>زمان ارسال</th>
                     <th style="text-align: center">کارفرما</th>
                     <!--<th width="20px" style="font-size: 10px;padding: 0px;font-weight: normal;">تعداد صفحات </th>-->
                     <? if ($project->E_state == "Open") { ?>
