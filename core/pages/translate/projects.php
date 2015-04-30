@@ -1,4 +1,5 @@
 <?php
+/* @var $persiandate Persiandate*/
 //$projects_list_1 = $project->getList(" AND type ='Agency'");
 //$projects_list_2 = $project->getList(" AND type <>'Agency'");
 //if($_CONFIGS['Params'][1]=='open') {
@@ -37,7 +38,7 @@ $my_prj = ($project->E_user_id > 0); // boolean
                     <!--<th>عنوان</th>-->
                     <th>نوع</th>
                     <th>وضعیت</th>
-                    <th width="120px" >تاریخ ارسال</th>
+                    <th>تاریخ ارسال</th>
                     <th style="text-align: center">کارفرما</th>
                     <!--<th width="20px" style="font-size: 10px;padding: 0px;font-weight: normal;">تعداد صفحات </th>-->
                     <? if ($project->E_state == "Open") { ?>
@@ -80,7 +81,7 @@ $my_prj = ($project->E_user_id > 0); // boolean
                                 </span>
                             <? } ?>
                         </td>
-                        <td><?php echo $persiandate->displayDate($p['submit_date']) ?></td>
+                        <td><?php echo $persiandate->displayDateAgo($p['submit_date']) ?></td>
                         <td style="text-align: center" class="mini-cup">
                             <?= $u->getNickname(); ?>
                             <br/>

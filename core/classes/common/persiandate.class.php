@@ -503,4 +503,9 @@ class PersianDate {
         echo '<span id="cd_' . $id . '"></span>';
         echo '<script type="text/javascript" >mhkCounterDown("#cd_' . $id . '",' . $until . ',"","' . $expire_id . '");</script>';
     }
+    
+     function displayDateAgo($timestamp) {
+        return '<span class="timeago" title="' . date(DATE_ISO8601, $timestamp) . '"></span>';
+    }
+    
 }
