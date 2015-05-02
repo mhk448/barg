@@ -191,28 +191,28 @@ abstract class BaseBid {
         $div.= '<div>';
 
         $div.= '<div style="float:right;background-color: #f5f5f5;min-height:150px; width: 20%;border: 1px dotted #000;padding: 10px;margin: 5px;">'
-                . '<p style=" padding-bottom: 1px;font-size:12pt;">عملیات پیشنهاد</p>'
+                . '<p style="margin:0;padding-bottom: 1px;font-size:12pt;">عملیات پیشنهاد</p>'
                 .
                 '<div style="text-align: center">' .
                 '<div  class="' . ($this->accepted >= 0 ? 'bg-theme' : 'bg-red') . '">
                         ' . $_ENUM2FA['verified'][$this->accepted] . '
                         </div>'
                 . '<p style="text-align: center;width: 100%">'
-                . $persiandate->displayDate($this->dateline)
+                . $persiandate->displayDateAgo($this->dateline)
                 . '</p>
 		 </div>';
 
 
         if ($this->user_id == $user->id || $user->isAdmin()) {
-            $div .= '<p style="padding: 10px">'
-                    . '<span class="tooltip3" title="ویرایش پیشنهاد"><a href="project_' . $p->id . '?showBidForm=1" ><img style="margin:5px;" src="medias/images/icons/acceptbid.png" align="absmiddle" /></a></span>'
+            $div .= '<p style="padding: 0;margin: 0;">'
+//                    . '<span class="tooltip3" title="ویرایش پیشنهاد"><a href="project_' . $p->id . '?showBidForm=1" ><img style="margin:5px;" src="medias/images/icons/acceptbid.png" align="absmiddle" /></a></span>'
 //                    . '<span class="tooltip3" title="حذف کردن پیشنهاد"><a onclick="" ><img style="margin:5px;" src="medias/images/icons/hidebid.png" align="absmiddle" /></a></span>'
 //                    . '<span class="tooltip3" title="ارسال پیام متنی"><a onclick="mhkform.ajax(\'send-message_' . $p->user_id . '_' . $p->id . '?ajax=1\')" ><img style="margin-right:10px;" src="medias/images/icons/sendmessage.png" align="absmiddle" /></a></span>'
                     . '</p>';
         }
 
         if ((!$msg && $this->user_id != $user->id ) || $user->isAdmin()) {
-            $div .= '<p style="padding: 10px">'
+            $div .= '<p style="padding: 0;margin: 0;">'
                     . ((($p->typist_id || $this->accepted == Event::$V_CANCEL || $user->id != $p->user_id ) && !$user->isAdmin()) ? '' : ('<span class="tooltip3" title="قبول پیشنهاد"><a onclick="mhkform.ajax(\'accept-bid_' . $this->id . '?ajax=1\')"><img style="margin:5px;" src="medias/images/icons/acceptbid.png" align="absmiddle" /></a></span>' ))
 //                    . '<span class="tooltip3" title="حذف کردن پیشنهاد"><a onclick="" ><img style="margin:5px;" src="medias/images/icons/hidebid.png" align="absmiddle" /></a></span>'
                     . '<span class="tooltip3" title="ارسال پیام متنی"><a onclick="mhkform.ajax(\'send-message_' . $u->id . '_' . $p->id . '?ajax=1\')" ><img style="margin:5px;" src="medias/images/icons/sendmessage.png" align="absmiddle" /></a></span>'
