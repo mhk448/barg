@@ -206,7 +206,7 @@ abstract class BaseBid {
         if ($this->user_id == $user->id || $user->isAdmin()) {
             $div .= '<p style="padding: 10px">'
                     . '<span class="tooltip3" title="ویرایش پیشنهاد"><a href="project_' . $p->id . '?showBidForm=1" ><img style="margin:5px;" src="medias/images/icons/acceptbid.png" align="absmiddle" /></a></span>'
-                    . '<span class="tooltip3" title="حذف کردن پیشنهاد"><a onclick="" ><img style="margin:5px;" src="medias/images/icons/hidebid.png" align="absmiddle" /></a></span>'
+//                    . '<span class="tooltip3" title="حذف کردن پیشنهاد"><a onclick="" ><img style="margin:5px;" src="medias/images/icons/hidebid.png" align="absmiddle" /></a></span>'
 //                    . '<span class="tooltip3" title="ارسال پیام متنی"><a onclick="mhkform.ajax(\'send-message_' . $p->user_id . '_' . $p->id . '?ajax=1\')" ><img style="margin-right:10px;" src="medias/images/icons/sendmessage.png" align="absmiddle" /></a></span>'
                     . '</p>';
         }
@@ -214,7 +214,7 @@ abstract class BaseBid {
         if ((!$msg && $this->user_id != $user->id ) || $user->isAdmin()) {
             $div .= '<p style="padding: 10px">'
                     . ((($p->typist_id || $this->accepted == Event::$V_CANCEL || $user->id != $p->user_id ) && !$user->isAdmin()) ? '' : ('<span class="tooltip3" title="قبول پیشنهاد"><a onclick="mhkform.ajax(\'accept-bid_' . $this->id . '?ajax=1\')"><img style="margin:5px;" src="medias/images/icons/acceptbid.png" align="absmiddle" /></a></span>' ))
-                    . '<span class="tooltip3" title="حذف کردن پیشنهاد"><a onclick="" ><img style="margin:5px;" src="medias/images/icons/hidebid.png" align="absmiddle" /></a></span>'
+//                    . '<span class="tooltip3" title="حذف کردن پیشنهاد"><a onclick="" ><img style="margin:5px;" src="medias/images/icons/hidebid.png" align="absmiddle" /></a></span>'
                     . '<span class="tooltip3" title="ارسال پیام متنی"><a onclick="mhkform.ajax(\'send-message_' . $u->id . '_' . $p->id . '?ajax=1\')" ><img style="margin:5px;" src="medias/images/icons/sendmessage.png" align="absmiddle" /></a></span>'
                     . '</p>';
         }
@@ -245,7 +245,7 @@ abstract class BaseBid {
                         ریال
                     </span>
 					</p>
-					<p style=" color: #0000ff;">
+					<p style=" color: #0000ff;display:none;">
                          بیعانه درخواستی مجری:</br>
                         <span  class="" style=" padding: 0 10px;background-color:#203fb4; color: #fff; font-size:15pt;">
                             ' . number_format($this->earnest) . '

@@ -535,7 +535,7 @@ class BaseProject {
         }
 
         $accepted_price = ($this->type == 'Agency') ? 0 : $bid_price;
-        $lock_price = ($this->type == 'Agency') ? $this->lock_price : $bid_price;
+        $lock_price = ($this->type == 'Agency') ? $this->lock_price : roundPrice($bid_price*2/10);
         //only for monagese
         $earnest = ( $this->selection_method == 'li') ? $accepted_price : $this->earnest;
 
