@@ -276,9 +276,10 @@ if (isset($_REQUEST["showBidForm"])) {
                                 <?= $index++ ?>
                             </a>
                             <div>
-                                تعداد 
+                                <!--                                تعداد 
                                 <?= $f['pages'] ?> 
-                                صفحه توسط 
+                                                                صفحه توسط -->
+                                یک فایل نهایی توسط
                                 شما
                                 در تاریخ 
                                 <?= $persiandate->date('d F Y ساعت H:i', $f['dateline']) ?> 
@@ -303,7 +304,7 @@ if (isset($_REQUEST["showBidForm"])) {
                     </div>
 
 
-                    <? if ($project->state == 'Run') { ?>
+                    <? if (FALSE && $project->state == 'Run') { ?>
                         <script type="text/javascript">
                             function selectUser(id, username) {
                                 mhkform.ajax("project_<?= $project->id ?>?showShareForm=1&ajax=1$addUser=1&uid=" + id + "", "");
@@ -650,7 +651,7 @@ function showFinalForm($action_str) {
             <textarea name="m" style="width:300px; height:120px;"></textarea>
             <label>فایل نهایی:</label>
             <input type="file" name="fl" style="width:300px" />
-<!--            <label><?= $fabidtype[$project->bid_type] ?>:</label>
+        <!--            <label><?= $fabidtype[$project->bid_type] ?>:</label>
             <input type="text" name="pp" class="numberfild"/>-->
             <input type="hidden" name="pp" value="-1"/>
             <label> </label>
