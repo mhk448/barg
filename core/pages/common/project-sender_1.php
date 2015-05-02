@@ -184,9 +184,8 @@ $ff = $project->getFinalFile();
                                 <?= count($ff) > 1 ? $index : "" ?>
                             </a>
                             <div>
-<!--                                تعداد 
-                                <?php echo $f['pages'] . " " . $_ENUM2FA['bid_type_word'][$project->bid_type] ?> -->
-                                یک فایل
+                                تعداد 
+                                <?php echo $f['pages'] . " " . $_ENUM2FA['bid_type_word'][$project->bid_type] ?> 
                                 توسط 
                                 <?= $user->getNickname($project->typist_id); ?> 
                                 در تاریخ 
@@ -202,12 +201,11 @@ $ff = $project->getFinalFile();
                         <div class="info-box">
                             <a href<?= '="finish-project_' . $project->id . '"' ?> class="popup"  target="_blank">
                                 <img src="medias/images/theme/download1.png" />
-                                دانلود فایل نهایی
+                                اتمام پروژه
                             </a>
                             <div>
-<!--                                تعداد 
-                                <?php echo $f['pages'] . " " . $_ENUM2FA['bid_type_word'][$project->bid_type] ?> -->
-                                یک فایل
+                                تعداد 
+                                <?php echo $f['pages'] . " " . $_ENUM2FA['bid_type_word'][$project->bid_type] ?> 
                                 توسط 
                                 <?= $user->getNickname($project->typist_id); ?> 
                                 در تاریخ 
