@@ -1,5 +1,5 @@
 <?php
-/* @var $persiandate Persiandate*/
+/* @var $persiandate Persiandate */
 //$projects_list_1 = $project->getList(" AND type ='Agency'");
 //$projects_list_2 = $project->getList(" AND type <>'Agency'");
 //if($_CONFIGS['Params'][1]=='open') {
@@ -21,7 +21,6 @@ if (isset($_CONFIGS['Params'][1]) && $_CONFIGS['Params'][1] == "open" && !$my_pr
 
 $list = $project->getList(20);
 $my_prj = ($project->E_user_id > 0); // boolean
-
 //}
 //$online = $project->E_online;
 ?>
@@ -42,7 +41,7 @@ $my_prj = ($project->E_user_id > 0); // boolean
                     <th style="text-align: center">کارفرما</th>
                     <!--<th width="20px" style="font-size: 10px;padding: 0px;font-weight: normal;">تعداد صفحات </th>-->
                     <? if ($project->E_state == "Open") { ?>
-                        <!--<th>تخمین قیمت</th>-->
+                                    <!--<th>تخمین قیمت</th>-->
                     <? } else { ?>
                         <th>هزینه پروژه</th>
                         <? if ($my_prj) { ?>
@@ -61,10 +60,10 @@ $my_prj = ($project->E_user_id > 0); // boolean
                     $u = new User($p['user_id']);
                     $class = ($user->id == $p['user_id'] && !$my_prj) ? 'my-project' : '';
                     ?>
-                    <tr class="<?= $class ?>" style="cursor: pointer" onclick="mhkform.ajax('project_'+<?= $p['id'] ?>+'?ajax=1','#ajax_content')">
+                    <tr class="<?= $class ?>" style="cursor: pointer" onclick="mhkform.ajax('project_' +<?= $p['id'] ?> + '?ajax=1', '#ajax_content')">
                         <td><p class="number" style="text-align: right;padding: 5px;"><?= $prj->getCode() ?></p></td>
-<!--                        <td><a class="ajax" <?= 'href="project_' . $p['id'] . '"' ?> style="display:block">
-                                <?= $p['title']; ?>
+    <!--                        <td><a class="ajax" <?= 'href="project_' . $p['id'] . '"' ?> style="display:block">
+                        <?= $p['title']; ?>
                             </a>
                         </td>-->
                         <td><?= $_ENUM2FA['type'][$p['type']]; ?>
@@ -90,10 +89,10 @@ $my_prj = ($project->E_user_id > 0); // boolean
                         <!--<td><?= $p['guess_page_num'] ?></td>-->
 
                         <? if ($project->E_state == "Open") { ?>
-<!--                            <td>
-                                <span class="price"><?php echo $p['max_price'] ?></span>
-                                ریال    
-                            </td>-->
+                        <!--                            <td>
+                                                        <span class="price"><?php echo $p['max_price'] ?></span>
+                                                        ریال    
+                                                    </td>-->
                         <? } else { ?>
                             <td>
                                 <?
@@ -130,17 +129,26 @@ $my_prj = ($project->E_user_id > 0); // boolean
                             <?= $prj->getBidsCount() ?>
                         </td>
                         <td>
-                            <a class="ajax" <?= 'href="project_' . $p['id'] . '"'; ?>>
+    <!--                            <a class="ajax" <?= 'href="project_' . $p['id'] . '"'; ?>>
                                 <img src="medias/images/icons/bid.png" align="absmiddle" />
                                 نمایش جزئیات
-                            </a><br/>
-                            <?php if ($user->isWorker() && $p['state'] == 'Open' AND !$my_prj) { ?>
-                                <a class="popup" <?= 'href="project_' . $p['id'] . '?showBidForm=1"'; ?>>
-                                    <img src="medias/images/icons/bid.png" align="absmiddle" />
-                                    ارسال پیشنهاد
-                                </a><br/>
+                            </a><br/>-->
+                            <?php if ($user->isWorker() && $p['state'] == 'Open' AND ! $my_prj) { ?>
+            <!--                                <a class="popup" <?= 'href="project_' . $p['id'] . '?showBidForm=1"'; ?>>
+                                            <img src="medias/images/icons/bid.png" align="absmiddle" />
+                                            ارسال پیشنهاد
+                                        </a><br/>-->
+                                <? $dli = 0; ?>
+                                <? foreach ($prj->getProjectFileLinks() as $link) { ?>
+                                    <? $dli++ ?>
+                                        <a download="<?= "Project_" . $prj->getCode() . "_Attachment_" . $dli . "." . $files->extension($link); ?>" href<?= '=' . $link; ?> target="_blank">
+                                            <img src="medias/images/icons/bid.png" align="absmiddle" />
+                                            دانلود ضمیمه
+                                            <?= $dli ?>
+                                        </a>
+                                <? } ?>
                             <?php } ?>
-                            <?php if ($my_prj AND ($p['state'] == 'Run' OR $p['state'] == 'Finish')) { ?>
+                            <?php if ($my_prj AND ( $p['state'] == 'Run' OR $p['state'] == 'Finish')) { ?>
                                 <? if ($p['user_id'] == $user->id || $user->isAdmin()) { ?>
                                     <a class="" onclick="mhkform.ajax('sendsms_<?= $p['typist_id']; ?>?ajax=1')">
                                         <img src="medias/images/icons/sms.png" align="absmiddle" />
@@ -161,11 +169,11 @@ $my_prj = ($project->E_user_id > 0); // boolean
                                     </a><br/>
                                 <? } ?>
                             <?php } ?>
-                            <?php if ($user->isAdmin() AND ($my_prj AND ($p['verified'] == Event::$V_NONE OR $p['verified'] == Event::$V_NEED_EDIT))) { ?>
-<!--                                <a class="ajax" href<?= '="submit-project_' . $p['id'] . '"'; ?> >
-                                    <img src="medias/images/icons/edit.png" align="absmiddle" />
-                                    ویرایش
-                                </a><br/>-->
+                            <?php if ($user->isAdmin() AND ( $my_prj AND ( $p['verified'] == Event::$V_NONE OR $p['verified'] == Event::$V_NEED_EDIT))) { ?>
+        <!--                                <a class="ajax" href<?= '="submit-project_' . $p['id'] . '"'; ?> >
+                        <img src="medias/images/icons/edit.png" align="absmiddle" />
+                        ویرایش
+                    </a><br/>-->
                                 <a class="confirm" href<?= '="project_' . $p['id'] . '?mode=delete"'; ?> >
                                     <img src="medias/images/icons/cross.png" align="absmiddle" />
                                     حذف
@@ -179,8 +187,8 @@ $my_prj = ($project->E_user_id > 0); // boolean
                 <!--            </tbody>
                         </table>-->
                 <? if ($project->E_state == "Open" && !$my_prj) { ?>
-                                                                                                                                                                                                                                    <!--            <table width="100%" class="projects">
-                                                                                                                                                                                                                                    <tbody>-->
+                                                                                                                                                                                                                                                <!--            <table width="100%" class="projects">
+                                                                                                                                                                                                                                                <tbody>-->
                     <tr>
                         <td colspan="10" style="">
                             <img src="medias/images/icons/loading2.gif" style="float: right" width="32" height="32" />
@@ -218,15 +226,15 @@ $my_prj = ($project->E_user_id > 0); // boolean
                             </p>
                         </td>
                     </tr>
-                    <? if (FALSE){//$user->isWorker() || $user->isAdmin()) { ?>
+                    <? if (FALSE) {//$user->isWorker() || $user->isAdmin()) {  ?>
                         <tr>
                             <td colspan="10" style="" onclick="">
                                 <!--<img src="medias/images/icons/repair.jpg" style="float: right" width="40" height="40"/>-->
                                 <img src="uploads/type/twitt/F1398199312135U50I0.png" style="float: right" width="40" height="40"/>
                                 <p style="float: right;width: 90%;padding-right: 8px;color: red">
 
-تولد
-<br/>
+                                    تولد
+                                    <br/>
                                 </p>
                             </td>
                         </tr>
@@ -259,7 +267,7 @@ $my_prj = ($project->E_user_id > 0); // boolean
             </tbody>
         </table>
         <?= $pager->pageBreaker(); ?>
-         <? if ($project->E_state == "Open" && !$my_prj && $user->isWorker()) { ?>
+        <? if ($project->E_state == "Open" && !$my_prj && $user->isWorker()) { ?>
             <div style="width: 70%">
                 <br/>
                 <br/>
@@ -270,9 +278,9 @@ $my_prj = ($project->E_user_id > 0); // boolean
 </div>
 <? if ($project->E_state == "Open" && !$my_prj) { ?>
     <script type="text/javascript">
-        function afterCompose(){
-            curVer['typeonline_projects']=<?= time(); ?>;
-            updateData('typeonline_projects', 1*60*1+5,5);
+        function afterCompose() {
+            curVer['typeonline_projects'] =<?= time(); ?>;
+            updateData('typeonline_projects', 1 * 60 * 1 + 5, 5);
         }
         afterCompose();
     </script>
