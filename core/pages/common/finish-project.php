@@ -78,6 +78,9 @@ if ($fileNotExist) {
                 else {
                     $message->addMessage('پروژه شما با موفقیت بسته شد. <br>هم اکنون می توانید فایل نهایی را دانلود نمایید.<br><a class="active_btn" href="project_' . $p['id'] . '">رفتن به صفحه پروژه جهت دانلود فایل نهایی</a>');
 //                    $message->addMessage('پروژه شما با موفقیت بسته شد. <br>هم اکنون می توانید فایل نهایی را دانلود نمایید');
+                    $dl_link = '/uploads/' . $subSite . '/final/' . $ff['final_file'];
+                    header("Location:  " . $dl_link);
+                    exit();
                 }
                 include 'core/pages/' . $subSite . '/project.php';
             } else {
@@ -106,17 +109,17 @@ if ($fileNotExist) {
                 <tr>
                     <td><b><?= $_ENUM2FA['fa']['worker'] ?></b> <?= $user->getNickname($p['typist_id']) ?></td>
                     <td><b>تخمین قیمت:</b> <?php
-        if ($p['type'] == 'Agency') {
-            global $_PRICES;
-            echo 'به ازای هر صفحه ' . round($_PRICES[($p['lang'])] * $_PRICES['P_AGENCY']);
-        } else {
-            echo number_format($p['max_price']);
-        }
-            ?> ریال </td> 
+                        if ($p['type'] == 'Agency') {
+                            global $_PRICES;
+                            echo 'به ازای هر صفحه ' . round($_PRICES[($p['lang'])] * $_PRICES['P_AGENCY']);
+                        } else {
+                            echo number_format($p['max_price']);
+                        }
+                        ?> ریال </td> 
                 </tr>
     <!--				<tr>
-                        <td><b>مهلت اجرای پروژه:</b> <?php //echo $p['delivery_days']                     ?> روز و <?php // echo $p['delivery_hours']                    ?> ساعت</td>
-                        <td><b>حداقل اعتبار مورد نیاز:</b>  <?php //echo $p['min_credit']                     ?> ریال</td>
+                        <td><b>مهلت اجرای پروژه:</b> <?php //echo $p['delivery_days']                        ?> روز و <?php // echo $p['delivery_hours']                       ?> ساعت</td>
+                        <td><b>حداقل اعتبار مورد نیاز:</b>  <?php //echo $p['min_credit']                        ?> ریال</td>
                 </tr>-->
                 <tr>
                     <td><b>تعداد پیشنهادات:</b> <?= $project->getBidsCount(); ?></td>
@@ -166,7 +169,7 @@ if ($fileNotExist) {
             <span style="color:#F90">در صورتی که پس از مشاهده فایل نهایی مغایرتی با شرایط تعیین شده مشاهده نمودید در صفحه پروژه<a href="review-request_<?php echo $p['id'] ?>"> درخواست بازبینی نمایید</a>.</span>
             <div style="margin:20px; border:1px solid #CCC; padding:10px; text-align:center;">
                 <?php if (isset($ff['pages'])) { ?>
-                    <a onclick="mhkform.ajax('finish-project_<?php echo $p['id'] ?>_AP1?ajax=1','#ajax_content')" href="#"><img src="medias/images/icons/tick.png" align="absmiddle" /> قبول هزینه و پایان پروژه</a>
+                    <a onclick="mhkform.ajax('finish-project_<?php echo $p['id'] ?>_AP1?ajax=1', '#ajax_content')" href="#"><img src="medias/images/icons/tick.png" align="absmiddle" /> قبول هزینه و پایان پروژه</a>
                 <?php } else { ?>
                     <img src="medias/images/icons/tick.png" align="absmiddle" /> قبول هزینه و پایان پروژه
                 <?php } ?>

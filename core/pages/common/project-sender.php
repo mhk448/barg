@@ -202,6 +202,7 @@ $ff = $project->getFinalFile();
                         <div class="info-box">
                             <a href<?= '="finish-project_' . $project->id . '"' ?> class="popup"  target="_blank">
                                 <img src="medias/images/theme/download1.png" />
+                                <!--اتمام پروژه-->
                                 دانلود فایل نهایی
                             </a>
                             <div>
