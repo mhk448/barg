@@ -133,7 +133,7 @@
             <header class="main-header">
                 <!-- Logo -->
                 <a href="/panel" class="logo">
-                    <img src="medias/images/theme/logoWhite.png" alt="برگردون" height="45"/>
+                    <img src="medias/images/theme/logoWhite.png" alt="برگردون" height="45" />
                     <span style="margin-top: -5px">
                     برگردون
                     </span>
