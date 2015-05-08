@@ -37,7 +37,7 @@ if ($auth->validate('RegisterForm', array(
                 border: 1px solid #dddddd;
                 width: 396px;
                 margin: 36px auto 28px;
-                padding: 57px 35px 44px;
+                padding: 23px 35px 44px;
                 text-align: center;
                 -webkit-border-radius: 3px;
                 -moz-border-radius: 3px;
@@ -198,7 +198,7 @@ if ($auth->validate('RegisterForm', array(
             <?php $message->display() ?>
             <form class="form-signin" method="post" action="register">
                 <input type="hidden" name="formName" value="RegisterForm" />
-                <a class="signin-logo" href="#"><img src="images/logo.png" height="40"></a>
+                <a class="signin-logo" href="#"><img src="/medias/images/theme/logoBlack.png" height="80"></a>
                 <br/>
                 <label class="radio-inline">
                     <input type="radio" name="type" value="worker"> 
