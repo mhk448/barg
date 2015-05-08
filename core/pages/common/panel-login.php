@@ -168,7 +168,7 @@
 
             <form class="form-signin" method="post" action="/panel">
                 <input type="hidden" name="formName" value="LoginForm" />
-                <a class="signin-logo" href="#"><img src="images/logo.png" height="40"></a>
+                <a class="signin-logo" href="#"><img src="/medias/images/theme/logoBlack.png" height="80"></a>
                 <label for="inputEmail" class="sr-only">رایانامه</label>
                 <input type="text" name="un" id="inputEmail" class="form-control" placeholder="رایانامه" required autofocus>
                 <label for="inputPassword" class="sr-only">گذرواژه</label>
