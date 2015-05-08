@@ -134,8 +134,9 @@
                 <!-- Logo -->
                 <a href="/panel" class="logo">
                     <img src="medias/images/theme/logoWhite.png" alt="برگردون" height="45"/>
+                    <span style="margin-top: -5px">
                     برگردون
-                    
+                    </span>
                 </a>
                 <!-- Header Navbar: style can be found in header.less -->
                 <nav class="navbar navbar-static-top" role="navigation">
