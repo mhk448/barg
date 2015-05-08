@@ -132,7 +132,11 @@
 
             <header class="main-header">
                 <!-- Logo -->
-                <a href="index2.html" class="logo"><b>Admin</b>LTE</a>
+                <a href="/panel" class="logo">
+                    <img src="medias/images/theme/logoWhite.png" alt="برگردون" height="45"/>
+                    برگردون
+                    
+                </a>
                 <!-- Header Navbar: style can be found in header.less -->
                 <nav class="navbar navbar-static-top" role="navigation">
                     <!-- Sidebar toggle button-->
