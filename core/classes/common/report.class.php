@@ -46,7 +46,7 @@ class Report {
 //    }
 
     public static function addLog($msg) {
-        global $user, $project, $persiandate, $_CONFIGS, $message,$subSite;
+        global $user, $project, $persiandate, $_CONFIGS, $message, $subSite;
         if (is_array($msg))
             $msg = json_encode($msg);
 
@@ -69,7 +69,7 @@ class Report {
         $reg.='Subsite:  ' . $subSite . $sep;
         $reg.='Param:  ' . getCurPageName() . $sep;
         $reg.='IP:  ' . mh_getIp() . $sep;
-        if($persiandate)
+        if ($persiandate)
             $reg.='Time:  ' . $persiandate->date("Y/m/d h:i:s") . $sep;
         $reg.='msg:  ' . $msg . $sep;
 
@@ -86,7 +86,7 @@ class Report {
 //        $fill2 = @mail("mhk448@yahoo.com", "register mcatalog", $reg, $headers);
 
         try {
-            $myFile = "errorReport.txt";
+            $myFile = $_SERVER['DOCUMENT_ROOT'] . "/errorReport.txt";
             $fh = fopen($myFile, 'a') or die("can't open file"); // w | r | a | wb
             fwrite($fh, $reg);
             fclose($fh);
