@@ -1,0 +1,4 @@
+ErrorDocument 404 /medias/images/theme/unknownfile.jpg
+ErrorDocument 500 /medias/images/theme/unknownfile.jpg
+RewriteEngine On
+RewriteBase /

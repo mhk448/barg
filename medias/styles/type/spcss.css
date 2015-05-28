@@ -1,0 +1,58 @@
+/* 
+    Document   : type
+    Created on : Dec 27, 2013, 3:05:21 PM
+    Author     : MHK448
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+hr{height: 2px;width: 90%;border: none;background-color: #AC1;}
+.color{color:#AC1 }
+input,textarea,select{
+    border: solid 1px #599501
+}
+
+.bg-theme { 
+    background-color: #bbd532;
+}
+.br-theme { 
+    border-color: #bbd532;
+    border-width: 1px;
+}
+div{
+    border-color: #AC1;
+}
+#topmenu-event .content .unread{
+    background: #BBD532;
+}
+.hour-theme:hover { 
+    background-color: #bbd532;
+}
+
+.active_btn{
+    background-color: #AC1;
+    border: 1px solid black;
+}
+/*///////////////////////////////*/
+.event-body a:hover{
+    background-position: 0 0;
+    color: black;
+}
+.event-body a{
+    background-color: #AC1;
+}
+/*//////////////////////*/
+.form input,.form select,.form textarea,.input{
+    border-top: 2px solid #AC1;
+    border-bottom: 2px solid #AC1;
+}
+.form input[type=submit],.form input[type=button]{
+    border: 2px solid #AC1;
+}
+table.projects tr,table.projects th{border-color: #AC1;}
+table.projects tr:hover td{background:#DDFFAA;}
+
+.my-project{background-color: #ccff99 !important;}
+#menu > li:hover > a , #menu > li > a.select{
+    background-color: #BBD533;
+}

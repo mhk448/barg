@@ -1,0 +1,5 @@
+ErrorDocument 404 /user/avatar/null.png
+ErrorDocument 500 /user/avatar/null.png
+RewriteEngine On
+RewriteBase /
+#nc?

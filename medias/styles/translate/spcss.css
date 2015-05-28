@@ -1,0 +1,75 @@
+/* 
+    Document   : type
+    Created on : Dec 27, 2013, 3:05:21 PM
+    Author     : MHK448
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+hr{height: 2px !important;width: 90%;border: none;background-color: #00A7D0;}
+.color{color:#00A65A }
+input,textarea,select{
+    border: solid 1px #008749
+}
+
+.bg-theme { 
+    background-color: #00A65A;
+}
+
+.bg-theme a{
+    color: white !important;   
+}
+.br-theme { 
+    border-color: #00A65A;
+    border-width: 1px;
+}
+div{
+    border-color: #00A65A;
+}
+#topmenu-event .content .unread{
+    background: #59C594;
+    font-weight: bold;
+}
+.hour-theme:hover { 
+    background-color: #00A65A;
+}
+
+.active_btn{
+    background-color: #00A65A;
+    border: 1px solid black;
+}
+/*///////////////////////////////*/
+.event-body a:hover{
+    background-position: 0 0;
+    color: black;
+}
+.event-body a{
+    margin-top: 15px;
+    cursor: pointer;
+    background-color: #00A65A;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 2px 20px;
+    color: white;
+    background-position: 0 -8px;
+    background-image: url('../images/icons/bg-btn.png');
+    background-repeat: repeat-x;
+}
+/*//////////////////////*/
+.form input,.form select,.form textarea,.input{
+    border-top: 2px solid #00A65A;
+    border-bottom: 2px solid #00A65A;
+}
+.form input[type=submit],.form input[type=button]{
+    border: 2px solid #00A65A;
+}
+.form input[type=submit]:hover,.form input[type=button]:hover{
+    background: #00A65A;
+}
+table.projects tr,table.projects th{border-color: #00A65A;}
+table.projects tr:hover td{background: #99ff99;}
+
+.my-project{background-color:#86d2fc !important;}
+#menu > li:hover > a , #menu > li > a.select{
+    background-color: #00A65A;
+}

@@ -1,0 +1,79 @@
+.tools{
+    width: 80%;
+    float: right;
+    padding: 20px;
+    text-align: right;
+    background-color:  #f3f3f1;
+    background-image: url('../images/theme/menu_dash_line.png');
+    background-position: center left;
+    background-repeat: repeat-y;
+}
+
+#menu ul {
+    display: none;
+    list-style: none;
+}
+#menu li{
+    list-style: none;
+}
+#menu a{
+    text-decoration: none;
+    font-family: BYekan, tahoma;
+    cursor: pointer;
+    display: block;
+    line-height: 39px;
+    color: #3b3e40;
+}
+#menu>li>a{
+    border-bottom: 1px solid #DDD;
+    /*padding-right: 17%;*/
+}
+#menu > li:hover > a , #menu > li > a.select{
+    color: #fff;
+}
+
+#menu ul li{
+    background-color: #cccccc;
+}
+#menu ul li a{
+    text-decoration: none;
+    display: block;
+    padding-right: 23%;
+    height: 40px;
+    font-family: BYekan, tahoma;
+    border: 0;
+}
+#menu ul li:hover  a,#menu ul li a.select{
+    background-color: #454749;
+    color: white;
+}
+#menu li .menu-img {
+    background-repeat: no-repeat;
+    background-image: url('../images/icons/side-menu.png');
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin: 0px 6px -9px;
+    padding: 0;
+}
+
+#menu li a .item1{background-position: 0 0;}
+#menu li:hover a .item1,#menu li a.select .item1{background-position: 0 -24px; }
+#menu li a .item2{background-position: -24px 0;}
+#menu li:hover a .item2,#menu li a.select .item2{background-position: -24px -24px; }
+#menu li a .item3{background-position: -48px 0;}
+#menu li:hover a .item3,#menu li a.select .item3{background-position: -48px -24px; }
+#menu li a .item4{background-position: -72px 0;}
+#menu li:hover a .item4,#menu li a.select .item4{background-position: -72px -24px; }
+#menu li a .item5{background-position: -96px 0;}
+#menu li:hover a .item5,#menu li a.select .item5{background-position: -96px -24px; }
+#menu li a .item6{background-position: -120px 0;}
+#menu li:hover a .item6,#menu li a.select .item6{background-position: -120px -24px; }
+#menu li a .item7{background-position: -144px 0;}
+#menu li:hover a .item7,#menu li a.select .item7{background-position: -144px -24px; }
+#menu li a .item8{background-position: -168px 0;}
+#menu li:hover a .item8,#menu li a.select .item8{background-position: -168px -24px; }
+#menu li a .item9{background-position: -192px 0;}
+#menu li:hover a .item9,#menu li a.select .item9{background-position: -192px -24px; }
+#menu li a .item10{background-position: -216px 0;}
+#menu li:hover a .item10,#menu li a.select .item10{background-position: -216px -24px; }
