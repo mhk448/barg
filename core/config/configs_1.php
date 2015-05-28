@@ -5,27 +5,27 @@
 
 $GLOBALS['_CONFIGS'] = array(
     'TestMode' => TRUE,
-    'domains' => 'typeiran.com|tarjomeiran.com', //deprcated
-    'FileServerPath' => 'http://fileserver.typeiran.com/type/',
-//    'FileServerPath' => 'http://www.elmend.lc/',
-    'BackupServerPath' => 'http://fileserver.typeiran.com/type/',
-//    'BackupServerPath' => 'http://www.elmend.lc/',
+    'domains' => 'bargardoon.com|bargardoon.com', //deprcated
+    'FileServerPath' => 'http://fileserver.bargardoon.com/type/',
+//    'FileServerPath' => 'http://www.bargardoon.lc/',
+    'BackupServerPath' => 'http://fileserver.bargardoon.com/type/',
+//    'BackupServerPath' => 'http://www.bargardoon.lc/',
     'Site' => array(
-        'Name' => 'تایپیران',
-        'Path' => 'http://typeiran.com/',
-        'Path' => 'http://www.elmend.lc/',
-        'NickName' => 'تایپیران',
-        'NickPath' => 'www.TypeIran.com',
+        'Name' => 'برگردون',
+        'Path' => 'http://bargardoon.com/',
+        'Path' => 'http://www.bargardoon.lc/',
+        'NickName' => 'برگردون',
+        'NickPath' => 'www.bargardoon.com',
         'type' => array(
-            'Name' => 'تایپیران',
-            'Path' => 'http://typeiran.com/',
-            'Path' => 'http://type.elmend.lc/',
-            'NickName' => 'تایپایران',
-            'NickPath' => 'www.TypeIran.com', // 'Type.Elmend.ir',
-            'Email' => 'type@typeiran.com',
-            'Blog' => 'http://blog.typeiran.com/type', //sub path without "/"
-            'Forum' => 'http://forum.typeiran.com/', //sub path
-            'SMS_Postfix' => "\nwww.Typeiran.com", //"\nwww.Elmend.ir",
+            'Name' => 'برگردون',
+            'Path' => 'http://bargardoon.com/',
+            'Path' => 'http://type.bargardoon.lc/',
+            'NickName' => 'برگردون',
+            'NickPath' => 'www.bargardoon.com', // 'Type.bargardoon.ir',
+            'Email' => 'type@bargardoon.com',
+            'Blog' => 'http://blog.bargardoon.com/type', //sub path without "/"
+            'Forum' => 'http://forum.bargardoon.com/', //sub path
+            'SMS_Postfix' => "\nwww.bargardoon.com", //"\nwww.bargardoon.ir",
             'fg_color' => "#bace39",
             'bg_color' => "#bace39",
             'code' => "T",
@@ -37,15 +37,15 @@ $GLOBALS['_CONFIGS'] = array(
             ),
         ),
         'translate' => array(
-            'Name' => 'ترجمه‌ایران',
-            'Path' => 'http://typeiran.com/',
-            'Path' => 'http://translate.elmend.lc/',
-            'NickName' => 'ترجمه‌ایران',
-            'NickPath' => 'www.Tarjomeiran.com',
-            'Email' => 'info@Tarjomeiran.com',
-            'Blog' => 'http://blog.typeiran.com/type', //sub path without "/"
-            'Forum' => 'http://forum.typeiran.com/', //sub path
-            'SMS_Postfix' => "\nwww.Tarjomeiran.com",
+            'Name' => 'برگردون',
+            'Path' => 'http://bargardoon.com/',
+            'Path' => 'http://translate.bargardoon.lc/',
+            'NickName' => 'برگردون',
+            'NickPath' => 'www.bargardoon.com',
+            'Email' => 'info@bargardoon.com',
+            'Blog' => 'http://blog.bargardoon.com/type', //sub path without "/"
+            'Forum' => 'http://forum.bargardoon.com/', //sub path
+            'SMS_Postfix' => "\nwww.bargardoon.com",
             'fg_color' => "#b9e2ff",
             'bg_color' => "#b9e2ff",
             'code' => "B",
@@ -57,14 +57,14 @@ $GLOBALS['_CONFIGS'] = array(
             ),
         ),
         'graphic' => array(
-            'Name' => 'ترجمه‌ایران',
-            'Path' => 'http://type.elmend.lc/',
-            'NickName' => 'ترجمه‌ایران',
-            'NickPath' => 'graphic.typeiran.com',
-            'Email' => 'info@graphic.typeiran.com',
-            'Blog' => 'http://blog.kariran.net/type', //sub path without "/"
-            'Forum' => 'http://forum.typeiran.com/', //sub path
-            'SMS_Postfix' => "\ngraphic.typeiran.com",
+            'Name' => 'برگردون',
+            'Path' => 'http://type.bargardoon.lc/',
+            'NickName' => 'برگردون',
+            'NickPath' => 'graphic.bargardoon.com',
+            'Email' => 'info@graphic.bargardoon.com',
+            'Blog' => 'http://blog.bargardoon.com/type', //sub path without "/"
+            'Forum' => 'http://forum.bargardoon.com/', //sub path
+            'SMS_Postfix' => "\ngraphic.bargardoon.com",
             'fg_color' => "#b9e2ff",
             'bg_color' => "#b9e2ff",
             'code' => "G",
@@ -78,30 +78,24 @@ $GLOBALS['_CONFIGS'] = array(
     ),
     // Path Informations
     'Pathes' => array(
-        'Blog' => 'http://blog.typeiran.com/',
-        'Root' => 'http://typeiran.com/', //'http://type.elmend.ir/'
-//        'Root' => 'http://elmend.lc/',
+        'Blog' => 'http://blog.bargardoon.com/',
+        'Root' => 'http://bargardoon.com/', //'http://type.bargardoon.ir/'
+//        'Root' => 'http://bargardoon.lc/',
     ),
     // Security
     'Security' => array(
-        'CommandKey' => 'MHK448þì´G¹îojnÿJÑ0×d',
+        'CommandKey' => 'M',
+    ),
+    // SMS
+    'SMS' => array(
+        'username' => '',
+        'password' => '',
+        'from' => '5000290909' //from=30002592
     ),
     //HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
     // Database Informations
     'CDatabase' => array(
         'Server' => 'localhost',
-        'User' => 'elmend_user',
-        'Password' => 'GJtfzPmwWw329wxH',
-        'DatabaseName' => 'elmend_common',
-        ////
-        'User' => 'elmend_mhk448',
-        'Password' => 'M@z0?{&^JsK.',
-        'DatabaseName' => 'elmend_common',
-        ////
-        'User' => 'hessammo_loc',
-        'Password' => 'M@z0?{&^JsK.',
-        'DatabaseName' => 'hessammo_common',
-        ////
         'User' => 'root',
         'Password' => '',
         'DatabaseName' => 'mhk_elmend_common'
@@ -109,50 +103,26 @@ $GLOBALS['_CONFIGS'] = array(
     // Database Informations
     'Database_type' => array(
         'Server' => 'localhost',
-        'User' => 'elmend_user',
-        'Password' => 'GJtfzPmwWw329wxH',
-        'DatabaseName' => 'elmend_type',
-        ////
-        'User' => 'hessammo_loc',
-        'Password' => 'M@z0?{&^JsK.',
-        'DatabaseName' => 'hessammo_type',
-        ////
         'User' => 'root',
         'Password' => '',
         'DatabaseName' => 'mhk_elmend_type',
     ),
     'Database_translate' => array(
         'Server' => 'localhost',
-        'User' => 'elmend_mhk448',
-        'Password' => 'M@z0?{&^JsK.',
-        'DatabaseName' => 'elmend_translate',
-        ////
-        'User' => 'hessammo_loc',
-        'Password' => 'M@z0?{&^JsK.',
-        'DatabaseName' => 'hessammo_type',
-        ////
         'User' => 'root',
         'Password' => '',
         'DatabaseName' => 'mhk_elmend_translate',
     ),
     'Database_graphic' => array(
         'Server' => 'localhost',
-        'User' => 'elmend_mhk448',
-        'Password' => 'M@z0?{&^JsK.',
-        'DatabaseName' => 'elmend_translate',
-        ////
-        'User' => 'hessammo_loc',
-        'Password' => 'M@z0?{&^JsK.',
-        'DatabaseName' => 'hessammo_type',
-        ////
         'User' => 'root',
         'Password' => '',
         'DatabaseName' => 'mhk_elmend_translate',
     ),
     'Ftp' => array(//create backup dir in root
-        'Server' => 'typeiran.xzn.ir',
-        'User' => 'u820903543',
-        'Password' => '12341234',
+        'Server' => 'bargardoon.xzn.ir',
+        'User' => '',
+        'Password' => '',
         'Path' => '/',
     ),
     // Page Informations

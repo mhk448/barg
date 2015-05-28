@@ -103,7 +103,7 @@ class PersonalMessage {
             return -1;
         $message = urlencode($message);
         // http://login.irpayamak.com/API/GetInbox.ashx?username=gooya&password=gooya&to=300089008900&year=1392&month=6&day=20
-        $url = "http://smsfa.net/API/SendSms.ashx?username=smsfa_637&password=45985&from=5000290909&to=$mobile&text=$message";//from=30002592
+        $url = "http://smsfa.net/API/SendSms.ashx?username=".$_CONFIGS["SMS"]["username"]."&password=".$_CONFIGS["SMS"]["password"]."&from=".$_CONFIGS["SMS"]["from"]."&to=$mobile&text=$message";
         $agent = 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.0.3705; .NET CLR 1.1.4322)';
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_USERAGENT, $agent);
