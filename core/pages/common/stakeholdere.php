@@ -1,2 +1,0 @@
-<?php
-include 'earnest.php';

@@ -1,4 +1,0 @@
-ErrorDocument 404 /uploads/images/unknown_group.png
-ErrorDocument 500 /uploads/images/unknown_group.png
-RewriteEngine On
-RewriteBase /
